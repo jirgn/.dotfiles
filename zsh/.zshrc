@@ -1,13 +1,3 @@
-# Path additions
-# List items in the reverse order you want them to appear in $PATH (i.e. last
-# items appear first ).
-PATH=/usr/X11/bin:$PATH     # X11 Stuff
-PATH=$ROOTSYS/bin:$PATH     # ROOT Data Analysis Framework
-PATH=/opt/local/bin:$PATH   # MacPorts
-PATH=/opt/local/sbin:$PATH  # MacPorts
-PATH=/usr/local/bin:$PATH   # User binaries
-PATH=$HOME/bin:$PATH        # Personal binaries
-
 #
 # Sets Oh My Zsh options.
 #
