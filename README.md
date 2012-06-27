@@ -18,10 +18,9 @@ Just clone the git repostiory to your home dir and symlink the files you want.
 
 These are the standard files to be used in your userprofile.
 
-1. .profile -> is loaded first of all your homefolder
+1. .profile -> evironment and bash
 2. .osx -> some modifications on mac osx
-3. .bashrc -> config for bash
-4. .vimrc -> config for vim
+3. .vimrc -> config for vim
 
 ## zsh (version > 3.4.10)
 
