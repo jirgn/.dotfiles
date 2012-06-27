@@ -67,11 +67,11 @@ match ErrorMsg '\%>80v.*'
 set scrolloff=15
 
 " rst preview
-:command Rst :!rst2html-2.7.py % > /tmp/rstprev.html && open /tmp/rstprev.html
-:nnoremap <C-p><C-r> :Rst<CR>
+":command Rst :!rst2html-2.7.py % > /tmp/rstprev.html && open /tmp/rstprev.html
+":nnoremap <C-p><C-r> :Rst<CR>
 
 " markdown (.md) preview
-:nnoremap <C-p><C-m> :Mm<CR>
+":nnoremap <C-p><C-m> :Mm<CR>
 
 " token from 
 " http://stackoverflow.com/questions/741814/move-entire-line-up-and-down-in-vim
