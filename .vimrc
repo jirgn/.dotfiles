@@ -1,3 +1,6 @@
+" based on andi balkes
+" https://github.com/pansen/dotfiles/blob/master/.vimrc
+
 syntax on
 set backspace=2
 set nocompatible
