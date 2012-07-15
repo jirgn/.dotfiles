@@ -2,6 +2,10 @@
 # thanx to andi balke 
 # https://github.com/pansen/dotfiles/blob/master/.osx
 
+# Google: disable autoupdate
+# see http://support.google.com/installer/bin/answer.py?hl=en&ctx=go&answer=147176
+defaults write com.google.Keystone.Agent checkInterval 0
+
 # Mail: disable "Reply", "Send" animation
 defaults write com.apple.Mail DisableSendAnimations -bool YES
 defaults write com.apple.Mail DisableReplyAnimations -bool YES
