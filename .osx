@@ -4,16 +4,20 @@
 
 # Google: disable autoupdate
 # see http://support.google.com/installer/bin/answer.py?hl=en&ctx=go&answer=147176
+echo "google: disable google updater"
 defaults write com.google.Keystone.Agent checkInterval 0
 
 # Mail: disable "Reply", "Send" animation
+echo "mail: disable reply and send animation"
 defaults write com.apple.Mail DisableSendAnimations -bool YES
 defaults write com.apple.Mail DisableReplyAnimations -bool YES
 
 # disable dashboard
+echo "system: disable dashboard"
 defaults write com.apple.dashboard mcx-disabled -boolean YES
 
 # make the keyboard fast
+echo "system: fasten keyboard"
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 echo "Set a shorter Delay until key repeat"
@@ -23,17 +27,22 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 12
 #defaults write com.apple.Dock orientation -string top
 
 # safari will ignore app-restore on restart
+echo "safari: disable persistend state"
 defaults write com.apple.Safari ApplePersistenceIgnoreState YES
 
 # disable sonderzeichen keyboard behaviour
+echo "system: disable keyboard press and hold"
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # show foldercontents in preview (space action)
+echo "system: enable show foldercontents in preview"
 defaults write com.apple.finder QLEnableXRayFolders -boolean yes
 
 # full path in finder title
+echo "finder: show full title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
+echo "system: screencapture type jpg"
 defaults write com.apple.screencapture type jpg
 
 # ipv6 stuff
