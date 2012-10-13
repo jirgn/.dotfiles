@@ -8,6 +8,13 @@
 # Set the path to Oh My Zsh.
 export OMZ="$HOME/.oh-my-zsh"
 
+# ------------------------------------------
+# Misc. Environment
+# ------------------------------------------
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home"
+export ANT_HOME=/usr/share/ant
+export EDITOR=vim
+
 # Paths
 typeset -gU cdpath fpath mailpath manpath path
 typeset -gUT INFOPATH infopath
@@ -36,8 +43,11 @@ for path_file in /etc/manpaths.d/*(.N); do
 done
 unset path_file
 
+
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /usr/X11/{bin,sbin}
+  /opt/local/{bin,sbin}
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
