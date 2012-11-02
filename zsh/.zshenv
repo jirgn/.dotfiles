@@ -14,6 +14,7 @@ export OMZ="$HOME/.oh-my-zsh"
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home"
 export ANT_HOME=/usr/share/ant
 export EDITOR=vim
+export MAKEOPTS="-j9"
 
 # Paths
 typeset -gU cdpath fpath mailpath manpath path

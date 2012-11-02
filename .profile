@@ -6,6 +6,7 @@ export ANT_HOME=/usr/share/ant
 
 export EDITOR=vim
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export MAKEOPTS="-j9"
 
 # ------------------------------------------
 # path definition
