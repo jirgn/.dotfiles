@@ -42,8 +42,13 @@ defaults write com.apple.finder QLEnableXRayFolders -boolean yes
 echo "finder: show full title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
+# screencapture preferences
 echo "system: screencapture type jpg"
 defaults write com.apple.screencapture type jpg
+
+echo "system: screencapture location to ~/Desktop/screencapture"
+defaults write com.apple.screencapture location ~/Desktop/screencapture/
+
 
 # ipv6 stuff
 # sudo su -c echo "net.inet6.ip6.use_tempaddr=1" >> /etc/sysctl.conf
