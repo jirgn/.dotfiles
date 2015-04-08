@@ -8,6 +8,18 @@ export EDITOR=vim
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export MAKEOPTS="-j9"
 
+DEFAULT_PROXY_HOST=192.168.160.252
+DEFAULT_PROXY_PORT=3128
+export http_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
+export https_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
+export ftp_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
+export no_proxy="*.local, 127.0.0.1, 169.254/16, *.vbox, *.franz-cornelsen-bildungsgruppe.de, *.cornelsen.de, *.entwicklung.fccs, *.localhost, *.cornelsen-schulverlage.de, $DEFAULT_PROXY_HOST, *.duden-schulbuch.de, *oldenbourg.de"
+
+export PTOOLSPATH=/Users/messner.j/Development/shared/php/vendor/phalcon/devtools/
+export PATH=$PATH:/Users/messner.j/Development/shared/php/vendor/phalcon/devtools
+export PTOOLSPATH=/Users/messner.j/Development/shared/php/vendor/phalcon/devtools/
+export PATH=$PATH:/Users/messner.j/Development/shared/php/vendor/phalcon/devtools
+
 # ------------------------------------------
 # path definition
 # ------------------------------------------
@@ -27,6 +39,25 @@ alias l='ls -CF'
 alias free='top -l 1 | grep Phys'
 alias top='top -o cpu'
 alias grep="grep --exclude='all-wcprops' --exclude='*.tmp' --exclude='entries' --exclude='*.svn-base' --exclude='*.svn*' "
+alias git="/usr/local/Cellar/git/2.2.1/bin/git"
+
+
+# -----------------------------------------
+# gitproxy
+# -----------------------------------------
+
+# requires brew install socat
+if [ -f `brew --prefix`/bin/socat ]; then
+    export GIT_PROXY_COMMAND=/tmp/gitproxy;
+
+    cat  > $GIT_PROXY_COMMAND <<EOF
+#!/bin/bash
+`brew --prefix`/bin/socat - PROXY:$DEFAULT_PROXY_HOST:\$1:\$2,proxyport=$DEFAULT_PROXY_PORT
+EOF
+    chmod +x $GIT_PROXY_COMMAND;
+fi
+
+
 
 #---------------------------
 # Terminal
@@ -55,7 +86,7 @@ fi
 # ------------------------------------------
 # Colors
 # require brew install coreutils
-# ------------------------------------------er
+# ------------------------------------------
 if [ "$color_prompt" = yes ]; then
     GNU_LS="$(brew --prefix coreutils)/libexec/gnubin/ls"
     if [ "$TERM" != "dumb" ] && [ -x $GNU_LS ]; then
@@ -144,8 +175,17 @@ if [ "$color_prompt" = yes ]; then
     # REV TEXT as an example
     REV_CYAN="\[$ESC[${DULL};${BG_WHITE};${BG_CYAN}m\]"
     REV_RED="\[$ESC[${DULL};${FG_YELLOW}; ${BG_RED}m\]"
+    HOSTNAME_SHORT=$(hostname|sed -e 's/^\([^\.]\{0,\}\)\..*$/\1/')
 
-    PS1="${CYAN}\$([ \"root\" == \"$USER\" ] && echo -e \"${BRIGHT_RED}\")${USER} ${BRIGHT_BLUE}${HOSTNAME}${WHITE} \w ${GREEN}\$([ \"function\" == \"`type -t __git_ps1`\" ] && __git_ps1 "%s") ${NORMAL}\$ ${RESET}"
+    function git_dirty()
+    {
+        exit 0
+        [[ "$(git status 2> /dev/null)" =~ "working directory clean" ]] || \
+            echo -e " $ESC[${DULL};${FG_RED}m⚡$ESC[m"
+    }
+
+    PS1="${CYAN}\$([ \"root\" == \"$USER\" ] && printf \"${BRIGHT_RED}\")${USER} ${BRIGHT_BLUE}${HOSTNAME_SHORT}${WHITE} \w ${GREEN}\$([ \"function\" == \"`type -t __git_ps1`\" ] && __git_ps1 "%s"; git_dirty) ${NORMAL}\$ ${RESET}"
     export CLICOLOR=1
+
 fi
 
