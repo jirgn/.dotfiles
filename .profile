@@ -16,7 +16,7 @@ DEFAULT_PROXY_PORT=3128
 export http_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
 export https_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
 export ftp_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
-export no_proxy="*.local, 127.0.0.1, 169.254/16, *.vbox, *.franz-cornelsen-bildungsgruppe.de, *.cornelsen.de, *.entwicklung.fccs, *.localhost, *.cornelsen-schulverlage.de, $DEFAULT_PROXY_HOST, *.duden-schulbuch.de, *oldenbourg.de"
+export no_proxy="*.local, 127.0.0.1, 169.254.*, 192.168.99.100 , *.vbox, *.franz-cornelsen-bildungsgruppe.de, *.cornelsen.de, *.entwicklung.fccs, *.localhost, *.cornelsen-schulverlage.de, $DEFAULT_PROXY_HOST, *.duden-schulbuch.de, *oldenbourg.de"
 
 export PTOOLSPATH=/Users/messner.j/Development/shared/php/vendor/phalcon/devtools/
 export PATH=$PATH:/Users/messner.j/Development/shared/php/vendor/phalcon/devtools
