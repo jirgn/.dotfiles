@@ -8,6 +8,9 @@ export EDITOR=vim
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export MAKEOPTS="-j9"
 
+export LANG=de_DE.UTF-8
+export LC_ALL=de_DE.UTF-8
+
 DEFAULT_PROXY_HOST=192.168.160.252
 DEFAULT_PROXY_PORT=3128
 export http_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
