@@ -36,6 +36,7 @@ PATH=$ROOTSYS/bin:$PATH     # ROOT Data Analysis Framework
 PATH=/opt/local/bin:$PATH   # MacPorts
 PATH=/opt/local/sbin:$PATH  # MacPorts
 PATH=/usr/local/bin:$PATH   # User binaries
+PATH=/usr/local/sbin:$PATH   # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
 
 # ------------------------------------------
