@@ -33,6 +33,6 @@ brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
 
 # # install neovim
-# brew install neovim/neovim/neovim
+brew install neovim/neovim/neovim
 
 exit 0
