@@ -15,11 +15,16 @@ linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' )
 for file in $linkables; do
     filename=".$( basename $file '.symlink' )"
     target="$HOME/$filename"
+    if [ ! -e $target ]; then
+        echo "skipping - $filename does not exist"
+        continue
+    fi
+
     if [ ! -L $target ]; then
         echo "backing up $filename"
         cp $target $BACKUP_DIR
     else
-        echo -e "$filename does not exist at this location or is a symlink"
+        echo "skipping - $filename does not exist at this location or is a symlink"
     fi
 done
 
