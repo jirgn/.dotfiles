@@ -10,7 +10,7 @@ source install/link.sh
 if [ "$(uname)" == "Darwin" ]; then
     echo -e "\n\nRunning on OSX"
 
-    # source install/brew.sh
+    source install/brew.sh
 
     source install/osx.sh
 
