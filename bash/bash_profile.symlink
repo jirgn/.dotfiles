@@ -1,73 +1,5 @@
-# ------------------------------------------
-# Misc. Environment
-# ------------------------------------------
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home"
-export ANT_HOME=/usr/share/ant
-
-export EDITOR=vim
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
-export MAKEOPTS="-j9"
-
-export LANG=de_DE.UTF-8
-export LC_ALL=de_DE.UTF-8
-
-DEFAULT_PROXY_HOST=192.168.160.252
-DEFAULT_PROXY_PORT=3128
-export http_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
-export https_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
-export ftp_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
-export no_proxy="*.local, 127.0.0.1, 169.254.*, 192.168.99.100 , *.vbox, *.franz-cornelsen-bildungsgruppe.de, *.cornelsen.de, *.entwicklung.fccs, *.localhost, *.cornelsen-schulverlage.de, $DEFAULT_PROXY_HOST, *.duden-schulbuch.de, *oldenbourg.de"
-
-export HTTP_PROXY=$http_proxy
-export HTTPS_PROXY=$https_proxy
-export FTP_PROXY=$ftp_proxy
-export NO_PROXY=$no_proxy
-
-export PTOOLSPATH=/Users/messner.j/Development/shared/php/vendor/phalcon/devtools/
-export PATH=$PATH:/Users/messner.j/Development/shared/php/vendor/phalcon/devtools
-export PTOOLSPATH=/Users/messner.j/Development/shared/php/vendor/phalcon/devtools/
-export PATH=$PATH:/Users/messner.j/Development/shared/php/vendor/phalcon/devtools
-
-# ------------------------------------------
-# path definition
-# ------------------------------------------
-PATH=/usr/X11/bin:$PATH     # X11 Stuff
-PATH=$ROOTSYS/bin:$PATH     # ROOT Data Analysis Framework
-PATH=/opt/local/bin:$PATH   # MacPorts
-PATH=/opt/local/sbin:$PATH  # MacPorts
-PATH=/usr/local/bin:$PATH   # User binaries
-PATH=/usr/local/sbin:$PATH   # User binaries
-PATH=$HOME/bin:$PATH        # Personal binaries
-
-# ------------------------------------------
-# Aliases
-# ------------------------------------------
-alias ll='ls -l'
-alias la='ls -lAh'
-alias l='ls -CF'
-alias free='top -l 1 | grep Phys'
-alias top='top -o cpu'
-alias grep="grep --exclude='all-wcprops' --exclude='*.tmp' --exclude='entries' --exclude='*.svn-base' --exclude='*.svn*' "
-alias tmux="TERM=screen-256color-bce tmux"
-#alias git="/usr/local/Cellar/git/2.2.1/bin/git"
-
-
-# -----------------------------------------
-# gitproxy
-# -----------------------------------------
-
-# requires brew install socat
-if [ -f `brew --prefix`/bin/socat ]; then
-    export GIT_PROXY_COMMAND=/tmp/gitproxy;
-
-    cat  > $GIT_PROXY_COMMAND <<EOF
-#!/bin/bash
-`brew --prefix`/bin/socat - PROXY:$DEFAULT_PROXY_HOST:\$1:\$2,proxyport=$DEFAULT_PROXY_PORT
-EOF
-    chmod +x $GIT_PROXY_COMMAND;
-fi
-
-
+# use basic environment for non login shells
+source ~/.bashrc
 
 #---------------------------
 # Terminal
@@ -106,16 +38,8 @@ if [ "$color_prompt" = yes ]; then
     GNU_DIRCOLORS="$(brew --prefix coreutils)/libexec/gnubin/dircolors"
     if [ "$TERM" != "dumb" ] && [ -x $GNU_DIRCOLORS ]; then
         eval $($GNU_DIRCOLORS $HOME/.dir_colors)
-
         export LS_OPTIONS='--color=auto'
         export CLICOLOR='Yes'
-
-        #alias dir='ls --color=auto --format=vertical'
-        #alias vdir='ls --color=auto --format=long'
-
-        #alias grep='grep --color=auto'
-        #alias fgrep='fgrep --color=auto'
-        #alias egrep='egrep --color=auto'
     else
         # set dircolors for osx native fileutils
         # http://www.napolitopia.com/2010/03/lscolors-in-osx-snow-leopard-for-dummies/
