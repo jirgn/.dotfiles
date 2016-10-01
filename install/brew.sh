@@ -8,6 +8,9 @@ fi
 echo -e "\n\nInstalling homebrew packages..."
 echo "=============================="
 
+# better terminal
+brew install Caskroom/cask/iterm2
+
 # cli tools
 brew install ack
 brew install tree
