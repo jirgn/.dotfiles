@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 ######################################################
 # thanx to andi balke 
 # https://github.com/pansen/dotfiles/blob/master/.osx
@@ -108,3 +109,7 @@ defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Fi
 
 echo "Show the ~/Library folder"
 chflags nohidden ~/Library
+
+echo "Kill affected applications"
+for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+

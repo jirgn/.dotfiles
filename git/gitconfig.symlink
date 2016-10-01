@@ -1,0 +1,18 @@
+[user]
+    name = Jirgn Mssnr
+    email = jirgn76@googlemail.com
+[http]
+#   proxy = http://192.168.160.252:3128
+[core]
+	excludesfile = /Users/messner.j/.gitignore_global
+	autocrlf = input
+[difftool "sourcetree"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = true
+[push]
+	default = current
+[credential]
+    helper = osxkeychain
