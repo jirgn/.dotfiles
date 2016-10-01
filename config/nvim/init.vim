@@ -102,6 +102,16 @@ set magic                   " Set magic on, for regex
 set showmatch               " show matching braces
 set mat=2                   " how many tenths of a second to blink
 
+" Commenting blocks of code.
+autocmd FileType php,c,cpp,java,scala let b:comment_leader = '// '
+autocmd FileType sh,ruby,python       let b:comment_leader = '# '
+autocmd FileType conf,fstab           let b:comment_leader = '# '
+autocmd FileType tex                  let b:comment_leader = '% '
+autocmd FileType mail                 let b:comment_leader = '> '
+autocmd FileType vim                  let b:comment_leader = '" '
+noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
 " error bells
 set noerrorbells
 set visualbell
@@ -124,55 +134,55 @@ let mapleader = ','
 inoremap jk <esc>
 
 " wipout buffer
-nmap <silent> <leader>b :bw<cr>
+" nmap <silent> <leader>b :bw<cr>
 
 " shortcut to save
-nmap <leader>, :w<cr>
+" nmap <leader>, :w<cr>
 
 " set paste toggle
-set pastetoggle=<leader>v
+" set pastetoggle=<leader>v
 
 " toggle paste mode
 " map <leader>v :set paste!<cr>
 
 " edit ~/.config/nvim/init.vim
-map <leader>ev :e! ~/.config/nvim/init.vim<cr>
+" map <leader>ev :e! ~/.config/nvim/init.vim<cr>
 " edit gitconfig
-map <leader>eg :e! ~/.gitconfig<cr>
+" map <leader>eg :e! ~/.gitconfig<cr>
 
 " clear highlighted search
-noremap <space> :set hlsearch! hlsearch?<cr>
+" noremap <space> :set hlsearch! hlsearch?<cr>
 
 " activate spell-checking alternatives
-nmap ;s :set invspell spelllang=en<cr>
+" nmap ;s :set invspell spelllang=en<cr>
 
 " markdown to html
-nmap <leader>md :%!markdown --html4tags <cr>
+" nmap <leader>md :%!markdown --html-6tags <cr>
 
 " remove extra whitespace
-nmap <leader><space> :%s/\s\+$<cr>
+" nmap <leader><space> :%s/\s\+$<cr>
 
 
-nmap <leader>l :set list!<cr>
+" nmap <leader>l :set list!<cr>
 
 " Textmate style indentation
-vmap <leader>[ <gv
-vmap <leader>] >gv
-nmap <leader>[ <<
-nmap <leader>] >>
+" vmap <leader>[ <gv
+" vmap <leader>] >gv
+" nmap <leader>[ <<
+" nmap <leader>] >>
 
 " switch between current and last buffer
-nmap <leader>. <c-^>
+" nmap <leader>. <c-^>
 
 " enable . command in visual mode
 vnoremap . :normal .<cr>
 
-map <silent> <C-h> :call functions#WinMove('h')<cr>
-map <silent> <C-j> :call functions#WinMove('j')<cr>
-map <silent> <C-k> :call functions#WinMove('k')<cr>
-map <silent> <C-l> :call functions#WinMove('l')<cr>
+" map <silent> <C-h> :call functions#WinMove('h')<cr>
+" map <silent> <C-j> :call functions#WinMove('j')<cr>
+" map <silent> <C-k> :call functions#WinMove('k')<cr>
+" map <silent> <C-l> :call functions#WinMove('l')<cr>
 
-map <leader>wc :wincmd q<cr>
+" map <leader>wc :wincmd q<cr>
 
 " toggle cursor line
 nnoremap <leader>i :set cursorline!<cr>
@@ -188,21 +198,21 @@ nnoremap <silent> ^ g^
 nnoremap <silent> $ g$
 
 " search for word under the cursor
-nnoremap <leader>/ "fyiw :/<c-r>f<cr>
+" nnoremap <leader>/ "fyiw :/<c-r>f<cr>
 
 " inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
-map <leader>r :call RunCustomCommand()<cr>
+" map <leader>r :call RunCustomCommand()<cr>
 " map <leader>s :call SetCustomCommand()<cr>
-let g:silent_custom_command = 0
+" let g:silent_custom_command = 0
 
 " helpers for dealing with other people's code
 nmap \t :set ts=4 sts=4 sw=4 noet<cr>
 nmap \s :set ts=4 sts=4 sw=4 et<cr>
 
-nmap <leader>w :setf textile<cr> :Goyo<cr>
+" nmap <leader>w :setf textile<cr> :Goyo<cr>
 
-nnoremap <silent> <leader>u :call functions#HtmlUnEscape()<cr>
+" nnoremap <silent> <leader>u :call functions#HtmlUnEscape()<cr>
 
 " }}}
 
