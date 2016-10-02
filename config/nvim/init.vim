@@ -137,7 +137,7 @@ inoremap jk <esc>
 " nmap <silent> <leader>b :bw<cr>
 
 " shortcut to save
-" nmap <leader>, :w<cr>
+nmap <leader>, :w<cr>
 
 " set paste toggle
 " set pastetoggle=<leader>v
@@ -182,7 +182,7 @@ map <silent> <C-j> :call functions#WinMove('j')<cr>
 map <silent> <C-k> :call functions#WinMove('k')<cr>
 map <silent> <C-l> :call functions#WinMove('l')<cr>
 
-" map <leader>wc :wincmd q<cr>
+map <leader>wc :wincmd q<cr>
 
 " toggle cursor line
 nnoremap <leader>i :set cursorline!<cr>
