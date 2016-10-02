@@ -3,6 +3,9 @@
 # thanx to andi balke 
 # https://github.com/pansen/dotfiles/blob/master/.osx
 
+echo "\n\nConfiguring OS"
+echo "=================="
+
 # Google: disable autoupdate
 # see http://support.google.com/installer/bin/answer.py?hl=en&ctx=go&answer=147176
 echo "google: disable google updater"

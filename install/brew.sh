@@ -5,7 +5,7 @@ if test ! $(which brew); then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo -e "\n\nInstalling homebrew packages..."
+echo "\n\nInstalling homebrew packages..."
 echo "=============================="
 
 # better terminal
@@ -35,4 +35,3 @@ brew install zsh-autosuggestions
 # # install neovim
 brew install neovim/neovim/neovim
 
-exit 0
