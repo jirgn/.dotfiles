@@ -8,12 +8,23 @@ git submodule update --init --recursive
 source install/link.sh
 
 if [ "$(uname)" == "Darwin" ]; then
-    echo -e "\n\nRunning on OSX"
+    echo "\n\nRunning on OSX"
 
     source install/brew.sh
 
     source install/osx.sh
 
+    # fix xterm problem -> <C-h> binding issue 
+    # https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
+    echo "\nfixing xterm <C-h> binding issue"
+    echo "---------------------------------"
+    TERMINFO_DIR=~/.terminfo
+    mkdir -p $TERMINFO_DIR
+    cd $TERMINFO_DIR
+    infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+    tic $TERM.ti
+    cd -
+    
     # source install/nvm.sh
 fi
 

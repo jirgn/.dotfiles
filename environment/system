@@ -9,6 +9,9 @@ export MAKEOPTS="-j9"
 export LANG=de_DE.UTF-8
 export LC_ALL=de_DE.UTF-8
 
+#fix for terminfo problem in vim see https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
+[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
+
 # ------------------------------------------
 # path definition
 # ------------------------------------------
