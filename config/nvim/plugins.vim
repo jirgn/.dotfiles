@@ -66,6 +66,9 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } " sass scss syntax support
 Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' } " Open markdown files in Marked.app - mapped to <leader>m
 Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 
+" puppet
+Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
+
 " language-specific plugins
 " Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
 " Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
