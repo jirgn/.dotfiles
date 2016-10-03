@@ -17,7 +17,7 @@ Plug 'mileszs/ack.vim' " search inside files using ack. Same as command line ack
 " Plug 'benmills/vimux' " tmux integration for vim
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
-" Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
+Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 " Plug 'garbas/vim-snipmate' " snippet manager
