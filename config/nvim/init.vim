@@ -213,8 +213,8 @@ nnoremap <silent> $ g$
 " let g:silent_custom_command = 0
 
 " helpers for dealing with other people's code
-nmap \t :set ts=4 sts=4 sw=4 noet<cr>
-nmap \s :set ts=4 sts=4 sw=4 et<cr>
+" nmap \t :set ts=4 sts=4 sw=4 noet<cr>
+" nmap \s :set ts=4 sts=4 sw=4 et<cr>
 
 " nmap <leader>w :setf textile<cr> :Goyo<cr>
 
