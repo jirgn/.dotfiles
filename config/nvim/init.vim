@@ -146,7 +146,7 @@ nmap <leader>, :w<cr>
 " map <leader>v :set paste!<cr>
 
 " edit ~/.config/nvim/init.vim
-" map <leader>ev :e! ~/.config/nvim/init.vim<cr>
+map <leader>ev :e! ~/.config/nvim/init.vim<cr>
 " edit gitconfig
 " map <leader>eg :e! ~/.gitconfig<cr>
 
