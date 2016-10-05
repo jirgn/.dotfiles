@@ -10,3 +10,4 @@ if beginswith "(Cornelsen" $CURRENT_NETWORK_LOCATION; then
     echo "initializing Cornelsen specific environment"
     source $DOTFILES/environment/cornelsen
 fi
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

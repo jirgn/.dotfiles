@@ -15,3 +15,5 @@ if beginswith "(Cornelsen" $CURRENT_NETWORK_LOCATION; then
 fi
 
 # plugins
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
