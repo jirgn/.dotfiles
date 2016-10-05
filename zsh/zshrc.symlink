@@ -1,0 +1,9 @@
+DOTFILES_DIR=$HOME/.dotfiles
+ZSH=$DOTFILES_DIR/zsh
+
+source $ZSH/plugins.zsh
+
+# load config 
+for config ($ZSH/config/*.zsh) source $config
+
+# plugins
