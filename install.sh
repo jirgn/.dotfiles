@@ -31,8 +31,7 @@ fi
 echo "creating vim directories"
 mkdir -p ~/.vim-tmp
 
-
 # echo "Configuring zsh as default shell"
-# chsh -s $(which zsh)
+chsh -s $(which zsh)
 
 echo "Done."
