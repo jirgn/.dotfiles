@@ -4,9 +4,9 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ll='ls -l'
-alias la='ls -lAh'
-alias l='ls -CF'
+alias ll='ls -lG'
+alias la='ls -lAhG'
+alias l='ls -CFG'
 alias free='top -l 1 | grep Phys'
 alias top='top -o cpu'
 alias grep="grep --exclude='all-wcprops' --exclude='*.tmp' --exclude='entries' --exclude='*.svn-base' --exclude='*.svn*' "
