@@ -1,29 +1,12 @@
 # .dotfiles
 
-Here are some config files, for easy distribution between Xnix systems.
+These is a set of configuartion files for zsh/bash shell as well as vim and other development relevant tools.
+The setup is heavily inspired by (https://github.com/nicknisi/dotfiles).
 
-## Installation
+## Theme
+https://draculatheme.com
 
-Just clone the git repostiory to your home dir and symlink the files you want.
+## Fonts
+https://github.com/ryanoasis/nerd-fonts
+https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20for%20Powerline%20Nerd%20Font%20Complete%20Mono.ttf
 
-    # copy to your home
-    git clone https://github.com/jirgn/.dotfiles.git ~/
-
-    # symlink files
-    cd ~/ && \
-    # it depends on you what to use here 
-    ln -s .dotfiles/.profile .dotfiles/zsh/.zshrc .dotfiles/zsh/.zlogin
-
-## common 
-
-These are the standard files to be used in your userprofile.
-
-1. .profile -> evironment and bash
-2. .osx -> some modifications on mac osx
-3. .vimrc -> config for vim
-
-## zsh (version > 3.4.10)
-
-Zsh is a interactive Shell, that in my opinion is way more powerfull than bash. And can be used as an alternaive.
-I use the comunity based framework [_oh-my-zsh_](https://github.com/jirgn/oh-my-zsh.git), which is _required_ for the given dotfiles to work.
-All needed files are located in the subfolder .dotfiles/zsh

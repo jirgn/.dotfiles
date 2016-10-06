@@ -1,12 +1,8 @@
 export DOTFILES=$HOME/.dotfiles
 
 source $DOTFILES/environment/system
-source $DOTFILES/bash/aliases
 
-beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
+for config in $DOTFILES/bash/config/*.bash; do
+    source $config
+done
 
-CURRENT_NETWORK_LOCATION="$(scselect | awk '{if ($1=="*") print $3}')"
-if beginswith "(Cornelsen" $CURRENT_NETWORK_LOCATION; then
-    echo "initializing Cornelsen specific environment"
-    source $DOTFILES/environment/cornelsen
-fi
