@@ -35,3 +35,5 @@ brew install diff-so-fancy
 # # install neovim
 brew install neovim/neovim/neovim
 
+# other
+brew install go

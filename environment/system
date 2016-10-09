@@ -1,6 +1,7 @@
-# ------------------------------------------
-# Misc. Environment
-# ------------------------------------------
+#----------------------
+# system general
+# ---------------------
+
 
 export EDITOR=vim
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
@@ -19,3 +20,11 @@ PATH=/usr/X11/bin:$PATH     # X11 Stuff
 PATH=/usr/local/bin:$PATH   # User binaries
 PATH=/usr/local/sbin:$PATH   # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
+
+# --------------------------
+# tools
+# --------------------------
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
