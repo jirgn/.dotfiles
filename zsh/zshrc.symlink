@@ -1,7 +1,7 @@
-export DOTFILES_DIR=$HOME/.dotfiles
+DOTFILES=$HOME/.dotfiles
+ZSH=$DOTFILES/zsh
 
-ZSH=$DOTFILES_DIR/zsh
-
+source $DOTFILES/environment/system
 source $ZSH/plugins.zsh
 
 # load config 
