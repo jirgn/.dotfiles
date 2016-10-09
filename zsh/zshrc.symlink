@@ -1,4 +1,4 @@
-DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
 ZSH=$DOTFILES/zsh
 
 source $DOTFILES/environment/system
