@@ -172,7 +172,7 @@ map <leader>ev :e! ~/.config/nvim/init.vim<cr>
 " nmap <leader>] >>
 
 " switch between current and last buffer
-" nmap <leader>. <c-^>
+nmap <leader>. <c-^>
 
 " enable . command in visual mode
 vnoremap . :normal .<cr>
