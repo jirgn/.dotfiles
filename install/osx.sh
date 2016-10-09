@@ -47,11 +47,11 @@ echo "finder: show full title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
 # screencapture preferences
-echo "system: screencapture type jpg"
-defaults write com.apple.screencapture type jpg
+echo "system: screencapture type png"
+defaults write com.apple.screencapture type -string "png"
 
 echo "system: screencapture location to ~/Desktop/screencapture"
-defaults write com.apple.screencapture location ~/Desktop/screencapture/
+defaults write com.apple.screencapture location -string "${HOME}/Desktop/screencapture"
 
 
 # ipv6 stuff
