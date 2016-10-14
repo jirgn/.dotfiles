@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin("~/config/nvim/plugged")
 
 " colorschemes
 Plug 'dracula/vim'
@@ -7,13 +7,14 @@ Plug 'dracula/vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
 Plug 'mileszs/ack.vim' " search inside files using ack. Same as command line ack utility, but use :Ack
+Plug 'godlygeek/tabular' " conde align in tabular manner
 " Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
 " Plug 'jiangmiao/auto-pairs' " automatic closing of quotes, parenthesis, brackets, etc.
 " Plug 'tpope/vim-commentary' " comment stuff out
 " Plug 'tpope/vim-unimpaired' " mappings which are simply short normal mode aliases for commonly used ex commands
 " Plug 'tpope/vim-endwise' " automatically add end in ruby
 " Plug 'tpope/vim-ragtag' " endings for html, xml, etc. - ehances surround
-" Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
+Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
 " Plug 'benmills/vimux' " tmux integration for vim
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
