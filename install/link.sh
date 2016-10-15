@@ -39,7 +39,7 @@ done
 # like to configure vim, so lets symlink ~/.vimrc and ~/.vim over to their
 # neovim equivalent.
 
-echo -e "\n\nCreating vim symlinks"
+echo  "\n\nCreating vim symlinks"
 echo "=============================="
 VIMFILES=( "$HOME/.vim:$DOTFILES/config/nvim"
         "$HOME/.vimrc:$DOTFILES/config/nvim/init.vim" )

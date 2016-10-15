@@ -38,6 +38,7 @@ set-window-option -g  window-status-current-format "#[bold]#I #W"
 set-option -g pane-border-fg $tm_color_inactive
 set-option -g pane-active-border-fg $tm_active_border_color
 
+
 # message text
 set-option -g message-bg default
 set-option -g message-fg $tm_color_active
@@ -55,6 +56,7 @@ tm_battery="#(~/.dotfiles/bin/battery_indicator.sh)"
 tm_date="#[fg=$tm_color_inactive] %R %d %b"
 tm_host="#[fg=$tm_color_feature,bold]#h"
 tm_session_name="#[fg=$tm_color_feature,bold]$tm_icon #S"
+tm_prefix_highlight="#[fg=$tm_color_active]#{prefix_highlight}"
 
 set -g status-left $tm_session_name' '
-set -g status-right $tm_tunes' '$tm_date' '$tm_host
+set -g status-right $tm_prefix_highlight' '$tm_tunes' '$tm_date' '$tm_host
