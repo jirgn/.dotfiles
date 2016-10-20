@@ -259,10 +259,8 @@ nmap <leader>m :MarkedOpen!<cr>
 nmap <leader>mq :MarkedQuit<cr>
 nmap <leader>* *<c-o>:%s///gn<cr>
 
-" let g:neomake_javascript_jshint_maker = {
-"     \ 'args': ['--verbose'],
-"     \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
-" \ }
+" makers for javascript syntax
+let g:neomake_javascript_enabled_makers = [ 'eslint' ]
 
 " airline options
 let g:airline_powerline_fonts=1
