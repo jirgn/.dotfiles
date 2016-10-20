@@ -39,6 +39,7 @@ highlight htmlArg cterm=italic
 
 set number                  " show line numbers
 " set relativenumber          " show relative line numbers
+set relativenumber          " show relative line numbers
 
 set wrap                    " turn on line wrapping
 set wrapmargin=8            " wrap lines when coming within n characters from side
