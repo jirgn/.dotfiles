@@ -15,6 +15,7 @@ Plug 'godlygeek/tabular' " conde align in tabular manner
 " Plug 'tpope/vim-endwise' " automatically add end in ruby
 " Plug 'tpope/vim-ragtag' " endings for html, xml, etc. - ehances surround
 Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
+Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
 " Plug 'benmills/vimux' " tmux integration for vim
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
