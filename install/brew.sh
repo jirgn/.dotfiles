@@ -17,6 +17,7 @@ brew install tree
 brew install wget
 
 # development tools
+brew install cmake
 brew install git
 brew install hub
 brew install fzf
@@ -29,11 +30,13 @@ brew install nvm
 brew install z
 brew install markdown
 brew install diff-so-fancy
-# brew install zsh-syntax-highlighting
-# brew install zsh-autosuggestions
 
-# # install neovim
+# install neovim
 brew install neovim/neovim/neovim
+brew install python
+brew install python3
+pip2 install neovim --upgrade
+pip3 install neovim --upgrade
 
 # other
 brew install go

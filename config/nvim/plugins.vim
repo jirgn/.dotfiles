@@ -27,6 +27,7 @@ Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . c
 " Plug 'MarcWeber/vim-addon-mw-utils' " interpret a file by function and cache file automatically
 " Plug 'tomtom/tlib_vim' " utility functions for vim
 " Plug 'sotte/presenting.vim', { 'for': 'markdown' } " a simple tool for presenting slides in vim based on text files
+Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
 " Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 " Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 " Plug 'tpope/vim-vinegar'

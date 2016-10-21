@@ -262,6 +262,10 @@ nmap <leader>* *<c-o>:%s///gn<cr>
 " makers for javascript syntax
 let g:neomake_javascript_enabled_makers = [ 'eslint' ]
 
+" set python paths for youcompleteme to work correctly
+let g:python2_host_prog = '/usr/local/python'
+let g:python3_host_prog = '/usr/local/python3'
+
 " airline options
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=''
