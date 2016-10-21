@@ -165,15 +165,6 @@ nnoremap <silent> k gk
 nnoremap <silent> ^ g^
 nnoremap <silent> $ g$
 
-" Commenting blocks of code.
-autocmd FileType php,c,cpp,java,scala                   let b:comment_leader = '// '
-autocmd FileType sh,ruby,python,puppet,conf,fstab,yaml  let b:comment_leader = '# '
-autocmd FileType tex                                    let b:comment_leader = '% '
-autocmd FileType mail                                   let b:comment_leader = '> '
-autocmd FileType vim                                    let b:comment_leader = '" '
-noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-
 " inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
 " map <leader>r :call RunCustomCommand()<cr>
