@@ -18,15 +18,17 @@ Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job 
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 
-Plug 'tomtom/tlib_vim' " util needed by vim-snippet
-Plug 'MarcWeber/vim-addon-mw-utils' " needed by vim-snipmat
-Plug 'garbas/vim-snipmate' " snippet manager
+" Plug 'tomtom/tlib_vim' " util needed by vim-snippet
+" Plug 'MarcWeber/vim-addon-mw-utils' " needed by vim-snipmat
+" Plug 'garbas/vim-snipmate' " snippet manager
+Plug 'SirVer/ultisnips' " snippet manager
 Plug 'honza/vim-snippets' " snippet library
 
 Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
 " Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'embear/vim-localvimrc' " enable .lvimrc support in projects
+Plug 'mhinz/vim-startify' " fancy startscreen
 
 " html / templates
 Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax

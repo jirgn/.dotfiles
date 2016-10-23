@@ -165,18 +165,6 @@ nnoremap <silent> k gk
 nnoremap <silent> ^ g^
 nnoremap <silent> $ g$
 
-" inoremap <tab> <c-r>=Smart_TabComplete()<CR>
-
-" map <leader>r :call RunCustomCommand()<cr>
-" map <leader>s :call SetCustomCommand()<cr>
-" let g:silent_custom_command = 0
-
-" helpers for dealing with other people's code
-" nmap \t :set ts=4 sts=4 sw=4 noet<cr>
-" nmap \s :set ts=4 sts=4 sw=4 et<cr>
-
-" nnoremap <silent> <leader>u :call functions#HtmlUnEscape()<cr>
-
 " }}}
 
 " Section AutoGroups {{{
@@ -236,8 +224,16 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 
+" zen coding in html
 let g:user_emmet_expandabbr_key = '<s-tab>'
 
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " Fugitive Shortcuts
 """""""""""""""""""""""""""""""""""""
