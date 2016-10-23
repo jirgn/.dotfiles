@@ -140,10 +140,11 @@ nmap <leader>. <c-^>
 vnoremap . :normal .<cr>
 
 " " Navigate Panes or create new
-" map <silent> <C-h> :call functions#WinMove('h')<cr>
-" map <silent> <C-j> :call functions#WinMove('j')<cr>
-" map <silent> <C-k> :call functions#WinMove('k')<cr>
-" map <silent> <C-l> :call functions#WinMove('l')<cr>
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 
 "resize pane
 nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<cr>
