@@ -145,6 +145,7 @@ nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 
 "resize pane
 nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<cr>
@@ -216,7 +217,7 @@ nmap <silent> <leader>e :FZF<cr>
 " omap <leader><tab> <plug>(fzf-maps-o)
 
 " zen coding in html
-let g:user_emmet_expandabbr_key = '<s-tab>'
+" let g:user_emmet_expandabbr_key = '<s-tab>'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
