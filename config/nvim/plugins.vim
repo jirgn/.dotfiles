@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
+Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
 
 " Plug 'tomtom/tlib_vim' " util needed by vim-snippet
 " Plug 'MarcWeber/vim-addon-mw-utils' " needed by vim-snipmat
