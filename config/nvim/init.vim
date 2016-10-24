@@ -76,7 +76,7 @@ set foldnestmax=10          " deepest fold is 10 levels
 set nofoldenable            " don't fold by default
 set foldlevel=1
 
-set clipboard=unnamed
+set clipboard=unnamed       " unnamed clipboard maps to systemclipboard"
 
 set ttyfast                 " faster redrawing
 set diffopt+=vertical
@@ -98,9 +98,7 @@ set smartcase               " case-sensitive if expresson contains a capital let
 set hlsearch                " highlight search results
 set incsearch               " set incremental search, like modern browsers
 set nolazyredraw            " don't redraw while executing macros
-
 set magic                   " Set magic on, for regex
-
 set showmatch               " show matching braces
 set mat=2                   " how many tenths of a second to blink
 
@@ -182,10 +180,6 @@ augroup configgroup
     " save all files on focus lost, ignoring warnings about untitled buffers
     autocmd FocusLost * silent! wa
 
-    " make quickfix windows take all the lower section of the screen
-    " when there are multiple windows open
-    autocmd FileType qf wincmd J
-
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
     let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json=javascript', 'stylus', 'html']
 
@@ -263,7 +257,5 @@ let g:airline#extensions#tabline#show_splits = 0
 
 " don't hide quotes in json files
 let g:vim_json_syntax_conceal = 0
-
-let g:SuperTabCrMapping = 0
 
 " }}}
