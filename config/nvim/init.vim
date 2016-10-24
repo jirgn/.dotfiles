@@ -1,3 +1,5 @@
+" vim:fdm=marker
+
 source ~/.config/nvim/plugins.vim
 
 " Section General {{{
