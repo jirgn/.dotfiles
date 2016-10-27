@@ -19,14 +19,10 @@ Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
 
-" Plug 'tomtom/tlib_vim' " util needed by vim-snippet
-" Plug 'MarcWeber/vim-addon-mw-utils' " needed by vim-snipmat
-" Plug 'garbas/vim-snipmate' " snippet manager
 Plug 'SirVer/ultisnips' " snippet manager
 Plug 'honza/vim-snippets' " snippet library
 
 Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
-" Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'embear/vim-localvimrc' " enable .lvimrc support in projects
 Plug 'mhinz/vim-startify' " fancy startscreen
@@ -40,12 +36,10 @@ Plug 'digitaltoad/vim-jade', { 'for': ['jade', 'pug'] } " jade support
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
-Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' } " JavaScript indent support
-Plug 'moll/vim-node', { 'for': 'javascript' } " node support
-Plug 'othree/yajs.vim', { 'for': 'javascript' } " JavaScript syntax plugin
-Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' } " ES6 and beyond syntax
-Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript'] } " JSX support
-
+Plug 'pangloss/vim-javascript', { 'for': [ 'javascript.jsx', 'javascript'  ]} " javascript syntax support
+Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
+Plug 'heavenshell/vim-jsdoc', { 'for': [ 'javascript.jsx', 'javascript' ] }
+ 
 " styles
 Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
 Plug 'groenewege/vim-less', { 'for': 'less' } " less support

@@ -217,7 +217,7 @@ nmap <silent> <leader>e :FZF<cr>
 " omap <leader><tab> <plug>(fzf-maps-o)
 
 " zen coding in html
-" let g:user_emmet_expandabbr_key = '<s-tab>'
+" let g:user_emmet_expandabbr_key = '<c-e>'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -240,6 +240,20 @@ nmap <leader>* *<c-o>:%s///gn<cr>
 
 " makers for javascript syntax
 let g:neomake_javascript_enabled_makers = [ 'eslint' ]
+let g:neomake_jsx_enabled_makers = [ 'eslint' ]
+
+" vim-jsx 
+let g:jsx_ext_required = 0 " enable jsx for all js files
+
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+
+"vim-jsdoc
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+
+" mapping for jsdoc commenting
+nmap <silent> <c-d> <Plug>(jsdoc)
 
 " set python paths for youcompleteme to work correctly
 let g:python2_host_prog = '/usr/local/python'

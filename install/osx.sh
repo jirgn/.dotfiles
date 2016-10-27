@@ -80,7 +80,7 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 echo "Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Increase window resize speed for Cocoa applications
+echo "Increase window resize speed for Cocoa applications"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 echo "Avoid creating .DS_Store files on network volumes"
@@ -100,12 +100,6 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
-
-echo "Disable the Ping sidebar in iTunes"
-defaults write com.apple.iTunes disablePingSidebar -bool true
-
-echo "Disable all the other Ping stuff in iTunes"
-defaults write com.apple.iTunes disablePing -bool true
 
 echo "Make ⌘ + F focus the search input in iTunes"
 defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
