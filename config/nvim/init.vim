@@ -251,9 +251,13 @@ let g:javascript_plugin_jsdoc = 1
 "vim-jsdoc
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
-
 " mapping for jsdoc commenting
 nmap <silent> <c-d> <Plug>(jsdoc)
+
+"mappings for YouCompleteme
+noremap <leader>jd :YcmCompleter GoToDefinition<cr>
+noremap <leader>jr :YcmCompleter GoToReferences<cr>
+noremap <leader>rr :YcmCompleter RefactorRename<cr>
 
 " set python paths for youcompleteme to work correctly
 let g:python2_host_prog = '/usr/local/python'

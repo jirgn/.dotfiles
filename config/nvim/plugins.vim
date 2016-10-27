@@ -23,6 +23,7 @@ Plug 'SirVer/ultisnips' " snippet manager
 Plug 'honza/vim-snippets' " snippet library
 
 Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'} " generator for goto commands in ycm to work
 Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'embear/vim-localvimrc' " enable .lvimrc support in projects
 Plug 'mhinz/vim-startify' " fancy startscreen
