@@ -21,3 +21,4 @@
 --type-set=ts=.ts
 --type-set=php=.php,.phtml
 --type-set=style=.scss,.sass,.styl,.less,.css
+--type-set=js=.js,.jsx
