@@ -31,6 +31,7 @@ brew install z
 brew install markdown
 brew install diff-so-fancy
 brew install editorconfig
+brew install tidy-html5
 
 # install neovim
 brew install neovim/neovim/neovim
