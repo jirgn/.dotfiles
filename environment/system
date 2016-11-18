@@ -10,8 +10,6 @@ export MAKEOPTS="-j9"
 export LANG=de_DE.UTF-8
 export LC_ALL=de_DE.UTF-8
 
-#fix for terminfo problem in vim see https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
-[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
 
 # ------------------------------------------
 # path definition
@@ -20,11 +18,4 @@ PATH=/usr/X11/bin:$PATH     # X11 Stuff
 PATH=/usr/local/bin:$PATH   # User binaries
 PATH=/usr/local/sbin:$PATH   # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
-
-# --------------------------
-# tools
-# --------------------------
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 

@@ -5,14 +5,18 @@ echo "Installing dotfiles"
 echo "Initializing submodule(s)"
 git submodule update --init --recursive
 
-source install/link.sh
+. install/link.sh
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ `uname` == "FreeBSD" ]; then
+    echo "\n\nRunning on FreeBSD"
+    . install/pkg.sh
+
+elif [ `uname` == "Darwin" ]; then
     echo "\n\nRunning on OSX"
 
-    source install/brew.sh
+    . install/brew.sh
 
-    source install/osx.sh
+    . install/osx.sh
 
     # fix xterm problem -> <C-h> binding issue 
     # https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
@@ -25,7 +29,7 @@ if [ "$(uname)" == "Darwin" ]; then
     tic $TERM.ti
     cd -
     
-    # source install/nvm.sh
+    # . install/nvm.sh
 fi
 
 echo "installing tmux plugin manager"
@@ -40,6 +44,6 @@ echo "creating vim directories"
 mkdir -p ~/.vim-tmp
 
 # echo "Configuring zsh as default shell"
-chsh -s $(which zsh)
+chsh -s `which zsh`
 
 echo "Done."
