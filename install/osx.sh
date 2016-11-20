@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 ######################################################
 # thanx to andi balke 
 # https://github.com/pansen/dotfiles/blob/master/.osx

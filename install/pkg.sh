@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 
 # cli tools
@@ -14,14 +14,10 @@ sudo pkg install -y zsh
 sudo pkg install -y editorconfig
 sudo pkg install -y markdown
 sudo pkg install -y diff-so-fancy
-#brew install hub
-#brew install highlight
-#brew install nvm
-#brew install z
-#brew install diff-so-fancy
+sudo pkg install -y ipmitool
 
-# install neovim
-sudo pkg install -y neovim
+# install vim
+sudo pkg install -y vim
 sudo pkg install -y python
 sudo python -m ensurepip
-pip install neovim --upgrade
+
