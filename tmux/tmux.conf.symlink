@@ -30,6 +30,7 @@ set-option -g mouse on
 ##############################
 ### Color & Style Settings ###
 ##############################
+set -g default-terminal "screen-256color"
 
 source $DOTFILES/tmux/theme.tmux
 # List of plugins
