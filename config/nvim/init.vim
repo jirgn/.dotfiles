@@ -187,9 +187,16 @@ augroup configgroup
     autocmd BufNewFile,BufRead,BufWrite *.md syntax match Comment /\%^---\_.\{-}---$/
 
     autocmd! BufWritePost * Neomake
-    
+
+    " fix some issues with puppet and ruby
+    if v:version >= 703
+        " Note: Relative number is quite slow with Ruby, so is cursorline
+        autocmd FileType ruby setlocal norelativenumber nocursorline regexpengine=1 foldmethod=manual 
+    endif
+
     " vim-commentary
     autocmd FileType puppet setlocal commentstring=#\ %s
+    
 augroup END
 
 " }}}
