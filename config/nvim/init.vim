@@ -187,11 +187,15 @@ augroup configgroup
     autocmd BufNewFile,BufRead,BufWrite *.md syntax match Comment /\%^---\_.\{-}---$/
 
     autocmd! BufWritePost * Neomake
+    
+    " vim-commentary
+    autocmd FileType puppet setlocal commentstring=#\ %s
 augroup END
 
 " }}}
 
 " Section Plugins {{{
+"
 
 " Toggle NERDTree
 nmap <silent> <leader>k :NERDTreeToggle<cr>
@@ -241,6 +245,7 @@ nmap <leader>* *<c-o>:%s///gn<cr>
 " makers for javascript syntax
 let g:neomake_javascript_enabled_makers = [ 'eslint' ]
 let g:neomake_jsx_enabled_makers = [ 'eslint' ]
+let g:neomake_puppet_enabled_makers = [ 'puppetlint' ]
 
 " vim-jsx 
 let g:jsx_ext_required = 0 " enable jsx for all js files
