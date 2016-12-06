@@ -8,7 +8,6 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
 Plug 'mileszs/ack.vim' " search inside files using ack. Same as command line ack utility, but use :Ack
 Plug 'godlygeek/tabular' " conde align in tabular manner
-" Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ...
 Plug 'tpope/vim-commentary' " comment stuff out
 Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
@@ -26,6 +25,7 @@ Plug 'honza/vim-snippets' " snippet library
 Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'} " generator for goto commands in ycm to work
 Plug 'vim-scripts/matchit.zip' " extended % matching
+
 Plug 'embear/vim-localvimrc' " enable .lvimrc support in projects
 Plug 'mhinz/vim-startify' " fancy startscreen
 
@@ -34,7 +34,7 @@ Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx' ] } " 
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
 Plug 'mustache/vim-mustache-handlebars' " mustach support
-Plug 'digitaltoad/vim-jade', { 'for': ['jade', 'pug'] } " jade support
+" Plug 'digitaltoad/vim-jade', { 'for': ['jade', 'pug'] } " jade support
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
@@ -55,6 +55,9 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 
 " puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
+
+" php
+Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
 
 call plug#end()
 
