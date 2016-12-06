@@ -191,7 +191,7 @@ augroup configgroup
     " fix some issues with puppet and ruby
     if v:version >= 703
         " Note: Relative number is quite slow with Ruby, so is cursorline
-        autocmd FileType ruby setlocal norelativenumber nocursorline regexpengine=1 foldmethod=manual 
+        autocmd FileType ruby setlocal norelativenumber nocursorline regexpengine=1 foldmethod=manual lazyredraw
     endif
 
     " vim-commentary
