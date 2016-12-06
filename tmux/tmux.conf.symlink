@@ -23,22 +23,35 @@ bind N new-window
 # synchronize all panes in a window
 bind y setw synchronize-panes
 
-# 
 # enable mouse support for switching panes/windows
 set-option -g mouse on
 
 ##############################
 ### Color & Style Settings ###
 ##############################
-
 source $DOTFILES/tmux/theme.tmux
-# List of plugins
+
+########################
+###  List of plugins ###
+########################
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
+set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'nhdaly/tmux-better-mouse-mode'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# Plugin Features
+# ################
+#
+# activate optionals feature for tmux-resurrect plugin
+# for vim
+# set -g @resurrect-strategy-vim 'session'
+# for neovim
+# set -g @resurrect-strategy-nvim 'session'
 
 run '~/.tmux/plugins/tpm/tpm'
