@@ -18,6 +18,7 @@ brew install wget
 
 # development tools
 brew install cmake
+brew install phpctags
 brew install git
 brew install hub
 brew install fzf
