@@ -124,9 +124,6 @@ let mapleader = ','
 " remap esc
 inoremap jk <esc>
 
-" wipout buffer
-" nmap <silent> <leader>b :bw<cr>
-
 " shortcut to save
 nmap <leader>, :w<cr>
 
@@ -146,10 +143,6 @@ nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
-
-"resize pane
-nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<cr>
-nnoremap <silent> <leader>- :exe "resize " . (winheight(0) * 2/3)<cr>
 
 " window close
 map <leader>wc :wincmd q<cr>
@@ -223,12 +216,6 @@ endif
 
 nmap <silent> <leader>r :Buffers<cr>
 nmap <silent> <leader>e :FZF<cr>
-" nmap <leader><tab> <plug>(fzf-maps-n)
-" xmap <leader><tab> <plug>(fzf-maps-x)
-" omap <leader><tab> <plug>(fzf-maps-o)
-
-" zen coding in html
-" let g:user_emmet_expandabbr_key = '<c-e>'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -252,6 +239,7 @@ nmap <leader>* *<c-o>:%s///gn<cr>
 " makers for javascript syntax
 let g:neomake_javascript_enabled_makers = [ 'eslint' ]
 let g:neomake_jsx_enabled_makers = [ 'eslint' ]
+let g:neomake_php_enabled_makers = [ 'php', 'phpmd', 'phpcs' ]
 let g:neomake_puppet_enabled_makers = [ 'puppetlint' ]
 
 " vim-jsx 

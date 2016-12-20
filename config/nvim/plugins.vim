@@ -58,6 +58,7 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
 
 " php
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
+Plug 'shawncplus/phpcomplete', { 'for': 'php' } "PHP Autocompleter
 
 call plug#end()
 
