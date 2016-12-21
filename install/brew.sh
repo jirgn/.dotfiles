@@ -18,6 +18,8 @@ brew install wget
 
 # development tools
 brew install cmake
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags
 brew install phpctags
 brew install git
 brew install hub

@@ -194,6 +194,19 @@ augroup END
 
 " }}}
 
+" Section Ctags {{{  
+" Default/Generic tag file
+set tag=tags,.tags
+
+autocmd FileType c              set tags=.tags_cpp,$HOME/.vim/tags/cpp
+autocmd FileType cpp            set tags=.tags_cpp,$HOME/.vim/tags/cpp
+autocmd FileType css            set tags=.tags_css,$HOME/.vim/tags/css
+autocmd FileType java           set tags=.tags_java,$HOME/.vim/tags/java
+autocmd FileType javascript     set tags=.tags_js,$HOME/.vim/tags/js
+autocmd FileType html           set tags=.tags_html,$HOME/.vim/tags/html
+autocmd FileType php            set tags=.tags_php,$HOME/.vim/tags/php
+autocmd FileType sh             set tags=.tags_sh,$HOME/.vim/tags/sh
+" }}}
 " Section Plugins {{{
 "
 
