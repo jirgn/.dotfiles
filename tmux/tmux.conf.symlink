@@ -1,4 +1,4 @@
-# set -g default-command "login-shell"
+set -g default-command $SHELL
 
 
 # automatically renumber tmux windows
