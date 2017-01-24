@@ -11,6 +11,9 @@ echo "=============================="
 # better terminal
 brew install Caskroom/cask/iterm2
 
+# keyboard tweeks
+brew install Caskroom/cask/karabiner
+
 # cli tools
 brew install ack
 brew install tree
