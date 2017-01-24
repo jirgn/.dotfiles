@@ -111,7 +111,6 @@ set tm=500
 
 if has('mouse')
 	set mouse=a
-	" set ttymouse=xterm2
 endif
 
 " }}}
@@ -121,14 +120,8 @@ endif
 " set a map leader for more key combos
 let mapleader = ','
 
-" remap esc
-inoremap jk <esc>
-
 " shortcut to save
 nmap <leader>, :w<cr>
-
-" edit ~/.config/nvim/init.vim
-map <leader>ev :e! ~/.config/nvim/init.vim<cr>
 
 " switch between current and last buffer
 nmap <leader>. <c-^>
