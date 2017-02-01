@@ -10,6 +10,8 @@ abbr teh the
 abbr tempalte template
 abbr fitler filter
 
+set shada='20,<50,s10       " reducing number of lines in viminfo file -- fixing slow startup times
+
 set nocompatible            " not compatible with vi
 set autoread                " detect when a file is changed
 
@@ -75,8 +77,6 @@ set foldmethod=syntax       " fold based on indent
 set foldnestmax=10          " deepest fold is 10 levels
 set nofoldenable            " don't fold by default
 set foldlevel=1
-
-set clipboard=unnamed       " unnamed clipboard maps to systemclipboard"
 
 set ttyfast                 " faster redrawing
 set diffopt+=vertical
