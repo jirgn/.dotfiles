@@ -4,6 +4,9 @@ call plug#begin("~/.config/nvim/plugged")
 Plug 'dracula/vim'
 
 " utilities
+Plug 'embear/vim-localvimrc' " enable .lvimrc support in projects
+Plug 'mhinz/vim-startify' " fancy startscreen
+Plug 'mbbill/undotree' " visualize undo branches
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
 Plug 'mileszs/ack.vim' " search inside files using ack. Same as command line ack utility, but use :Ack
@@ -26,8 +29,6 @@ Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'} " generator for goto commands in ycm to work
 Plug 'vim-scripts/matchit.zip' " extended % matching
 
-Plug 'embear/vim-localvimrc' " enable .lvimrc support in projects
-Plug 'mhinz/vim-startify' " fancy startscreen
 
 " html / templates
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
@@ -43,7 +44,6 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
 Plug 'heavenshell/vim-jsdoc', { 'for': [ 'javascript.jsx', 'javascript' ] }
  
 " styles
-Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
 Plug 'groenewege/vim-less', { 'for': 'less' } " less support
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
@@ -58,7 +58,7 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
 
 " php
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
-Plug 'shawncplus/phpcomplete', { 'for': 'php' } "PHP Autocompleter
+Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' } "PHP Autocompleter
 
 call plug#end()
 
