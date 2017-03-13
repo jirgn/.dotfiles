@@ -231,6 +231,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" vim-marked 
+let g:marked_app = "Marked"
+
 " Fugitive Shortcuts
 """""""""""""""""""""""""""""""""""""
 nmap <silent> <leader>gs :Gstatus<cr>
