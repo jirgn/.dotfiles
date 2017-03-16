@@ -54,7 +54,7 @@ Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' } " Open m
 Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
 
 " confluence
-Plug 'vim-scripts/confluencewiki.vim', { 'for': 'confluencewiki' }
+Plug 'jirgn/confluencewiki.vim', { 'for': 'confluencewiki' }
 
 " puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
