@@ -164,15 +164,17 @@ augroup configgroup
     autocmd VimResized * exe 'normal! \<c-w>='
     autocmd BufWritePost .vimrc,.vimrc.local,init.vim source %
     autocmd BufWritePost .vimrc.local source %
+     
     " save all files on focus lost, ignoring warnings about untitled buffers
     autocmd FocusLost * silent! wa
 
+    " markdown
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
     let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json=javascript', 'stylus', 'html']
-
     autocmd BufNewFile,BufRead,BufWrite *.md syntax match Comment /\%^---\_.\{-}---$/
 
-    autocmd! BufWritePost * Neomake
+    " confluence
+    autocmd BufNewFile,BufReadPost *.confluence set filetype=confluencewiki
 
     " fix some issues with puppet and ruby
     if v:version >= 703
@@ -180,8 +182,12 @@ augroup configgroup
         autocmd FileType ruby setlocal norelativenumber nocursorline regexpengine=1 foldmethod=manual lazyredraw
     endif
 
-    " vim-commentary
+    " puppet-commentary
     autocmd FileType puppet setlocal commentstring=#\ %s
+    
+    " activate neomake for linting
+    autocmd! BufWritePost * Neomake
+    
     
 augroup END
 
