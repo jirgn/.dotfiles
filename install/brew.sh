@@ -39,6 +39,14 @@ brew install diff-so-fancy
 brew install editorconfig
 brew install tidy-html5
 
+# php envirionment with sniffer and packagemanager
+brew install php70
+brew install php70-msgpack 
+brew install phpmd
+brew install composer
+composer global require "squizlabs/php_codesniffer=*"
+composer global require "friendsofphp/php-cs-fixer=*"
+
 # install neovim
 brew install neovim/neovim/neovim
 brew install python
