@@ -63,6 +63,7 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' } " PHP Autocompleter
+Plug 'joonty/vdebug', { 'for': 'php' } " dpkg debugger 
 " Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' } "PHP Autocompleter
 
 call plug#end()

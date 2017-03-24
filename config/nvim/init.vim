@@ -206,6 +206,7 @@ autocmd FileType html           set tags=.tags_html,$HOME/.vim/tags/html
 autocmd FileType php            set tags=.tags_php,$HOME/.vim/tags/php
 autocmd FileType sh             set tags=.tags_sh,$HOME/.vim/tags/sh
 " }}}
+"
 " Section Plugins {{{
 "
 
@@ -293,4 +294,7 @@ let g:airline#extensions#tabline#show_splits = 0
 " don't hide quotes in json files
 let g:vim_json_syntax_conceal = 0
 
+let g:vdebug_options = { 'server': '127.0.0.1', 'port': '9000' }
+
 " }}}
+"
