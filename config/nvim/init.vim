@@ -296,5 +296,9 @@ let g:vim_json_syntax_conceal = 0
 
 let g:vdebug_options = { 'server': '127.0.0.1', 'port': '9000' }
 
+" Mapping for maximize
+let g:maximizer_set_default_mapping = 1
+let g:maximizer_default_mapping_key = '<leader>z'
+
 " }}}
 "

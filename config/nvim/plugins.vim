@@ -29,6 +29,7 @@ Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'} " generator for goto commands in ycm to work
 Plug 'vim-scripts/matchit.zip' " extended % matching
 
+Plug 'szw/vim-maximizer' "maximizes a window and resizes it back again
 
 " html / templates
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
