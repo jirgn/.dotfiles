@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+DEFAULT_PROXY_HOST=192.168.160.252
+DEFAULT_PROXY_PORT=3128
+export http_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
+export https_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
+export ftp_proxy="http://$DEFAULT_PROXY_HOST:$DEFAULT_PROXY_PORT"
+export no_proxy="*.local, 127.0.0.1, 169.254.*, 192.168.99.100 , *.vbox, *.franz-cornelsen-bildungsgruppe.de, *.cornelsen.de, *.entwicklung.fccs, *.localhost, *.cornelsen-schulverlage.de, $DEFAULT_PROXY_HOST, *.duden-schulbuch.de, *oldenbourg.de"
+export HTTP_PROXY=$http_proxy
+export HTTPS_PROXY=$https_proxy
+export FTP_PROXY=$ftp_proxy
+export NO_PROXY=$no_proxy
+
+
+# -----------------------------------------
+# gitproxy
+# -----------------------------------------
+
+# requires brew install socat
+if [ -f `brew --prefix`/bin/socat ]; then
+   export GIT_PROXY_COMMAND=/tmp/gitproxy;
+
+   cat  > $GIT_PROXY_COMMAND <<EOF
+#!/usr/bin/env bash
+`brew --prefix`/bin/socat - PROXY:$DEFAULT_PROXY_HOST:\$1:\$2,proxyport=$DEFAULT_PROXY_PORT
+EOF
+   chmod +x $GIT_PROXY_COMMAND;
+fi

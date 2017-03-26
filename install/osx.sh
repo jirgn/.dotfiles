@@ -1,6 +1,10 @@
+#!/usr/bin/env sh
 ######################################################
 # thanx to andi balke 
 # https://github.com/pansen/dotfiles/blob/master/.osx
+
+echo "\n\nConfiguring OS"
+echo "=================="
 
 # Google: disable autoupdate
 # see http://support.google.com/installer/bin/answer.py?hl=en&ctx=go&answer=147176
@@ -43,11 +47,11 @@ echo "finder: show full title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
 # screencapture preferences
-echo "system: screencapture type jpg"
-defaults write com.apple.screencapture type jpg
+echo "system: screencapture type png"
+defaults write com.apple.screencapture type -string "png"
 
 echo "system: screencapture location to ~/Desktop/screencapture"
-defaults write com.apple.screencapture location ~/Desktop/screencapture/
+defaults write com.apple.screencapture location -string "${HOME}/Desktop/screencapture"
 
 
 # ipv6 stuff
@@ -76,7 +80,7 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 echo "Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Increase window resize speed for Cocoa applications
+echo "Increase window resize speed for Cocoa applications"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 echo "Avoid creating .DS_Store files on network volumes"
@@ -97,14 +101,12 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "Disable the Ping sidebar in iTunes"
-defaults write com.apple.iTunes disablePingSidebar -bool true
-
-echo "Disable all the other Ping stuff in iTunes"
-defaults write com.apple.iTunes disablePing -bool true
-
 echo "Make ⌘ + F focus the search input in iTunes"
 defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 echo "Show the ~/Library folder"
 chflags nohidden ~/Library
+
+echo "Kill affected applications"
+for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+

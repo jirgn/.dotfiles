@@ -1,0 +1,8 @@
+.netrwhist
+npm-debug.log
+
+plug.vim.old
+
+vim/vim.symlink/spell/
+vim/vim.symlink/plugged/
+config/nvim/plugged/

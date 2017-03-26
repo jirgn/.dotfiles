@@ -1,0 +1,2 @@
+#!/bin/sh
+XDEBUG_CONFIG="idekey=xdebug" `which php` "$@"

@@ -1,0 +1,8 @@
+export DOTFILES=$HOME/.dotfiles
+
+source $DOTFILES/environment/system
+
+for config in $DOTFILES/bash/config/*.bash; do
+    source $config
+done
+
