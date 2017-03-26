@@ -19,6 +19,7 @@ export LC_ALL=de_DE.UTF-8
 PATH=$PATH:/usr/local/bin             # User binaries
 PATH=$PATH:/usr/local/sbin            # User binaries
 PATH=$PATH:$HOME/bin                  # Personal binaries
+PATH=$PATH:$DOTFILES/bin              # Personal binaries
 PATH=$PATH:$HOME/.composer/vendor/bin # Global Composer bin
 PATH=$PATH:/usr/X11/bin               # X11 Stuff
 
