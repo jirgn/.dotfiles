@@ -11,7 +11,6 @@ if [ "$(uname)" == "Darwin" ]; then
     echo "\n\nRunning on OSX"
 
     source install/brew.sh
-
     source install/osx.sh
 
     # fix xterm problem -> <C-h> binding issue 
@@ -24,9 +23,10 @@ if [ "$(uname)" == "Darwin" ]; then
     infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
     tic $TERM.ti
     cd -
-    
-    # source install/nvm.sh
 fi
+
+source install/composer.sh
+source install/pip.sh
 
 echo "installing tmux plugin manager"
 if [ ! -d $HOME/.tmux/plugins ]; then

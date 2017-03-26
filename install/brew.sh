@@ -8,51 +8,67 @@ fi
 echo "\n\nInstalling homebrew packages..."
 echo "=============================="
 
+# brew taps to execute
+taps=(
+    'universal-ctags/universal-ctags'
+)
+
+# brew formulas to isntall
+formulas=(
 # better terminal
-brew install Caskroom/cask/iterm2
-
+     'Caskroom/cask/iterm2'
+    
 # keyboard tweeks
-brew install Caskroom/cask/karabiner
-
+     'Caskroom/cask/karabiner'
+    
 # cli tools
-brew install ack
-brew install tree
-brew install wget
-
+     ack
+     tree
+     wget
+    
 # development tools
-brew install cmake
-brew tap universal-ctags/universal-ctags
-brew install --HEAD universal-ctags
-brew install phpctags
-brew install git
-brew install hub
-brew install fzf
-brew install macvim --override-system-vim
-brew install reattach-to-user-namespace
-brew install tmux
-brew install zsh
-brew install highlight
-brew install nvm
-brew install z
-brew install markdown
-brew install diff-so-fancy
-brew install editorconfig
-brew install tidy-html5
-
+     cmake
+     '--HEAD universal-ctags'
+     phpctags
+     git
+     hub
+     fzf
+     'macvim --override-system-vim'
+     'reattach-to-user-namespace'
+     tmux
+     zsh
+     highlight
+     nvm
+     z
+     markdown
+     diff-so-fancy
+     editorconfig
+     tidy-html5
+    
 # php envirionment with sniffer and packagemanager
-brew install php70
-brew install php70-msgpack 
-brew install phpmd
-brew install composer
-composer global require "squizlabs/php_codesniffer=*"
-composer global require "friendsofphp/php-cs-fixer=*"
-
+     php70
+     php70-msgpack 
+     phpmd
+     composer
+    
 # install neovim
-brew install neovim/neovim/neovim
-brew install python
-brew install python3
-pip2 install neovim --upgrade
-pip3 install neovim --upgrade
-
+     'neovim/neovim/neovim'
+     python
+     python3
+    
 # other
-brew install go
+     go
+)
+
+for tap in "${tabs[@]}"; do
+    brew tap $tap
+done
+
+for formula in "${formulas[@]}"; do
+    if brew list "$formula" > /dev/null 2>&1; then
+        echo "$formula already installed... skipping."
+    else
+        brew install $formula
+    fi
+done
+
