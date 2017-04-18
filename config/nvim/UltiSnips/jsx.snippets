@@ -22,4 +22,22 @@ import React from 'react';
 class ${1:ComponentName} extends React.Component {
 	$0
 }
+$1.propTypes = {
+	${2:propName}: ${3:React.PropTypes.type.contraint},
+};
+export default $1;
+endsnippet
+
+snippet rcomconst "react const component" b
+import React from 'react';
+
+const ${1:ComponentName} = ( props ) => (
+	${0:<someJsx></someJsx>}
+)
+
+$1.propTypes = {
+	${2:propName}: ${3:React.PropTypes.type.contraint},
+};
+
+export default $1;
 endsnippet
