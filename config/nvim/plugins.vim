@@ -21,6 +21,7 @@ Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job 
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
+Plug 'brooth/far.vim' " powerful search and replace tool
 
 Plug 'SirVer/ultisnips' " snippet manager
 Plug 'honza/vim-snippets' " snippet library
