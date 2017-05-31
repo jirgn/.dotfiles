@@ -18,25 +18,27 @@ endsnippet
 # class snippets
 snippet rcom "react component" b
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ${1:ComponentName} extends React.Component {
 	$0
 }
 $1.propTypes = {
-	${2:propName}: ${3:React.PropTypes.type.contraint},
+	${2:propName}: ${3:PropTypes.type.contraint},
 };
 export default $1;
 endsnippet
 
 snippet rcomconst "react const component" b
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ${1:ComponentName} = ( props ) => (
 	${0:<someJsx></someJsx>}
-)
+);
 
 $1.propTypes = {
-	${2:propName}: ${3:React.PropTypes.type.contraint},
+	${2:propName}: ${3:PropTypes.type.contraint},
 };
 
 export default $1;
