@@ -277,8 +277,8 @@ noremap <leader>jr :YcmCompleter GoToReferences<cr>
 noremap <leader>rr :YcmCompleter RefactorRename<cr>
 
 " set python paths for youcompleteme to work correctly
-let g:python2_host_prog = '/usr/local/python'
-let g:python3_host_prog = '/usr/local/python3'
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " airline options
 let g:airline_powerline_fonts=1
