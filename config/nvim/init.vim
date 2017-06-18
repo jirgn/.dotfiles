@@ -193,20 +193,6 @@ augroup END
 
 " }}}
 
-" Section Ctags {{{  
-" Default/Generic tag file
-set tag=tags,.tags
-
-autocmd FileType c              set tags=.tags_cpp,$HOME/.vim/tags/cpp
-autocmd FileType cpp            set tags=.tags_cpp,$HOME/.vim/tags/cpp
-autocmd FileType css            set tags=.tags_css,$HOME/.vim/tags/css
-autocmd FileType java           set tags=.tags_java,$HOME/.vim/tags/java
-autocmd FileType javascript     set tags=.tags_js,$HOME/.vim/tags/js
-autocmd FileType html           set tags=.tags_html,$HOME/.vim/tags/html
-autocmd FileType php            set tags=.tags_php,$HOME/.vim/tags/php
-autocmd FileType sh             set tags=.tags_sh,$HOME/.vim/tags/sh
-" }}}
-"
 " Section Plugins {{{
 
 " set python paths for plugins depending on python to work
@@ -233,7 +219,7 @@ endif
 nmap <silent> <leader>r :Buffers<cr>
 nmap <silent> <leader>e :FZF<cr>
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric//YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -274,14 +260,21 @@ let g:jsdoc_input_description = 1
 " mapping for jsdoc commenting
 nmap <silent> <c-d> <Plug>(jsdoc)
 
-"mappings for YouCompleteme
-noremap <leader>jd :YcmCompleter GoToDefinition<cr>
-noremap <leader>jr :YcmCompleter GoToReferences<cr>
-noremap <leader>rr :YcmCompleter RefactorRename<cr>
+" deoplete autocompletion
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+let g:tern_request_timeout = 1
+" let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
 
-" set python paths for youcompleteme to work correctly
-let g:python2_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+"Add extra filetypes
+let g:tern#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx'
+                \ ]
+
+" Use tern_for_vim.
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
 
 " airline options
 let g:airline_powerline_fonts=1
@@ -302,6 +295,14 @@ let g:vdebug_options = { 'server': '127.0.0.1', 'port': '9000' }
 " Mapping for maximize
 let g:maximizer_set_default_mapping = 1
 let g:maximizer_default_mapping_key = '<leader>z'
+
+let g:gutentags_ctags_tagfile = '.tags'
+
+" EasyAlign
+" mapping visual mode
+xmap ga <Plug>(EasyAlign)
+" mapping normal mode
+nmap ga <Plug>(EasyAlign)kk
 
 " }}}
 "
