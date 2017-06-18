@@ -208,7 +208,10 @@ autocmd FileType sh             set tags=.tags_sh,$HOME/.vim/tags/sh
 " }}}
 "
 " Section Plugins {{{
-"
+
+" set python paths for plugins depending on python to work
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Toggle NERDTree
 nmap <silent> <leader>k :NERDTreeToggle<cr>
