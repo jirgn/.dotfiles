@@ -21,13 +21,15 @@ Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job 
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
-Plug 'brooth/far.vim' " powerful search and replace tool
+Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } " powerful search and replace tool
 
 Plug 'SirVer/ultisnips' " snippet manager
 Plug 'honza/vim-snippets' " snippet library
 
-Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'} " generator for goto commands in ycm to work
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplettion
+" Plug 'Valloric/YouCompleteMe' " fancy autocompletion for several languages
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'} " generator for goto commands in ycm to work
+"
 Plug 'vim-scripts/matchit.zip' " extended % matching
 
 Plug 'szw/vim-maximizer' "maximizes a window and resizes it back again
@@ -41,6 +43,7 @@ Plug 'mustache/vim-mustache-handlebars' " mustach support
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " javascript syntax support
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript.jsx', 'javascript'  ]} " javascript syntax support
 Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
 Plug 'heavenshell/vim-jsdoc', { 'for': [ 'javascript.jsx', 'javascript' ] }
