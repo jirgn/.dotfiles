@@ -16,20 +16,24 @@ render() {
 endsnippet
 
 # class snippets
-snippet rcom "react component" b
+snippet rcom "react class component" b
 import React from 'react';
 import PropTypes from 'prop-types';
 
 class ${1:ComponentName} extends React.Component {
+	static propTypes = {
+		${2:propName}: ${3:PropTypes.type.contraint},
+	}
+
+	static defaultValues = {
+		${4:propName}: ${5:value},
+	}
 	$0
 }
-$1.propTypes = {
-	${2:propName}: ${3:PropTypes.type.contraint},
-};
 export default $1;
 endsnippet
 
-snippet rcomconst "react const component" b
+snippet rcomfn "react functional component" b
 import React from 'react';
 import PropTypes from 'prop-types';
 
