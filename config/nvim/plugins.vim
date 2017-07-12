@@ -22,6 +22,7 @@ Plug 'tpope/vim-commentary' " comment stuff out
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
+Plug 'airblade/vim-gitgutter' " show git status in the gutter (left column)
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plug 'vim-scripts/matchit.zip' " extended % matching

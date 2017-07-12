@@ -37,13 +37,24 @@ snippet rcomfn "react functional component" b
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ${1:ComponentName} = ( props ) => (
-	${0:<someJsx></someJsx>}
-);
+const ${1:ComponentName} = (props) => { 
+	const {
+		${2: propName}
+	} = props;
+
+	return (
+		${0:<someJsx></someJsx>}
+	);
+};
 
 $1.propTypes = {
-	${2:propName}: ${3:PropTypes.type.contraint},
+	$2: ${3:PropTypes.type.contraint},
 };
+
+$1.defaultProps = {
+	$2: ${3:defaultValue}
+}
 
 export default $1;
 endsnippet
+

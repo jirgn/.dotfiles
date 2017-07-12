@@ -10,3 +10,101 @@ ${1:methodName}( ${2:args} ) {
 	$0
 }
 endsnippet
+
+snippet fnarr "es6 arrow function" b
+(${1:arguments}) => { 
+	${0:implement}
+};
+endsnippet
+
+# redux snippets
+snippet rxcontainer "react container component with redux bindings" b
+import { connect } from 'react-redux';
+import ${1:ComponentToWrap} from '${2:path/to/component}';
+import { ${3:actionCreator} } from 'actions';
+
+const mapStateToProps = (state) => {
+  return {
+    ${3:propInComponent}: ${4:state.value}
+  };
+};
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    ${5:callbackInComponent}: (${6:callbackParam}) => {
+      dispatch(
+		$3($6)
+      );
+    }
+  };
+};
+
+const ${7:ContainerName} = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)($1);
+
+export default $7;
+endsnippet
+
+snippet rxreducer "redux reducer" b
+import { ${1:ACTION_CONSTANT} } from 'actions/const';
+
+const initialState = {};
+
+function reducer(state = initialState, action) {
+	switch (action.type) {
+		case $1:
+			${0:implement as pure function and return new state}
+		default:
+			return state;
+	}
+}
+export default reducer;
+endsnippet
+
+snippet rxac "redux action creator" b
+import { ${1:ACTION_CONSTANT} } from './const';
+
+$0
+
+const action = (${2:payload}) => {
+	return {
+		type: $1,
+		$2
+	};
+};
+
+module.exports = action;
+endsnippet
+
+snippet saga "saga" b
+import { takeEvery, put, call } from 'redux-saga';
+import { ${1:ACTION_CONSTANT} } from 'actions/const';
+
+export function * ${2:worker} {
+	console.log('implement worker');
+}
+
+export function * ${3:watcherFn}() {
+	yield ${4:takeEvery($1, $2);
+}
+endsnippet
+
+snippet rtcp "react test shell presentational component" b
+import ${1:componentName} from 'components/${2:path}/$1';
+
+describe('<$1 />', () => {
+	describe('when rendering the component', () => {
+		$0
+	});
+
+	describe('when interacting with the component', () => {
+	});
+});
+endsnippet
+
+snippet mtest "mocha test case" b
+it('${1:should be a transparent description of testcase}', () => {
+	$0
+});
+endsnippet
