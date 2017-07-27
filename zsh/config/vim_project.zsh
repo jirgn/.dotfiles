@@ -15,12 +15,14 @@ function make-ctags-css() {
 		2>/dev/null
 }
 function make-ctags-js() {
-	ctags -R -f .tags_js \
-        --exclude="*.min.js" \
-		--file-scope=yes \
-		--sort=yes \
-		--languages=JavaScript \
-		2>/dev/null
+    find -E . -regex '.*\.(js|jsx)' -not -iname '*.min.js' -exec jsctags {} -f \; | sed '/^$/d' | sort > .tags_js
+    # find -type f -iregex '//' jsctags **/*.(js|jsx) | sed '/^$/d' | sort > .tags_js
+	# ctags -R -f .tags_js \
+    #     --exclude="*.min.js" \
+		# --file-scope=yes \
+		# --sort=yes \
+		# --languages=JavaScript \
+		# 2>/dev/null
 }
 function make-ctags-html() {
 	ctags -R -f .tags_html \
