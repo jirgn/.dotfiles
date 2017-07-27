@@ -29,11 +29,22 @@ set-option -g mouse on
 ##############################
 ### Color & Style Settings ###
 ##############################
-source $DOTFILES/tmux/theme.tmux
+# source $DOTFILES/tmux/theme.tmux # dracula like colorscheme
+# solrarized loaded as plugin see plugin section
+tm_icon="🙊"
+tm_battery="#(~/.dotfiles/scripts/battery_indicator.sh)"
+tm_date="#[fg=$tm_color_inactive] %R %d %b"
+tm_host="#[fg=$tm_color_feature,bold]#h"
+tm_session_name="#[fg=$tm_color_feature,bold]$tm_icon #S"
+tm_prefix_highlight="#[fg=$tm_color_active]#{prefix_highlight}"
+
+set -g status-left $tm_session_name' '
+set -g status-right $tm_prefix_highlight' '$tm_battery' '$tm_tunes' '$tm_date' '$tm_host
 
 ########################
 ###  List of plugins ###
 ########################
+set -g @plugin 'seebi/tmux-colors-solarized'
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
@@ -47,6 +58,7 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 
 # Plugin Features
 # ################
+set -g @colors-solarized 'dark'
 #
 # activate optionals feature for tmux-resurrect plugin
 # for vim

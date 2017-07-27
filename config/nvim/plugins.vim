@@ -2,6 +2,7 @@ call plug#begin("~/.config/nvim/plugged")
 
 " colorschemes
 Plug 'dracula/vim'
+Plug 'lifepillar/vim-solarized8'
 
 " utilities
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
@@ -28,6 +29,7 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'ludovicchabant/vim-gutentags' " ctag autogeneration
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplettion
 Plug 'junegunn/vim-easy-align' " alignment 
+Plug 'majutsushi/tagbar' " outliner based on ctags
 
 " html / templates
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx' ] } " emmet support for vim - easily create markdup wth CSS-like syntax

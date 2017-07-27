@@ -26,12 +26,13 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " Section User Interface {{{
 
 " enable 24 bit color support if supported
-if (has("termguicolors"))
-    set termguicolors
-endif
+" if (has("termguicolors"))
+"     set termguicolors
+" endif
 
-set t_Co=256                " Explicitly tell vim that the terminal supports 256 colors"
-colorscheme dracula         " Set the colorscheme
+set t_Co=16
+colorscheme solarized8_dark_flat " Set the colorscheme
+let g:solarized_termcolors=16
 
 " make the highlighting of tabs and other non-text less annoying
 highlight SpecialKey ctermbg=none ctermfg=8
@@ -137,9 +138,6 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 
-" window close
-map <leader>wc :wincmd q<cr>
-
 " toggle cursor line
 nnoremap <leader>i :set cursorline!<cr>
 
@@ -164,7 +162,7 @@ augroup configgroup
     autocmd VimResized * exe 'normal! \<c-w>='
     autocmd BufWritePost .vimrc,.vimrc.local,init.vim source %
     autocmd BufWritePost .vimrc.local source %
-     
+
     " save all files on focus lost, ignoring warnings about untitled buffers
     autocmd FocusLost * silent! wa
 
@@ -184,11 +182,10 @@ augroup configgroup
 
     " puppet-commentary
     autocmd FileType puppet setlocal commentstring=#\ %s
-    
+
     " activate neomake for linting
     autocmd! BufWritePost * Neomake
-    
-    
+
 augroup END
 
 " }}}
@@ -237,10 +234,6 @@ nmap <leader>ge :Gedit<cr>
 nmap <silent><leader>gr :Gread<cr>
 nmap <silent><leader>gb :Gblame<cr>
 
-nmap <leader>m :MarkedOpen!<cr>
-nmap <leader>mq :MarkedQuit<cr>
-nmap <leader>* *<c-o>:%s///gn<cr>
-
 " makers for javascript syntax
 let g:neomake_javascript_enabled_makers = [ 'eslint' ]
 let g:neomake_jsx_enabled_makers = [ 'eslint' ]
@@ -268,9 +261,9 @@ let g:tern_request_timeout = 1
 
 "Add extra filetypes
 let g:tern#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx'
-                \ ]
+    \ 'jsx',
+    \ 'javascript.jsx'
+    \ ]
 
 " Use tern_for_vim.
 let g:tern#command = ["tern"]
@@ -280,12 +273,12 @@ let g:tern#arguments = ["--persistent"]
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='dracula'
+let g:airline_theme='solarized'
+let g:airline#extensions#tagbar#enabled = 0 " enable airline tabline
 let g:airline#extensions#tabline#enabled = 1 " enable airline tabline
 let g:airline#extensions#tabline#tab_min_count = 2 " only show tabline if tabs are being used (more than 1 tab open)
 let g:airline#extensions#tabline#show_buffers = 0 " do not show open buffers in tabline
 let g:airline#extensions#tabline#show_splits = 0
-
 
 " don't hide quotes in json files
 let g:vim_json_syntax_conceal = 0
@@ -297,6 +290,13 @@ let g:maximizer_set_default_mapping = 1
 let g:maximizer_default_mapping_key = '<leader>z'
 
 let g:gutentags_ctags_tagfile = '.tags'
+" let g:gutentags_ctags_executable_javascript = 'jsctags'
+" let g:gutentags_project_info = [
+"     \{'type': 'python', 'file': 'setup.py'},
+"     \{'type': 'ruby', 'file': 'Gemfile'},
+"     \{'type': 'javascript', 'file': 'package.json'},
+"     \{'type': 'php', 'file': 'composer.json'}
+" \]
 
 " EasyAlign
 " mapping visual mode
