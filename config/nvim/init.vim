@@ -26,13 +26,20 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " Section User Interface {{{
 
 " enable 24 bit color support if supported
+" when unsing solarized the term color pallete with 16 colors is far better looking than the full color support from
+" terminal
 " if (has("termguicolors"))
 "     set termguicolors
 " endif
+colorscheme solarized8_light_flat " Set the colorscheme
+if !has('gui_running')
+    " Compatibility for Terminal
+    let g:solarized_termtrans=1
 
-set t_Co=16
-colorscheme solarized8_dark_flat " Set the colorscheme
-let g:solarized_termcolors=16
+    " Make Solarized use 16 colors for Terminal support
+    let g:solarized_termcolors=16
+    set t_Co=16
+endif
 
 " make the highlighting of tabs and other non-text less annoying
 highlight SpecialKey ctermbg=none ctermfg=8
