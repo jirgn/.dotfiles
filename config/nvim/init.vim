@@ -10,13 +10,17 @@ abbr teh the
 abbr tempalte template
 abbr fitler filter
 
-set shada='20,<50,s10       " reducing number of lines in viminfo file -- fixing slow startup times
+if (has('nvim'))
+  set shada='20,<50,s10       " reducing number of lines in viminfo file -- fixing slow startup times
+else
+  set viminfo='20,<50,s10
+endif
 
 set nocompatible            " not compatible with vi
 set autoread                " detect when a file is changed
 
 set history=1000            " change history to 1000
-set textwidth=120
+" set textwidth=120
 
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -25,22 +29,18 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Section User Interface {{{
 
-" enable 24 bit color support if supported
-" when unsing solarized the term color pallete with 16 colors is far better looking than the full color support from
-" terminal
-" if (has("termguicolors"))
-"     set termguicolors
-" endif
-colorscheme solarized8_light " Set the colorscheme
+colorscheme solarized " Set the colorscheme
+set background=dark
+let g:solarized_degrade   = 0
+let g:solarized_bold      = 0
+let g:solarized_underline = 0
+let g:solarized_italic    = 0
+let g:solarized_contrast  = "normal" " "normal"|   "high" or "low"
+let g:solarized_visibility= "normal" " "normal"|   "high" or "low"et background=dark
 if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ Mono:h13
 else
-    " Compatibility for Terminal
     let g:solarized_termtrans=1
-
-    " Make Solarized use 16 colors for Terminal support
-    let g:solarized_termcolors=16
-    set t_Co=16
 endif
 
 " make the highlighting of tabs and other non-text less annoying
