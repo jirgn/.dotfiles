@@ -31,8 +31,10 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " if (has("termguicolors"))
 "     set termguicolors
 " endif
-colorscheme solarized8_light_flat " Set the colorscheme
-if !has('gui_running')
+colorscheme solarized8_light " Set the colorscheme
+if has('gui_running')
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ Mono:h13
+else
     " Compatibility for Terminal
     let g:solarized_termtrans=1
 
@@ -206,7 +208,6 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " Toggle NERDTree
 nmap <silent> <leader>k :NERDTreeToggle<cr>
 " expand to the path of the file in the current buffer
-nmap <silent> <leader>y :NERDTreeFind<cr>
 
 let NERDTreeShowHidden=1
 
