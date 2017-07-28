@@ -32,9 +32,9 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 colorscheme solarized " Set the colorscheme
 set background=dark
 let g:solarized_degrade   = 0
-let g:solarized_bold      = 0
-let g:solarized_underline = 0
-let g:solarized_italic    = 0
+let g:solarized_bold      = 1
+let g:solarized_underline = 1
+let g:solarized_italic    = 1
 let g:solarized_contrast  = "normal" " "normal"|   "high" or "low"
 let g:solarized_visibility= "normal" " "normal"|   "high" or "low"et background=dark
 if has('gui_running')
@@ -205,10 +205,9 @@ augroup END
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
-" Toggle NERDTree
+" NERDTree
 nmap <silent> <leader>k :NERDTreeToggle<cr>
-" expand to the path of the file in the current buffer
-
+nmap <silent> <leader>y :NERDTreeFind<cr>
 let NERDTreeShowHidden=1
 
 let g:fzf_layout = { 'down': '~25%' }
