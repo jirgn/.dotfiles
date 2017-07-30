@@ -8,6 +8,7 @@ Plug 'altercation/vim-colors-solarized'
 
 " utilities
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
+Plug 'airblade/vim-gitgutter' " gitstatus in the gutter column
 Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
 Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } " powerful search and replace tool
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
