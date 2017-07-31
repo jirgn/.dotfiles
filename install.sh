@@ -26,6 +26,7 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 source install/composer.sh
+source install/npm.sh
 source install/pip.sh
 
 echo "installing tmux plugin manager"

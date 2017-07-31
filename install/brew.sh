@@ -11,6 +11,8 @@ echo "=============================="
 # brew taps to execute
 taps=(
     'universal-ctags/universal-ctags'
+    'homebrew/homebrew-php'
+    'neovim/neovim'
 )
 
 # brew formulas to isntall
@@ -29,7 +31,6 @@ formulas=(
 # development tools
      cmake
      '--HEAD universal-ctags'
-     phpctags
      git
      hub
      fzf
@@ -39,6 +40,7 @@ formulas=(
      zsh
      highlight
      nvm
+     npm
      z
      markdown
      diff-so-fancy
@@ -52,7 +54,7 @@ formulas=(
      composer
     
 # install neovim
-     'neovim/neovim/neovim'
+     neovim
      python
      python3
     
@@ -60,7 +62,7 @@ formulas=(
      go
 )
 
-for tap in "${tabs[@]}"; do
+for tap in "${taps[@]}"; do
     brew tap $tap
 done
 
