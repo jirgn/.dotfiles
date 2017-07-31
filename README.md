@@ -20,7 +20,7 @@ Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSa
 coding and the terminal.
 Just download it, install it on your system and ensure it is used by your favourite Terminal(emulator).
 
-# Installation
+## Installation
 Simply checkout this repo to your home directory.
 
     git clone git@github.com:jirgn/.dotfiles.git ~/
@@ -29,9 +29,8 @@ and run the install script
 
     cd ~/.dotfiles && ./install.sh
 
-**Hint**
-My Setup assumes MacOs and brew installed on your system. If you are using linux, just take a look into the ./install/brew.sh to get an idea what to install with your favourite package manager.
-You can extend the install.sh with your system setup to make run. 
-Good Luck
+>My Setup assumes MacOs and brew installed on your system. If you are using linux, just take a look into the ./install/brew.sh to get an idea what to install with your favourite package manager.
+>You can extend the install.sh with your system setup to make run. 
+>Good Luck
 
 
