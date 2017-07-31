@@ -8,10 +8,7 @@ endif
 
 call plug#begin("~/.config/nvim/plugged")
 
-
 " colorschemes
-" Plug 'dracula/vim'
-" Plug 'lifepillar/vim-solarized8'
 Plug 'altercation/vim-colors-solarized'
 
 " utilities
