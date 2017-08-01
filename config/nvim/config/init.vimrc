@@ -38,6 +38,7 @@ Plug 'ludovicchabant/vim-gutentags' " ctag autogeneration
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplettion
 Plug 'junegunn/vim-easy-align' " alignment 
 Plug 'majutsushi/tagbar' " outliner based on ctags
+Plug 'nelstrom/vim-visual-star-search' " enables * search on visual selection
 
 " html / templates
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
