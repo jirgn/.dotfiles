@@ -1,10 +1,19 @@
+" vim:fdm=marker
+
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create- 
+    \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
 call plug#begin("~/.config/nvim/plugged")
 
 " colorschemes
-Plug 'dracula/vim'
+Plug 'altercation/vim-colors-solarized'
 
 " utilities
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
+Plug 'airblade/vim-gitgutter' " gitstatus in the gutter column
 Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
 Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } " powerful search and replace tool
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
@@ -29,6 +38,8 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'ludovicchabant/vim-gutentags' " ctag autogeneration
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplettion
 Plug 'junegunn/vim-easy-align' " alignment 
+Plug 'majutsushi/tagbar' " outliner based on ctags
+Plug 'nelstrom/vim-visual-star-search' " enables * search on visual selection
 
 " html / templates
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
@@ -39,7 +50,7 @@ Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " autocompletion and refactoring 
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " javascript syntax support
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " javascript extended navigation with tern
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript.jsx', 'javascript'  ]} " javascript syntax support
 Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
 Plug 'heavenshell/vim-jsdoc', { 'for': [ 'javascript.jsx', 'javascript' ] }
