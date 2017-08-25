@@ -24,23 +24,23 @@ import ${1:ComponentToWrap} from '${2:path/to/component}';
 import { ${3:actionCreator} } from 'actions';
 
 const mapStateToProps = (state) => {
-  return {
-    ${3:propInComponent}: ${4:state.value}
-  };
+	return {
+		${3:propInComponent}: ${4:state.value}
+	};
 };
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    ${5:callbackInComponent}: (${6:callbackParam}) => {
-      dispatch(
+	return {
+		${5:callbackInComponent}: (${6:callbackParam}) => {
+			dispatch(
 		$3($6)
-      );
-    }
-  };
+			);
+		}
+	};
 };
 
 const ${7:ContainerName} = connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )($1);
 
 export default $7;
@@ -103,7 +103,13 @@ describe('<$1 />', () => {
 });
 endsnippet
 
-snippet mtest "mocha test case" b
+snippet mdesc "mocha describe" b
+describe('${1:file-path/component-name/method-name}', () => {
+	$0
+});
+endsnippet
+
+snippet mit "mocha test case" b
 it('${1:should be a transparent description of testcase}', () => {
 	$0
 });
