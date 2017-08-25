@@ -1,6 +1,5 @@
 " vim:fdm=marker
 
-
 " Neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = [ 'eslint' ]
@@ -53,12 +52,14 @@ let g:javascript_plugin_jsdoc = 1
 "vim-jsdoc
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
-nmap <silent> <c-d> <Plug>(jsdoc) " mapping for jsdoc commenting
+nmap <silent> <c-d> <Plug>(jsdoc)
 
 " deoplete autocompletion
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:tern_request_timeout = 1
+let g:deoplete#file#enable_buffer_path = 1
+
 " let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
 
 " tern-for-vim
