@@ -9,7 +9,7 @@ endif
 call plug#begin("~/.config/nvim/plugged")
 
 " colorschemes
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 " utilities
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more

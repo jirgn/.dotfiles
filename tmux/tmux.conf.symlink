@@ -58,7 +58,7 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 
 # Plugin Features
 # ################
-set -g @colors-solarized 'light'
+set -g @colors-solarized 'dark'
 #
 # activate optionals feature for tmux-resurrect plugin
 # for vim

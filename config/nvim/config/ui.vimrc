@@ -1,17 +1,12 @@
 " vim:fdm=marker
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_light = 'hard'
 
-colorscheme solarized " Set the colorscheme
-set background=light
-let g:solarized_degrade   = 0
-let g:solarized_bold      = 1
-let g:solarized_underline = 1
-let g:solarized_italic    = 1
-let g:solarized_contrast  = "normal" " "normal"|   "high" or "low"
-let g:solarized_visibility= "normal" " "normal"|   "high" or "low"et background=dark
+colorscheme gruvbox " Set the colorscheme
+set background=dark
+
 if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ Mono:h13
-else
-    let g:solarized_termtrans=1
 endif
 
 " make the highlighting of tabs and other non-text less annoying
