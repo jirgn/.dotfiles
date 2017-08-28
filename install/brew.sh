@@ -20,9 +20,6 @@ formulas=(
 # better terminal
      'Caskroom/cask/iterm2'
     
-# keyboard tweeks
-     'Caskroom/cask/karabiner'
-    
 # cli tools
      ack
      tree
@@ -32,6 +29,7 @@ formulas=(
      cmake
      '--HEAD universal-ctags'
      git
+     git-flow
      hub
      fzf
      'macvim --override-system-vim'
