@@ -88,5 +88,3 @@ set tm=500
 if has('mouse')
 	set mouse=a
 endif
-
-
