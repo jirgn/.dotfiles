@@ -103,5 +103,5 @@ let g:gutentags_ctags_tagfile = '.tags'
 
 " EasyAlign
 xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)kk
+nmap ga <Plug>(EasyAlign)
 

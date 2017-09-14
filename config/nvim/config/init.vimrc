@@ -31,6 +31,7 @@ Plug 'tpope/vim-commentary' " comment stuff out
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
+Plug 'tpope/vim-unimpaired' " mappings for easier usage of common actions like next, previous or line switching
 Plug 'airblade/vim-gitgutter' " show git status in the gutter (left column)
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
@@ -76,7 +77,7 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' } " PHP Autocompleter
-Plug 'joonty/vdebug', { 'for': 'php' } " dpkg debugger 
+Plug 'joonty/vdebug', { 'for': [ 'php', 'javascript', 'javascript.jsx' ] } " dpkg debugger 
 " Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' } "PHP Autocompleter
 
 call plug#end()
