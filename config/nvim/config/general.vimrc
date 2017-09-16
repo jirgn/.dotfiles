@@ -8,7 +8,7 @@ abbr fitler filter
 
 " reducing number of lines in viminfo file -- fixing slow startup times
 if (has('nvim'))
-  set shada='20,<50,s10       
+  set shada='20,<50,s10
 else
   set viminfo='20,<50,s10
 endif
