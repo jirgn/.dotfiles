@@ -13,6 +13,8 @@ taps=(
     'universal-ctags/universal-ctags'
     'homebrew/homebrew-php'
     'neovim/neovim'
+    'osx-cross/avr'
+    'PX4/homebrew-px4'
 )
 
 # brew formulas to isntall
@@ -46,10 +48,16 @@ formulas=(
      tidy-html5
     
 # php envirionment with sniffer and packagemanager
-     php70
-     php70-msgpack 
+     php71
+     php71-msgpack 
      phpmd
      composer
+
+# qmk keyboard firmware -- planck keyboard-
+     avr-gcc
+     dfu-programmer
+     gcc-arm-none-eabi
+
     
 # install neovim
      neovim
