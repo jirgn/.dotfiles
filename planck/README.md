@@ -4,7 +4,7 @@ The Plank is a ortolinear Keyboard created by [olkb](https://olkb.com/planck), t
 Firmware](https://github.com/qmk/qmk_firmware). 
 The files of this repo are my current keyboard layout configuration.
 
-This layout is initially copied from [Noah Fredericks great layout](https://github.com/noahfrederick/dots/tree/master/planck) and will be modiefied by my needs.
+This layout is initially copied from [Noah Fredericks great layout](https://github.com/noahfrederick/dots/tree/master/planck) and will be modified by my needs.
 
 ## Build
 
