@@ -30,7 +30,9 @@ enum planck_layers {
 enum planck_macros {
   M_VERSION,
   LALT_BRACE,
-  RALT_BRACE
+  RALT_BRACE,
+  LALT_LABK,
+  RALT_RABK
 };
 
 // Dashes (macOS)
@@ -74,14 +76,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *   Tap for [ -- │ Fn3 │Hyper│  ⌥  │  ⌘  │  ↓  │   Space   │  ↑  │  ⌘  │  ⌥  │Hyper│ Fn3 │ -- Tap for ]
    *                └─────┴─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┴─────┴─────┘
    *                        /     /                                         /     /
-   *   Tap for ] [ --------'-----/-----------------------------------------/-----'
+   *   Tap for < > --------'-----/-----------------------------------------/-----'
    *   Tap for { } -------------'-----------------------------------------'
    */
   [BASE_QWERTY_LAYER] = {
     {KC_TAB,  KC_Q,           KC_W, KC_E,    KC_R,  KC_T,   KC_Y,    KC_U,  KC_I,    KC_O,   KC_P,           KC_QUOT},
     {F(5),    KC_A,           KC_S, KC_D,    KC_F,  KC_G,   KC_H,    KC_J,  KC_K,    KC_L,   F(1),           F(6)},
     {KC_LSPO, KC_Z,           KC_X, KC_C,    KC_V,  KC_B,   KC_N,    KC_M,  KC_COMM, KC_DOT, KC_SLSH,        KC_RSPC},
-    {F(3),    ALL_T(KC_RBRC), F(7), KC_LGUI, LOWER, KC_SPC, KC_BSPC, RAISE, KC_RGUI, F(8),   ALL_T(KC_LBRC), F(4)}
+    {F(3),    ALL_T(KC_RBRC), F(9), KC_LGUI, LOWER, KC_SPC, KC_BSPC, RAISE, KC_RGUI, F(10),   ALL_T(KC_LBRC), F(4)}
   },
 
   /* Base layer (Colemak)
@@ -135,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {LGUI(KC_GRV), KC_F1,          KC_F2,  KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,         S(KC_3)},
     {F(5),         KC_1,           KC_2,   KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,   KC_0,           F(6)},
     {KC_LSPO,      KC_MINS,        KC_EQL, KC_GRV,  KC_BSLS, KC_COLN, KC_NDSH, KC_MDSH, KC_COMM, KC_DOT, KC_SLSH,        KC_RSPC},
-    {F(3),         ALL_T(KC_LBRC), F(7),   KC_LGUI, LOWER,   KC_BSPC, KC_BSPC, RAISE,   KC_RGUI, F(8),   ALL_T(KC_RBRC), F(4)}
+    {F(3),         ALL_T(KC_LBRC), F(9),   KC_LGUI, LOWER,   KC_BSPC, KC_BSPC, RAISE,   KC_RGUI, F(10),   ALL_T(KC_RBRC), F(4)}
   },
 
   /* Symbol layer
@@ -229,6 +231,8 @@ const uint16_t PROGMEM fn_actions[] = {
   [6] = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_ENT),
   [7] = ACTION_MACRO_TAP(LALT_BRACE),
   [8] = ACTION_MACRO_TAP(RALT_BRACE),
+  [9] = ACTION_MACRO_TAP(LALT_LABK),
+  [10] = ACTION_MACRO_TAP(RALT_RABK),
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
@@ -267,6 +271,40 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
           add_weak_mods(MOD_LSFT);
           register_code(KC_RBRACKET);
           unregister_code(KC_RBRACKET);
+          del_weak_mods(MOD_LSFT);
+        }
+
+        record->tap.count = 0;
+      }
+      break;
+    case LALT_LABK:
+      if (record->event.pressed) {
+        register_mods(MOD_LALT);
+        record->tap.interrupted = 0;
+      } else {
+        unregister_mods(MOD_LALT);
+
+        if (record->tap.count && !record->tap.interrupted) {
+          add_weak_mods(MOD_LSFT);
+          register_code(KC_COMMA);
+          unregister_code(KC_COMMA);
+          del_weak_mods(MOD_LSFT);
+        }
+
+        record->tap.count = 0;
+      }
+      break;
+    case RALT_RABK:
+      if (record->event.pressed) {
+        register_mods(MOD_RALT);
+        record->tap.interrupted = 0;
+      } else {
+        unregister_mods(MOD_RALT);
+
+        if (record->tap.count && !record->tap.interrupted) {
+          add_weak_mods(MOD_LSFT);
+          register_code(KC_DOT);
+          unregister_code(KC_DOT);
           del_weak_mods(MOD_LSFT);
         }
 
