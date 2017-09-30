@@ -8,5 +8,17 @@ This layout is initially copied from [Noah Fredericks great layout](https://gith
 
 ## Build
 
+Install the [Quantum Mechanical Keyboard Firmware](https://github.com/qmk/qmk_firmware) and add this planck dir into the directory 
+ ./plank/keymaps.
 
+Example
 
+    ln -s /path/to/dotfiles/planck /path/to/qmk_firmware/keyboards/planck/keymaps/jirgn
+    sudo make clean && sudo make planck-rev4-jirgn-dfu
+
+If you have Error like
+
+    dfu-programmer: no device present.
+    Error: Bootloader not found. Trying again in 5s.
+
+try to use the manual switch on the keyboard directly (little hole in the bottom).
