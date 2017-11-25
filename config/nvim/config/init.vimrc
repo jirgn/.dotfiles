@@ -1,4 +1,4 @@
-" vim:fdm=marker
+" vim:fdm=marker 
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create- 
@@ -79,6 +79,8 @@ Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' } " PHP Autocompleter
 Plug 'joonty/vdebug', { 'for': [ 'php', 'javascript', 'javascript.jsx' ] } " dpkg debugger 
 " Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' } "PHP Autocompleter
+" typo3 neos
+Plug 'elmar-hinz/vim.typoscript'
 
 call plug#end()
 

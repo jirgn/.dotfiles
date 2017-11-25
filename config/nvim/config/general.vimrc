@@ -43,6 +43,9 @@ augroup configgroup
     " confluence
     autocmd BufNewFile,BufReadPost *.confluence set filetype=confluencewiki
 
+    " neos
+    autocmd BufNewFile,BufReadPost *.fusion set filetype=typoscript
+
     " fix some issues with puppet and ruby
     if v:version >= 703
         " Note: Relative number is quite slow with Ruby, so is cursorline
