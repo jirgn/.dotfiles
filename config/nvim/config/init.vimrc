@@ -42,9 +42,10 @@ Plug 'junegunn/vim-easy-align' " alignment
 Plug 'majutsushi/tagbar' " outliner based on ctags
 Plug 'nelstrom/vim-visual-star-search' " enables * search on visual selection
 Plug 'junegunn/gv.vim' " extension for fugitive to show log --graph
+Plug 'eshion/vim-sync' " filesync to remote or local directory
 
 " html / templates
-Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
+Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }  " mustach support

@@ -45,6 +45,7 @@ augroup configgroup
 
     " neos
     autocmd BufNewFile,BufReadPost *.fusion set filetype=typoscript
+    autocmd FileType typoscript setlocal commentstring=#\ %s
 
     " fix some issues with puppet and ruby
     if v:version >= 703
