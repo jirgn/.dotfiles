@@ -39,7 +39,6 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'ludovicchabant/vim-gutentags' " ctag autogeneration
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplettion
 Plug 'junegunn/vim-easy-align' " alignment 
-Plug 'majutsushi/tagbar' " outliner based on ctags
 Plug 'nelstrom/vim-visual-star-search' " enables * search on visual selection
 Plug 'junegunn/gv.vim' " extension for fugitive to show log --graph
 Plug 'eshion/vim-sync' " filesync to remote or local directory
@@ -78,9 +77,9 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
 " php
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' } " PHP Autocompleter
 Plug 'joonty/vdebug', { 'for': [ 'php', 'javascript', 'javascript.jsx' ] } " dpkg debugger 
-" Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' } "PHP Autocompleter
+Plug 'padawan-php/deoplete-padawan', { 'for': 'php', 'do': 'composer install' }
+
 " typo3 neos
 Plug 'elmar-hinz/vim.typoscript'
 

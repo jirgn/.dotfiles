@@ -2,6 +2,10 @@
 
 " Neomake
 autocmd! BufWritePost * Neomake
+let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
+let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
+let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
+let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 let g:neomake_javascript_enabled_makers = [ 'eslint' ]
 let g:neomake_jsx_enabled_makers = [ 'eslint' ]
 let g:neomake_php_enabled_makers = [ 'php', 'phpmd', 'phpcs' ]
@@ -59,8 +63,6 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:tern_request_timeout = 1
 let g:deoplete#file#enable_buffer_path = 1
-
-" let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
 
 " tern-for-vim
 let g:tern#filetypes = [

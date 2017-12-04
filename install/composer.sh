@@ -9,5 +9,5 @@ packages=(
 )
 
 for package in $packages; do
-    composer global require $package
+    composer global require "$package"
 done
