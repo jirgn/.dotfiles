@@ -37,6 +37,8 @@ Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'ludovicchabant/vim-gutentags' " ctag autogeneration
+Plug 'roxma/vim-hug-neovim-rpc' " enshures deoplete compatibility in macvim
+Plug 'roxma/nvim-yarp' " enshures deoplete compatibility in macvim
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplettion
 Plug 'junegunn/vim-easy-align' " alignment 
 Plug 'nelstrom/vim-visual-star-search' " enables * search on visual selection
