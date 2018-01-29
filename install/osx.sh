@@ -22,10 +22,10 @@ defaults write com.apple.dashboard mcx-disabled -boolean YES
 
 # make the keyboard fast
 echo "system: fasten keyboard"
-defaults write NSGlobalDomain KeyRepeat -int 5
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 echo "Set a shorter Delay until key repeat"
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 # safari will ignore app-restore on restart
 echo "safari: disable persistend state"
