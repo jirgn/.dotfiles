@@ -41,7 +41,7 @@ Plug 'padawan-php/deoplete-padawan', { 'for': 'php', 'do': 'composer install' }
 
 " search replace
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
-Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } " powerful search and replace tool
+Plug 'wincent/ferret'
 
 " project 
 Plug 'mhinz/vim-startify' " fancy startscreen

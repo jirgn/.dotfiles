@@ -39,9 +39,10 @@ nnoremap <leader>a :Rg<space>
 nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>
 
 " autocommand for Rg usage in FZF
+" use ? to show preview
 " HINT use .rgignore to override .gitingore if you want to include see
 " https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#automatic-filtering
-autocmd VimEnter * command! -nargs=* Rg
+command! -nargs=* Rg
     \ call fzf#vim#grep(
     \   'rg --column --line-number --no-heading --fixed-strings --color=always '.shellescape(<q-args>), 1,
     \   <bang>0 ? fzf#vim#with_preview('up:60%')
