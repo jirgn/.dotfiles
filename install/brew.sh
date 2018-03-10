@@ -24,7 +24,7 @@ formulas=(
     
 # cli tools
      ack
-     the_silver_searcher
+     ripgrep
      tree
      wget
     

@@ -42,7 +42,6 @@ Plug 'padawan-php/deoplete-padawan', { 'for': 'php', 'do': 'composer install' }
 " search replace
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
 Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } " powerful search and replace tool
-Plug 'mileszs/ack.vim' " search inside files using ack. Same as command line ack utility, but use :Ack
 
 " project 
 Plug 'mhinz/vim-startify' " fancy startscreen
@@ -65,31 +64,25 @@ Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to p
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }  " mustach support
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
-
 " JavaScript
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " autocompletion and refactoring 
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript.jsx', 'javascript'  ]} " javascript syntax support
 Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
 Plug 'heavenshell/vim-jsdoc', { 'for': [ 'javascript.jsx', 'javascript' ] }
- 
 " styles
 Plug 'groenewege/vim-less', { 'for': 'less' } " less support
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } " sass scss syntax support
 Plug 'stephenway/postcss.vim', { 'for': [ 'css', 'scss', 'less', 'stylus' ] } " postcss syntax highlight
-
 " markdown
 Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' } " Open markdown files in Marked.app - mapped to <leader>m
 Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
-
 " puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
-
 " php
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
-
 " typo3 neos
 Plug 'elmar-hinz/vim.typoscript'
 
