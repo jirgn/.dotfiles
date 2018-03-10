@@ -18,6 +18,8 @@ Plug 'SirVer/ultisnips' " snippet manager
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plug 'joonty/vdebug', { 'for': [ 'php', 'javascript', 'javascript.jsx' ] } " dpkg debugger 
+Plug 'vim-scripts/YankRing.vim' " easy yank/paste navigation
+Plug 'moll/vim-bbye' " keep window layout on Bdelete/Bwipeout
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
@@ -26,6 +28,7 @@ Plug 'tpope/vim-commentary' " comment stuff out
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
 Plug 'tpope/vim-unimpaired' " mappings for easier usage of common actions like next, previous or line switching
+Plug 'tpope/vim-abolish' " magic substition
 Plug 'junegunn/vim-easy-align' " alignment 
 Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'szw/vim-maximizer' "maximizes a window and resizes it back again
