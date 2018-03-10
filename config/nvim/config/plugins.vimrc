@@ -1,5 +1,12 @@
 " vim:fdm=marker
 
+" Startify
+let g:startify_bookmarks = [ 
+    \   { 'd': '~/.dotfiles' } 
+    \]
+let g:startify_change_to_dir = 0
+let g:startify_change_to_vcs_root = 1
+
 " Neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
