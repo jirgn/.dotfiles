@@ -2,15 +2,14 @@
 
 echo "\n\nInstalling Python packages"
 
-pip2 install neovim --upgrade
-pip3 install neovim --upgrade
-
 packages=(
- 'neovim --upgrade'
+ "neovim"
+ "jedi"
+ "psutil"
+ "setproctitle"
 )
 
-for package in $packages; do
-    pip2 install $package
-    pip3 install $package
+for package in "${packages[@]}"; do
+    pip install --user --upgrade $package
 done
 
