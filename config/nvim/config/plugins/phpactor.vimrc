@@ -18,10 +18,9 @@ autocmd FileType php nnoremap <leader>rap :call PHPModify("add_missing_propertie
 " Fill constructor
 autocmd FileType php nnoremap <leader>rfc :call PHPModify("complete_constructor")<cr>
 
-" Extract interface
+" Extract
 autocmd FileType php nnoremap <leader>rei :call phpactor#ClassInflect()<cr>
-
-" Extract method
+autocmd FileType php nnoremap <leader>reu :call phpactor#UseAdd()<cr>
 autocmd FileType php vnoremap <leader>rem :call phpactor#ExtractMethod()<cr>
 
 " go to definition of a method / class / whatever via Ctags
