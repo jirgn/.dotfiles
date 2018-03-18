@@ -37,6 +37,10 @@ Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ..
 
 " autocompletion
 Plug 'roxma/nvim-completion-manager' "autocompletion engine
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 " search replace
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
