@@ -36,11 +36,11 @@ Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
 Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ...
 
 " autocompletion
-Plug 'roxma/vim-hug-neovim-rpc' " enshures deoplete compatibility in macvim
-Plug 'roxma/nvim-yarp' " enshures deoplete compatibility in macvim
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplettion
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " javascript extended navigation with tern
-Plug 'padawan-php/deoplete-padawan', { 'for': 'php', 'do': 'composer install' }
+Plug 'roxma/nvim-completion-manager' "autocompletion engine
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 " search replace
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
@@ -59,33 +59,42 @@ Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'airblade/vim-gitgutter' " gitstatus in the gutter column
 Plug 'junegunn/gv.vim' " extension for fugitive to show log --graph
 
-" Syntax enhancements
-"""""""""""""""""""""""""
 " html / templates
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }  " mustach support
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
+
 " JavaScript
+Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " autocompletion and refactoring 
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript.jsx', 'javascript'  ]} " javascript syntax support
 Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
 Plug 'heavenshell/vim-jsdoc', { 'for': [ 'javascript.jsx', 'javascript' ] }
+
 " styles
+Plug 'calebeby/ncm-css' " completion for css/scss/sass
 Plug 'groenewege/vim-less', { 'for': 'less' } " less support
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } " sass scss syntax support
 Plug 'stephenway/postcss.vim', { 'for': [ 'css', 'scss', 'less', 'stylus' ] } " postcss syntax highlight
+
 " markdown
 Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' } " Open markdown files in Marked.app - mapped to <leader>m
 Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
+
 " puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
+
 " php
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
+Plug 'roxma/ncm-phpactor', { 'for': 'php' } " autocomplete
+Plug 'phpactor/phpactor', { 'for': 'php', 'do': 'composer install'} " php refactoring and completion
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' } " namespace completion
+
 " typo3 neos
 Plug 'elmar-hinz/vim.typoscript'
 
