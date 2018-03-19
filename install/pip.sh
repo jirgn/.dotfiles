@@ -10,6 +10,6 @@ packages=(
 )
 
 for package in "${packages[@]}"; do
-    pip install --user --upgrade $package
+    pip3 install --user --upgrade $package
 done
 
