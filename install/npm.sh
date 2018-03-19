@@ -3,6 +3,7 @@
 echo "\n\nInstalling javascript npm packages"
 
 packages=(
+    'tern'
     'eslint'
     'babel-eslint'
     'eslint-plugin-react'
