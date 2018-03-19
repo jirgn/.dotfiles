@@ -18,6 +18,7 @@ omap <leader><tab> <plug>(fzf-maps-o)
 " ripgrep to FZF
 nnoremap <leader>a :Rg<space>
 nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>
+vnoremap <leader>a y:Rg <c-r>0<cr>
 
 " autocommand for Rg usage in FZF
 " use ? to show preview
