@@ -37,6 +37,9 @@ Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ..
 
 " autocompletion
 Plug 'roxma/nvim-completion-manager' "autocompletion engine
+if !has('nvim')
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
