@@ -6,17 +6,16 @@ autocmd FileType php setlocal omnifunc=phpactor#Complete
 " general context meneu
 autocmd FileType php nnoremap <leader>rmm :call phpactor#ContextMenu()<cr>
 
-" copy commands
-autocmd FileType php nnoremap <leader>rmc :call phpactor#MoveFile()<cr>
-autocmd FileType php nnoremap <leader>rcc :call phpactor#CopyFile()<cr>
+" lookup definitions
+autocmd FileType php nnoremap <leader>rlr :call phpactor#FindReferences()<cr>
 
-autocmd FileType php nnoremap <leader>rmd :call phpactor#FindReferences()<cr>
-
-autocmd FileType php nnoremap <leader>ric :call PHPModify("implement_contracts")<cr>
-autocmd FileType php nnoremap <leader>rap :call PHPModify("add_missing_properties")<cr>
-
-" Fill constructor
+" Fill
+" constructor
 autocmd FileType php nnoremap <leader>rfc :call PHPModify("complete_constructor")<cr>
+" interface
+autocmd FileType php nnoremap <leader>rfi :call PHPModify("implement_contracts")<cr>
+" properties
+autocmd FileType php nnoremap <leader>rfp :call PHPModify("add_missing_properties")<cr>
 
 " Extract
 autocmd FileType php nnoremap <leader>rei :call phpactor#ClassInflect()<cr>
@@ -24,7 +23,6 @@ autocmd FileType php nnoremap <leader>reu :call phpactor#UseAdd()<cr>
 autocmd FileType php vnoremap <leader>rem :call phpactor#ExtractMethod()<cr>
 
 " go to definition of a method / class / whatever via Ctags
-" map <leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 autocmd FileType php map <leader>] :call phpactor#GotoDefinition()<CR>
 
 function! PHPModify(transformer)

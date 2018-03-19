@@ -67,6 +67,7 @@ Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }  " mustach suppor
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
+Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " autocompletion and refactoring 
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript.jsx', 'javascript'  ]} " javascript syntax support
 Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
@@ -92,7 +93,6 @@ Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
 Plug 'roxma/ncm-phpactor', { 'for': 'php' } " autocomplete
 Plug 'phpactor/phpactor', { 'for': 'php', 'do': 'composer install'} " php refactoring and completion
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' } " namespace completion
-Plug 'adoy/vim-php-refactoring-toolbox', { 'for': 'php' } " set of refactoring tools for php
 
 " typo3 neos
 Plug 'elmar-hinz/vim.typoscript'
