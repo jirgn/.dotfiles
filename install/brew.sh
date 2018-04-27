@@ -11,7 +11,6 @@ echo "=============================="
 # brew taps to execute
 taps=(
     'universal-ctags/universal-ctags'
-    'homebrew/homebrew-php'
     'neovim/neovim'
     'osx-cross/avr'
     'PX4/homebrew-px4'
@@ -35,7 +34,6 @@ formulas=(
      git-flow
      hub
      fzf
-     'macvim --override-system-vim'
      'reattach-to-user-namespace'
      tmux
      zsh
@@ -50,7 +48,6 @@ formulas=(
     
 # php envirionment with sniffer and packagemanager
      php71
-     php71-msgpack 
      phpmd
      composer
 

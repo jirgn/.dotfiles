@@ -27,6 +27,7 @@ PATH=$PATH:/usr/X11/bin               # X11 Stuff
 # --------------------------
 # tools
 # --------------------------
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
 export PYENV_ROOT="$(pyenv root)"
 export GOPATH="${HOME}/.go"
 export GOROOT="$(brew --prefix golang)/libexec"
