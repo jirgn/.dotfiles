@@ -50,3 +50,5 @@ augroup configgroup
     " puppet-commentary
     autocmd FileType puppet setlocal commentstring=#\ %s
 augroup END
+
+com! FormatJSON %!python -m json.tool
