@@ -39,7 +39,6 @@ formulas=(
      zsh
      highlight
      nvm
-     npm
      z
      markdown
      diff-so-fancy
