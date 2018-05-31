@@ -15,6 +15,9 @@ vnoremap . :normal .<cr>
 " toggle cursor line
 nnoremap <leader>i :set cursorline!<cr>
 
+" shortcut to redraw current window
+nnoremap <leader>rd :redraw!<cr>
+
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
