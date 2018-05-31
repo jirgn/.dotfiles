@@ -77,6 +77,46 @@ const action = (${2:payload}) => {
 module.exports = action;
 endsnippet
 
+# react-redux
+snippet rrxcontainer "react-redux Container" b
+import { connect } from 'react-redux';
+import ${1:ComponentName} from '${2:path/to/component}/$1';
+
+const $1Container = connect(
+	${3:mapStateToProps,}
+	${4:mapDispatchToProps,}
+	${5:mergeProps,}
+)($1);
+
+export default $1Container;
+endsnippet
+
+
+snippet rrxmapprops "mapStateToProps helper" b
+const mapStateToProps = (state${1:, ownProps}) => {
+	return {
+		$0
+	};
+};
+endsnippet
+
+snippet rrxmapdispatch "mapDispatchToProps" b
+const mapDispatchToProps = (dispatch${1:, ownProps}) => {
+	return {
+		$0
+	};
+};
+endsnippet
+
+snippet rrxmergeprops "mergeProps" b
+const mapDispatchToProps = (stateProps, dispatchProps, ownProps) => {
+	return {
+		$0
+	};
+};
+endsnippet
+
+# saga
 snippet saga "saga" b
 import { takeEvery, put, call } from 'redux-saga';
 import { ${1:ACTION_CONSTANT} } from 'actions/const';
