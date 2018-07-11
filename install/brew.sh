@@ -44,6 +44,7 @@ formulas=(
      diff-so-fancy
      editorconfig
      tidy-html5
+     pyenv
     
 # php envirionment with sniffer and packagemanager
      php71
@@ -58,8 +59,6 @@ formulas=(
     
 # install neovim
      neovim
-     python
-     python3
     
 # other
      go

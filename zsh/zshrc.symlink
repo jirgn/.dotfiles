@@ -3,6 +3,7 @@ ZSH=$DOTFILES/zsh
 
 source $DOTFILES/environment/system
 source $DOTFILES/environment/fzf
+source $DOTFILES/environment/pyenv
 source $ZSH/plugins.zsh
 
 # load config 
