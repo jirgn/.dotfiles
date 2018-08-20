@@ -18,7 +18,6 @@ Plug 'SirVer/ultisnips' " snippet manager
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plug 'joonty/vdebug', { 'for': [ 'php', 'javascript', 'javascript.jsx' ] } " dpkg debugger 
-Plug 'vim-scripts/YankRing.vim' " easy yank/paste navigation
 Plug 'moll/vim-bbye' " keep window layout on Bdelete/Bwipeout
 
 " additional commands/textobjects
@@ -36,10 +35,18 @@ Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
 Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ...
 
 " autocompletion
-Plug 'roxma/nvim-completion-manager' "autocompletion engine
-if !has('nvim')
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+" Plug 'ncm2/ncm2-syntax'
+Plug 'ncm2/ncm2-cssomni'
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim'
+Plug 'phpactor/ncm2-phpactor'
+Plug 'ncm2/ncm2-ultisnips'
+
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -70,14 +77,12 @@ Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }  " mustach suppor
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
-Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' } " autocompletion and refactoring 
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript.jsx', 'javascript'  ]} " javascript syntax support
 Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
 Plug 'heavenshell/vim-jsdoc', { 'for': [ 'javascript.jsx', 'javascript' ] }
 
 " styles
-Plug 'calebeby/ncm-css' " completion for css/scss/sass
 Plug 'groenewege/vim-less', { 'for': 'less' } " less support
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
@@ -94,12 +99,16 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
 " php
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
-Plug 'roxma/ncm-phpactor', { 'for': 'php' } " autocomplete
 Plug 'phpactor/phpactor', { 'for': 'php', 'do': 'composer install'} " php refactoring and completion
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' } " namespace completion
 
 " typo3 neos
-Plug 'elmar-hinz/vim.typoscript'
+Plug 'elmar-hinz/vim.typoscript', { 'for': 'typoscript' }
+
+" elixir
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
+Plug 'mhinz/vim-mix-format', { 'for': 'elixir' }
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 call plug#end()
 

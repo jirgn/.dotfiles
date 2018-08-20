@@ -21,17 +21,13 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " set python paths for plugins depending on python to work
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/Users/messner.j/.pyenv/shims/python'
 
 augroup configgroup
     autocmd!
 
     " automatically resize panes on resize
     autocmd VimResized * exe 'normal! \<c-w>='
-
-    " source modified vim config files
-    autocmd BufWritePost .vimrc,.vimrc.local,init.vim source %
-    autocmd BufWritePost .vimrc.local source %
 
     " save all files on focus lost, ignoring warnings about untitled buffers
     autocmd FocusLost * silent! wa
