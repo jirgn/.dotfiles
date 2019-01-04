@@ -1,8 +1,10 @@
 export DOTFILES=$HOME/.dotfiles
 
-source $DOTFILES/environment/system
+# source $DOTFILES/environment/system
+# source $DOTFILES/environment/fzf
 
 for config in $DOTFILES/bash/config/*.bash; do
     source $config
 done
 
+# source $DOTFILES/environment/post_init

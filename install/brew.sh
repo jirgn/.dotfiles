@@ -45,6 +45,7 @@ formulas=(
      editorconfig
      tidy-html5
      pyenv
+     rvm
     
 # php envirionment with sniffer and packagemanager
      php71

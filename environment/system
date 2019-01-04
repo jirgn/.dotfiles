@@ -1,17 +1,14 @@
 #----------------------
 # system general
 # ---------------------
-
-
 export EDITOR=nvim
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export MAKEOPTS="-j9"
-
 export LANG=de_DE.UTF-8
 export LC_ALL=de_DE.UTF-8
-
-#fix for terminfo problem in vim see https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
-[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PYENV_ROOT="$(pyenv root)"
 
 # ------------------------------------------
 # path definition
@@ -23,13 +20,10 @@ PATH=$PATH:$HOME/.local/bin           # pipsi libs
 PATH=$PATH:$DOTFILES/bin              # Personal binaries
 PATH=$PATH:$HOME/.composer/vendor/bin # Global Composer bin
 PATH=$PATH:/usr/X11/bin               # X11 Stuff
+PATH=$PATH:/usr/local/opt/php@7.1/bin
+PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+PATH=$PATH:$PYENV_ROOT:
+PATH=$PATH:$HOME/.rvm/bin           # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
-# --------------------------
-# tools
-# --------------------------
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-export PYENV_ROOT="$(pyenv root)"
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-
+# fix for terminfo problem in vim see https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
+[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo 
