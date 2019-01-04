@@ -37,6 +37,7 @@ Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ..
 " autocompletion
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
@@ -73,7 +74,7 @@ Plug 'junegunn/gv.vim' " extension for fugitive to show log --graph
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
-Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }  " mustach support
+Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache'}  " mustach support
 Plug 'juvenn/mustache.vim', { 'for': 'mustache' } " mustache support
 
 " JavaScript
