@@ -45,11 +45,9 @@ formulas=(
      editorconfig
      tidy-html5
      pyenv
-     rvm
-    
+
 # php envirionment with sniffer and packagemanager
      php71
-     phpmd
      composer
 
 # qmk keyboard firmware -- planck keyboard-

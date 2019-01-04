@@ -25,18 +25,11 @@ if [ "$(uname)" == "Darwin" ]; then
     cd -
 fi
 
-source install/composer.sh
+# source install/composer.sh
 source install/pecl.sh
 source install/npm.sh
 source install/pip.sh
-
-echo "installing tmux plugin manager"
-if [ ! -d $HOME/.tmux/plugins ]; then
-    echo "creating plugins dir"
-    mkdir -p $HOME/.tmux/plugins
-    echo "cloning tpm tmux pluginmanager"
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
+source install/shell.sh
 
 echo "creating vim directories"
 mkdir -p ~/.vim-tmp
