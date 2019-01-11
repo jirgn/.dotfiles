@@ -9,6 +9,11 @@ export LC_ALL=de_DE.UTF-8
 export GOPATH="${HOME}/.go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PYENV_ROOT="$(pyenv root)"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export LDFLAGS="-L/usr/local/opt/php@7.1/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+export CPPFLAGS="-I/usr/local/opt/php@7.1/include"
+
 
 # ------------------------------------------
 # path definition
@@ -22,9 +27,14 @@ PATH=$PATH:$HOME/.composer/vendor/bin # Global Composer bin
 PATH=$PATH:/usr/X11/bin               # X11 Stuff
 PATH=$PATH:/usr/local/opt/php@7.1/bin
 PATH=$PATH:/usr/local/opt/php@7.1/sbin
+PATH=$PATH:/usr/local/opt/icu4c/bin
+PATH=$PATH:/usr/local/opt/icu4c/sbin
 PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 PATH=$PATH:$PYENV_ROOT:
 PATH=$PATH:$HOME/.rvm/bin           # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
 # fix for terminfo problem in vim see https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
 [[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo 
+
+# system aliases
+alias php=`brew --prefix php@7.1`/bin/php

@@ -45,6 +45,7 @@ formulas=(
      editorconfig
      tidy-html5
      pyenv
+     icu4c
 
 # php envirionment with sniffer and packagemanager
      php71
