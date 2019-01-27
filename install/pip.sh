@@ -3,7 +3,7 @@
 echo "\n\nInstalling Python packages"
 
 packages=(
- "neovim"
+ "pynvim"
  "jedi"
  "psutil"
  "setproctitle"
