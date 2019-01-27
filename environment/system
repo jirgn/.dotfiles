@@ -23,7 +23,7 @@ PATH=$PATH:/usr/X11/bin               # X11 Stuff
 PATH=$PATH:/usr/local/opt/php@7.1/bin
 PATH=$PATH:/usr/local/opt/php@7.1/sbin
 PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-PATH=$PATH:$PYENV_ROOT:
+PATH=$PATH:$PYENV_ROOT
 PATH=$PATH:$HOME/.rvm/bin           # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
 # fix for terminfo problem in vim see https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
