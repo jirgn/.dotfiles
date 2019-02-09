@@ -9,5 +9,4 @@ let g:neomake_jsx_enabled_makers = [ 'eslint' ]
 let g:neomake_php_enabled_makers = [ 'php', 'phpmd', 'phpcs', 'phpstan']
 let g:neomake_php_phpcs_args_standard = 'PSR2'
 let g:neomake_puppet_enabled_makers = [ 'puppetlint' ]
-
-
+let g:neomake_elixir_enabled_makers = [ 'elixir', 'credo' ]
