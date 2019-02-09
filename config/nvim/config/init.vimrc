@@ -18,7 +18,8 @@ Plug 'SirVer/ultisnips' " snippet manager
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plug 'joonty/vdebug', { 'for': [ 'php', 'javascript', 'javascript.jsx' ] } " dpkg debugger 
-Plug 'moll/vim-bbye' " keep window layout on Bdelete/Bwipeout
+Plug 'tpope/vim-eunuch' " syntactic sugar for Unix helpers
+Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ...
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
@@ -32,7 +33,6 @@ Plug 'junegunn/vim-easy-align' " alignment
 Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'szw/vim-maximizer' "maximizes a window and resizes it back again
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
-Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ...
 
 " autocompletion
 Plug 'ncm2/ncm2'
@@ -41,13 +41,12 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
-" Plug 'ncm2/ncm2-syntax'
-Plug 'ncm2/ncm2-cssomni'
-Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim'
-Plug 'phpactor/ncm2-phpactor'
 Plug 'ncm2/ncm2-ultisnips'
-
+Plug 'ncm2/ncm2-cssomni' , { 'for': [ 'css', 'scss', 'less' ] }
+Plug 'ncm2/ncm2-tern',  { 'do': 'npm install', 'for': [ 'typescript'  ] }
+Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim'
+Plug 'phpactor/ncm2-phpactor', { 'for': 'php' }
+Plug 'pbogut/ncm2-alchemist', { 'for': 'elixir' }
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
