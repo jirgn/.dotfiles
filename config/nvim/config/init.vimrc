@@ -43,8 +43,8 @@ Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-ultisnips'
 Plug 'ncm2/ncm2-cssomni' , { 'for': [ 'css', 'scss', 'less' ] }
-Plug 'ncm2/ncm2-tern',  { 'do': 'npm install', 'for': [ 'typescript'  ] }
-Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim'
+Plug 'ncm2/ncm2-tern',  { 'do': 'npm install', 'for': [ 'javascript', 'javascript.jsx', 'typescript' ] }
+Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'phpactor/ncm2-phpactor', { 'for': 'php' }
 Plug 'pbogut/ncm2-alchemist', { 'for': 'elixir' }
 Plug 'autozimu/LanguageClient-neovim', {
