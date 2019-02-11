@@ -13,7 +13,8 @@ export LDFLAGS="-L/usr/local/opt/icu4c/lib"
 export LDFLAGS="-L/usr/local/opt/php@7.1/lib"
 export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 export CPPFLAGS="-I/usr/local/opt/php@7.1/include"
-
+export VAGRANT_USE_VAGRANT_TRIGGERS=TRUE
+export BEACH_REMOTE_AUTHORIZED_KEYS=$(ssh-add -L | base64)
 
 # ------------------------------------------
 # path definition
