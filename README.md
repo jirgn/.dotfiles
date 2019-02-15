@@ -15,9 +15,6 @@ Maybe you whant to also have a look at [gruvbox](https://github.com/morhetz/gruv
 
 ## Fonts
 I use the [NerdFonts]( https://github.com/ryanoasis/nerd-fonts ), because of their iconset that is compatible with powerline as well as NERDTree.
-In my opinion the [DejaVu
-Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20for%20Powerline%20Nerd%20Font%20Complete%20Mono.ttf) is a good choice for
-coding and the terminal.
 Just download it, install it on your system and ensure it is used by your favourite Terminal(emulator).
 
 ## Installation
