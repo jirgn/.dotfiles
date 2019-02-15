@@ -11,7 +11,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
-zplug "sindresorhus/pure"
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug "mafredri/zsh-async", on:"sindresorhus/pure"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
