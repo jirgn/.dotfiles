@@ -1,4 +1,4 @@
-# Setup fzf
+# Setup FZF
 # ---------
 if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
   export PATH="$PATH:/usr/local/opt/fzf/bin"
@@ -10,11 +10,17 @@ if [[ ! "$MANPATH" == */usr/local/opt/fzf/man* && -d "/usr/local/opt/fzf/man" ]]
   export MANPATH="$MANPATH:/usr/local/opt/fzf/man"
 fi
 
-# Auto-completion
-# ---------------
-[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.bash" 2> /dev/null
+# Addidional Funcions
+# --------
+fkill() {
+  local pid
+  pid=`ps -ef | sed 1d | fzf -m | awk '{print $2}'`
 
-# Key bindings
-# ------------
-source "/usr/local/opt/fzf/shell/key-bindings.bash"
+  if [ "x$pid" != "x" ]
+  then
+    echo $pid | xargs kill -${1:-9}
+  fi
+}
+
+alias fkill=fkill
 

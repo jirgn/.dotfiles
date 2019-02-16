@@ -1,4 +1,5 @@
-ssh-add $HOME/.ssh/id_rsa
+# ssh-add $HOME/.ssh/id_rsa
+
 #----------------------
 # system general
 # ---------------------
@@ -8,14 +9,14 @@ export MAKEOPTS="-j9"
 export LANG=de_DE.UTF-8
 export LC_ALL=de_DE.UTF-8
 export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PYENV_ROOT="$(pyenv root)"
+export GOROOT="`brew --prefix golang`/libexec"
+export PYENV_ROOT="`pyenv root`"
 export LDFLAGS="-L/usr/local/opt/icu4c/lib"
 export LDFLAGS="-L/usr/local/opt/php@7.1/lib"
 export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 export CPPFLAGS="-I/usr/local/opt/php@7.1/include"
 export VAGRANT_USE_VAGRANT_TRIGGERS=TRUE
-export BEACH_REMOTE_AUTHORIZED_KEYS=$(ssh-add -L | base64)
+export BEACH_REMOTE_AUTHORIZED_KEYS=`ssh-add -L | base64`
 
 # ------------------------------------------
 # path definition
@@ -38,5 +39,6 @@ PATH=$PATH:$HOME/.rvm/bin           # Add RVM to PATH for scripting. Make sure t
 # fix for terminfo problem in vim see https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work
 [[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo 
 
-# system aliases
-alias php=`brew --prefix php@7.1`/bin/php
+for config in $DOTFILES/environment/common_profile.d/*; do
+    source $config
+done

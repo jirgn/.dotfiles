@@ -1,10 +1,6 @@
-export DOTFILES=$HOME/.dotfiles
-ZSH=$DOTFILES/zsh
+source $DOTFILES/environment/common_rc.sh
+source $DOTFILES/zsh/plugins.zsh
 
-source $DOTFILES/environment/system
-source $DOTFILES/environment/fzf
-source $ZSH/plugins.zsh
-
-for config ($ZSH/config/*.zsh) source $config
+for config ($DOTFILES/zsh/config/*.zsh) source $config
 
 source $DOTFILES/environment/post_init
