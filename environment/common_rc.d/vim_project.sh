@@ -67,10 +67,12 @@ function make-vim-project() {
 
     read -r -d '' USAGE <<-'EOF'
 Usage: make-vim-project <type>
+creats a local vim projekt file and generates ctags based on given type.
 
 all     Create ctags for every filetype
 web     Create ctags for php, js, css and html
 shell	Create ctags for bash/sh
+blank	Create no ctags
 EOF
 
     if [ $# -ne 1 ]; then
@@ -94,6 +96,8 @@ EOF
         make-ctags-js
         make-ctags-css
         make-ctags-sql
+    elif [[  "$1" == "blank" ]]; then
+        echo 'no ctags generated'
     else
         echo "$USAGE"
         return
