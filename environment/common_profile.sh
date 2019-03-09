@@ -3,13 +3,16 @@
 #----------------------
 # system general
 # ---------------------
+
+export DOTFILES="${HOME}/.dotfiles"
+export BREW=`brew --prefix`
 export EDITOR=nvim
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export MAKEOPTS="-j9"
 export LANG=de_DE.UTF-8
 export LC_ALL=de_DE.UTF-8
 export GOPATH="${HOME}/.go"
-export GOROOT="`brew --prefix golang`/libexec"
+export GOROOT="${BREW}/opt/go/libexec"
 export PYENV_ROOT="`pyenv root`"
 export LDFLAGS="-L/usr/local/opt/icu4c/lib"
 export LDFLAGS="-L/usr/local/opt/php@7.1/lib"

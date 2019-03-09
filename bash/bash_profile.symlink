@@ -1,4 +1,4 @@
-source $DOTFILES/environment/common_profile.sh
+source $HOME/.dotfiles/environment/common_profile.sh
 
 # use basic environment for non login shells
 source ~/.bashrc

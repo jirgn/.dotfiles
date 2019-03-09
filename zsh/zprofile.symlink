@@ -1,3 +1,1 @@
-export DOTFILES=$HOME/.dotfiles
-
-source $DOTFILES/environment/common_profile.sh
+source $HOME/.dotfiles/environment/common_profile.sh

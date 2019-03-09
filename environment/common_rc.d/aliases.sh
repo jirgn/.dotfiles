@@ -11,4 +11,4 @@ alias free='top -l 1 | grep Phys'
 alias top='top -o cpu'
 alias grep="grep --exclude='all-wcprops' --exclude='*.tmp' --exclude='entries' --exclude='*.svn-base' --exclude='*.svn*' "
 alias tmux="TERM=screen-256color-bce tmux"
-alias php=`brew --prefix php@7.1`/bin/php
+alias php="${BREW}/opt/php@7.1/bin/php"
