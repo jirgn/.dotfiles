@@ -1,3 +1,11 @@
+# this file is sourced on interactive shells
+# -> configuration for interactive shell only
+# * colors
+# * history
+# * prompt
+# * completion
+# * aliasses
+
 source $DOTFILES/environment/common_rc.sh
 source $DOTFILES/zsh/plugins.zsh
 
