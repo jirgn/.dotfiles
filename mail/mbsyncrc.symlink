@@ -1,0 +1,27 @@
+#######
+# jirgn76@googlemail.com
+
+IMAPAccount jirgn_googlemail
+Host imap.gmail.com
+User jirgn76@googlemail.com
+# PassCmd "security find-internet-password -s 'jirgn_googlemail.mbsync' -a 'jirgn76@googlemail.com' -w"
+SSLType IMAPS
+CertificateFile ~/.dotfiles/mail/Certificates.pem
+AuthMechs LOGIN
+
+# Remote storage
+IMAPStore jirgn_googlemail-remote
+Account jirgn_googlemail
+
+# Local storage
+MaildirStore jirgn_googlemail-local
+Path ~/Mail/jirgn_googlemail/
+Inbox ~/Mail/jirgn_googlemail/INBOX
+
+Channel jirgn_googlemail
+Master :jirgn_googlemail-remote:
+Slave :jirgn_googlemail-local:
+Patterns  * !"[Google Mail]*" "[Google Mail]/Sent Mail" "[Google Mail]/Drafts" "lists" !Sent !Drafts !starred
+Create Both
+SyncState *
+CopyArrivalDate yes

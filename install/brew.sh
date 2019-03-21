@@ -60,6 +60,16 @@ formulas=(
     
 # install neovim
      neovim
+
+# mutt - email
+    isync
+    khard
+    msmtp
+    mu
+    neomutt
+    ripmime
+    w3m
+    vdirsyncer
     
 # other
      go

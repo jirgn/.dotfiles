@@ -1,0 +1,49 @@
+# user defined variables
+set my_config_dir    = ~/.config/neomutt
+
+# defaults
+set   wait_key   = no      # shut up, mutt
+set   mbox_type  = Maildir # mailbox type
+set   timeout    = 3       # idle time before scanning
+set   mail_check = 0       # minimum time between scans
+set   markers    = no      # no + sign for wrapped lines
+unset move                 # gmail does that
+set   delete               # don't ask, just do
+unset confirmappend        # don't ask, just do
+set   quit                 # don't ask, just do
+unset mark_old             # read/new is good enough
+set   beep_new             # bell on new emails
+set   pipe_decode          # strip headers and eval
+set   thorough_search      # also when searching
+color status cyan default  # while instead of black
+bind index g noop          # reset for gg Binding to work
+bind index gr group-reply  # replay to all receipiants
+bind index gg first-entry  # cursor to first a la vim
+bind index G  last-entry   # cursor to last a la vim
+set editor = "nvim +/^$ -c 'set ft=mail enc=utf-8 et nobk nosi nowb noswapfile'"
+
+# Folder Setup
+set folder           = ~/Mail
+set alias_file       = $my_config_dir/alias
+set header_cache     = $my_config_dir/cache/headers
+set message_cachedir = $my_config_dir/cache/bodies
+set certificate_file = $my_config_dir/certificates
+set mailcap_path     = $my_config_dir/mailcap
+set tmpdir           = $my_config_dir/temp
+
+
+folder-hook +jirgn_googlemail source $my_config_dir/accounts/jirgn_googlemail
+
+# Default inbox.
+set spoolfile = "+jirgn_googlemail/INBOX"
+
+# # Alternate email addresses.
+
+# Mailboxes to show in the sidebar.
+# mailboxes +jirgn_googlemail/INBOX \
+
+
+# Sidebar settings
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats

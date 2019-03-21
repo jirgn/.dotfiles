@@ -7,6 +7,7 @@ packages=(
  "jedi"
  "psutil"
  "setproctitle"
+ "urlscan"
 )
 
 for package in "${packages[@]}"; do
