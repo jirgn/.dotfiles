@@ -22,6 +22,8 @@ Plug 'tpope/vim-eunuch' " syntactic sugar for Unix helpers
 Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ...
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
+Plug 'junegunn/goyo.vim' " distraction free writing
+
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
