@@ -14,6 +14,7 @@ taps=(
     'neovim/neovim'
     'osx-cross/avr'
     'PX4/homebrew-px4'
+    'getantibody/tap'
 )
 
 # brew formulas to isntall
@@ -34,9 +35,9 @@ formulas=(
      git-flow
      hub
      fzf
-     'reattach-to-user-namespace'
      tmux
      zsh
+     antibody
      highlight
      nvm
      z

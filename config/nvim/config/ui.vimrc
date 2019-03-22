@@ -76,6 +76,9 @@ set nolazyredraw            " don't redraw while executing macros
 set magic                   " Set magic on, for regex
 set showmatch               " show matching braces
 set mat=2                   " how many tenths of a second to blink
+if (has('nvim'))
+    set inccommand=split    " interactive substitution
+endif
 
 
 " error bells

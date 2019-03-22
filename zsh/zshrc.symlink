@@ -1,10 +1,14 @@
-export DOTFILES=$HOME/.dotfiles
-ZSH=$DOTFILES/zsh
+# this file is sourced on interactive shells
+# -> configuration for interactive shell only
+# * colors
+# * history
+# * prompt
+# * completion
+# * aliasses
 
-source $DOTFILES/environment/system
-source $DOTFILES/environment/fzf
-source $ZSH/plugins.zsh
+source $DOTFILES/environment/common_rc.sh
+source $DOTFILES/zsh/plugins.zsh
 
-for config ($ZSH/config/*.zsh) source $config
+for config ($DOTFILES/zsh/config/*.zsh) source $config
 
 source $DOTFILES/environment/post_init

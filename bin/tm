@@ -13,21 +13,21 @@ echo "------------------"
 echo " "
 select opt in "${options[@]}"
 do
-	case $opt in
-		"New Session")
-			read -p "Enter new session name: " SESSION_NAME
-			tmux new -s "$SESSION_NAME"
-			break 
+    case $opt in
+        "New Session")
+            read -p "Enter new session name: " SESSION_NAME
+            tmux new -s "$SESSION_NAME"
+            break 
             ;;
-		"zsh")
-			zsh --login
-			break;;
-		"bash")
-			bash --login
-			break;;
-		*)
-			tmux attach-session -t $opt
-			break 
+        "zsh")
+            zsh --login
+            break;;
+        "bash")
+            bash --login
+            break;;
+        *)
+            tmux attach-session -t $opt
+            break 
             ;;
-	esac
+    esac
 done

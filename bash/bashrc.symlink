@@ -1,7 +1,4 @@
-export DOTFILES=$HOME/.dotfiles
-
-# source $DOTFILES/environment/system
-# source $DOTFILES/environment/fzf
+source $DOTFILES/environment/common_rc.sh
 
 for config in $DOTFILES/bash/config/*.bash; do
     source $config

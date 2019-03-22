@@ -1,0 +1,6 @@
+# this file is sourced on login before .zshrc
+# -> environement variables that need NOT to be updated fequently
+# * environment variables for tools
+# * configuration with commands that take some time
+
+source $HOME/.dotfiles/environment/common_profile.sh

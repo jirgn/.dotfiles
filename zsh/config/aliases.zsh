@@ -1,7 +1,0 @@
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias ll='ls -Gl'
-alias la='ls -lAhG'
-alias l='ls -CFG'
-alias vi='nvim'
