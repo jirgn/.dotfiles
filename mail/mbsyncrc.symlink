@@ -1,27 +1,92 @@
-#######
-# jirgn76@googlemail.com
-
-IMAPAccount jirgn_googlemail
-Host imap.gmail.com
-User jirgn76@googlemail.com
-# PassCmd "security find-internet-password -s 'jirgn_googlemail.mbsync' -a 'jirgn76@googlemail.com' -w"
-SSLType IMAPS
-CertificateFile ~/.dotfiles/mail/Certificates.pem
-AuthMechs LOGIN
-
-# Remote storage
-IMAPStore jirgn_googlemail-remote
-Account jirgn_googlemail
-
-# Local storage
-MaildirStore jirgn_googlemail-local
-Path ~/Mail/jirgn_googlemail/
-Inbox ~/Mail/jirgn_googlemail/INBOX
-
-Channel jirgn_googlemail
-Master :jirgn_googlemail-remote:
-Slave :jirgn_googlemail-local:
-Patterns  * !"[Google Mail]*" "[Google Mail]/Sent Mail" "[Google Mail]/Drafts" "lists" !Sent !Drafts !starred
 Create Both
 SyncState *
 CopyArrivalDate yes
+
+########
+## jirgn76@googlemail.com
+
+#IMAPAccount jirgn_googlemail
+#    Host imap.gmail.com
+#    User jirgn76@googlemail.com
+## PassCmd "security find-internet-password -s 'jirgn_googlemail.mbsync' -a 'jirgn76@googlemail.com' -w"
+#    SSLType IMAPS
+#    CertificateFile ~/.dotfiles/mail/Certificates.pem
+#    AuthMechs LOGIN
+
+## Remote storage
+#IMAPStore jirgn_googlemail-remote
+#    Account jirgn_googlemail
+
+## Local storage
+#MaildirStore jirgn_googlemail-local
+#    Path  ~/Mail/jirgn_googlemail/
+#    Inbox ~/Mail/jirgn_googlemail/INBOX
+
+## Channel jirgn_googlemail
+##     Master :jirgn_googlemail-remote:
+##     Slave :jirgn_googlemail-local:
+##     Patterns  * !"[Google Mail]*" "[Google Mail]/Sent Mail" "[Google Mail]/Drafts" "lists" !Sent !Drafts !starred
+
+#Channel jirgn_googlemail-inbox
+#    Master ":jirgn_googlemail-remote:INBOX"
+#    Slave ":jirgn_googlemail-local:INBOX"
+
+#Channel jirgn_googlemail-sent
+#    Master ":jirgn_googlemail-remote:Gesendet"
+#    Slave ":jirgn_googlemail-local:sent"
+
+## Channel jirgn_googlemail-gmx
+##     Master ":jirgn_googlemail-remote:juergenmessner@gmx"
+##     Slave ":jirgn_googlemail-local:gmx"
+
+#######
+# jirgnmssnr@googlemail.com
+
+IMAPAccount mssnr_googlemail
+    Host imap.gmail.com
+    User jirgnmssnr@googlemail.com
+# PassCmd "security find-internet-password -s 'jirgn_googlemail.mbsync' -a 'jirgn76@googlemail.com' -w"
+    SSLType IMAPS
+    CertificateFile ~/.dotfiles/mail/Certificates.pem
+    AuthMechs LOGIN
+
+# Remote storage
+IMAPStore mssnr_googlemail-remote
+    Account mssnr_googlemail
+
+# Local storage
+MaildirStore mssnr_googlemail-local
+    Path  ~/Mail/mssnr_googlemail/ # the trailing slash is important
+    Inbox ~/Mail/mssnr_googlemail/INBOX
+
+Channel mssnr_googlemail-inbox
+    Master :mssnr_googlemail-remote:INBOX
+    Slave :mssnr_googlemail-local:INBOX
+
+Channel mssnr_googlemail-archive
+    Master :mssnr_googlemail-remote:"[Google Mail]/Alle Nachrichten"
+    Slave :mssnr_googlemail-local:archive
+
+Channel mssnr_googlemail-sent
+    Master :mssnr_googlemail-remote:"[Google Mail]/Gesendet"
+    Slave :mssnr_googlemail-local:sent
+
+Channel mssnr_googlemail-trash
+    Master :mssnr_googlemail-remote:"[Google Mail]/Papierkorb"
+    Slave :mssnr_googlemail-local:trash
+
+Channel mssnr_googlemail-junk
+    Master :mssnr_googlemail-remote:"[Google Mail]/Spam"
+    Slave :mssnr_googlemail-local:junk
+
+Channel mssnr_googlemail-drafts
+    Master :mssnr_googlemail-remote:"[Google Mail]/Entw&APw-rfe"
+    Slave :mssnr_googlemail-local:drafts
+
+Group mssnr_googlemail
+    Channel mssnr_googlemail-inbox
+    Channel mssnr_googlemail-archive
+    Channel mssnr_googlemail-sent
+    Channel mssnr_googlemail-trash
+    Channel mssnr_googlemail-junk
+    Channel mssnr_googlemail-drafts

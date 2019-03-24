@@ -38,6 +38,11 @@ augroup configgroup
     let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json=javascript', 'stylus', 'html']
     autocmd BufNewFile,BufRead,BufWrite *.md syntax match Comment /\%^---\_.\{-}---$/
 
+    " mutt
+    autocmd BufNewFile,BufReadPost *.muttrc set filetype=muttrc
+    autocmd BufNewFile,BufReadPost *.neomuttrc set filetype=neomuttrc
+
+
     " fix some issues with puppet and ruby
     if v:version >= 703
         " Note: Relative number is quite slow with Ruby, so is cursorline
