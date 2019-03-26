@@ -7,4 +7,4 @@ user jirgn76@googlemail.com
 from jirgn76@googlemail.com
 tls on
 tls_starttls off
-tls_trust_file ~/.dotfiles/mail/Certificates.pem
+tls_trust_file ~/.dotfiles/config/neomutt/certificates/system.pem

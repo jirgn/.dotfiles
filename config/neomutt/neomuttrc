@@ -12,7 +12,7 @@ set folder           = ~/Mail
 set alias_file       = $my_config_dir/alias
 set header_cache     = $my_config_dir/cache/headers
 set message_cachedir = $my_config_dir/cache/bodies
-# set certificate_file = $my_config_dir/certificates
+set certificate_file = $my_config_dir/certificates
 set mailcap_path     = $my_config_dir/mailcap
 set tmpdir           = $my_config_dir/temp
 

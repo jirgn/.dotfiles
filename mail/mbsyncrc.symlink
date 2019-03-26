@@ -10,7 +10,7 @@ CopyArrivalDate yes
 #    User jirgn76@googlemail.com
 ## PassCmd "security find-internet-password -s 'jirgn_googlemail.mbsync' -a 'jirgn76@googlemail.com' -w"
 #    SSLType IMAPS
-#    CertificateFile ~/.dotfiles/mail/Certificates.pem
+#    CertificateFile ~/.dotfiles/config/neomutt/certificates/system.pem
 #    AuthMechs LOGIN
 
 ## Remote storage
@@ -45,9 +45,9 @@ CopyArrivalDate yes
 IMAPAccount mssnr_googlemail
     Host imap.gmail.com
     User jirgnmssnr@googlemail.com
-# PassCmd "security find-internet-password -s 'jirgn_googlemail.mbsync' -a 'jirgn76@googlemail.com' -w"
+    PassCmd "security find-internet-password -s 'smtp.gmail.com' -a 'jirgnmssnr@googlemail.com' -w"
     SSLType IMAPS
-    CertificateFile ~/.dotfiles/mail/Certificates.pem
+    CertificateFile ~/.dotfiles/config/neomutt/certificates/system.pem
     AuthMechs LOGIN
 
 # Remote storage
