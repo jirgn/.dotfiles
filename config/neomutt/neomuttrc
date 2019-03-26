@@ -12,7 +12,7 @@ set header_cache     = $my_config_dir/cache/headers
 set message_cachedir = $my_config_dir/cache/bodies
 # set certificate_file = $my_config_dir/certificates
 set mailcap_path     = $my_config_dir/mailcap
-# set tmpdir           = $my_config_dir/temp
+set tmpdir           = $my_config_dir/temp
 
 # Theme 
 source $my_config_dir/themes/gruvbox-shuber.muttrc
@@ -22,7 +22,8 @@ folder-hook =jirgn_googlemail source $my_config_dir/accounts/jirgn_googlemail.mu
 folder-hook =mssnr_googlemail source $my_config_dir/accounts/mssnr_googlemail.muttrc
 
 # Default inbox.
-set spoolfile = "+mssnr_googlemail/INBOX"
+source $my_config_dir/accounts/mssnr_googlemail.muttrc
+# set spoolfile = "=mssnr_googlemail/INBOX"
 
 # # Alternate email addresses.
 
