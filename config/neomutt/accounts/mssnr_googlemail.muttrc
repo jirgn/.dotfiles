@@ -9,9 +9,12 @@ set smtp_authenticators = login
 alternates jirgnmssnr@gmail.com
 
 set spoolfile = "=mssnr_googlemail/INBOX"
-# set record    = =example/sent  # sent folder
+set record    = =example/sent
 
-mailboxes Mssnr \ # fake mailbox as divider
-        =mssnr_googlemail/INBOX \
-        =mssnr_googlemail/sent \
-        =mssnr_googlemail/junk \
+mailboxes =mssnr_googlemail
+mailboxes =mssnr_googlemail/INBOX \
+    =mssnr_googlemail/sent \
+    =mssnr_googlemail/junk \
+    =mssnr_googlemail/trash \
+    =mssnr_googlemail/drafts \
+    =mssnr_googlemail/archive
