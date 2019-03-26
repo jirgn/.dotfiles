@@ -65,7 +65,7 @@ formulas=(
     isync
     khard
     msmtp
-    mu
+    notmuch
     neomutt
     ripmime
     w3m

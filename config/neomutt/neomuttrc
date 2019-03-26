@@ -4,6 +4,7 @@ set my_config_dir    = ~/.config/neomutt
 source $my_config_dir/defaults.muttrc
 source $my_config_dir/navigation.muttrc
 source $my_config_dir/sidebar.muttrc
+source $my_config_dir/notmuch.muttrc
 
 # Folder Setup
 set folder           = ~/Mail
