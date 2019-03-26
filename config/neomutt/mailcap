@@ -1,10 +1,10 @@
-text/html; qlmanage -p %s; nametemplate=%s.html
-text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
-application/pdf; qlmanage -p %s; nametemplate=%s.pdf
-image/jpg; qlmanage -p %s; nametemplate=%s.jpg
-image/jpeg; qlmanage -p %s; nametemplate=%s.jpg
-image/pjpeg; qlmanage -p %s; nametemplate=%s.jpg
-image/png; qlmanage -p %s; nametemplate=%s.png
-image/gif; qlmanage -p %s; nametemplate=%s.gif
-text/*; open %s
-application/*; open %s
+text/html; view_attachement %s html; nametemplate=%s.html
+text/html; w3m -dump %s; nametemplate=%s.html; copiousoutput
+application/pdf; view_attachement %s; nametemplate=%s.pdf
+image/jpg; view_attachement %s; nametemplate=%s.jpg
+image/jpeg; view_attachement %s; nametemplate=%s.jpg
+image/pjpeg; view_attachement %s; nametemplate=%s.jpg
+image/png; view_attachement %s; nametemplate=%s.png
+image/gif; view_attachement %s; nametemplate=%s.gif
+text/*; view_attachement %s
+application/*; view_attachement %s
