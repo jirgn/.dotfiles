@@ -5,6 +5,7 @@ source $my_config_dir/defaults.muttrc
 source $my_config_dir/navigation.muttrc
 source $my_config_dir/sidebar.muttrc
 source $my_config_dir/notmuch.muttrc
+source $my_config_dir/contacts.muttrc
 
 # Folder Setup
 set folder           = ~/Mail
@@ -24,11 +25,3 @@ folder-hook =mssnr_googlemail source $my_config_dir/accounts/mssnr_googlemail.mu
 
 # Default inbox.
 source $my_config_dir/accounts/mssnr_googlemail.muttrc
-# set spoolfile = "=mssnr_googlemail/INBOX"
-
-# # Alternate email addresses.
-
-# Mailboxes to show in the sidebar.
-# mailboxes +jirgn_googlemail/INBOX \
-
-
