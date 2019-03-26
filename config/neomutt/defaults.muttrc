@@ -7,10 +7,9 @@ set   pipe_decode          # strip headers and eval
 set   thorough_search      # also when searching
 set   crypt_use_gpgme = no # Hide warning "GPGME: CMS protocol not available"
 set   text_flowed = yes    # Avoid weird line breaks
-# set   sig_on_top = yes     # Put signatures on top of the message
-set   record = no          # Dont save local copies of sent mails
+set   record = yes         # ensure sent mails are stored locally
 
-set   editor = "nvim +/^$ -c 'Goyo' -c 'set ft=markdown enc=utf-8 et nobk nosi nowb noswapfile spell spelllang=de,en'"
+set   editor = "nvim +/^$ -c 'set ft=markdown enc=utf-8 et nobk nosi nowb noswapfile spell spelllang=de,en'"
 
 # Headers
 ignore *
@@ -34,9 +33,6 @@ set pager_context = 3
 set pager_index_lines = 10
 set pager_stop = yes
 set tilde = yes
-
-# Do not duplicate sent emails
-set copy = no
 
 # From header
 set use_from = yes
