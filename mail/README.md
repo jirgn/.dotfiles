@@ -15,3 +15,13 @@ surpase google standards.
 
 * goto (myaccount)[https://myaccount.google.com]
 * security -> sighnin -> app password
+
+### Password Access
+
+create smtp password in keychain like described in the [msmtp documentation](https://marlam.de/msmtp/msmtp.html#Authentication)
+
+    security add-internet-password -s smtp.gmail.com -r smtp -a jirgnmssnr@googlemail.com -w
+
+use this password in the following configurations
+* .msmtprc  => `passwordeval security find-internet-password -s 'smtp.gmail.com' -a 'jirgnmssnr@googlemail.com' -w`
+* .mbsyncrc => `PassCmd "security find-internet-password -s 'smtp.gmail.com' -a 'jirgnmssnr@googlemail.com' -w"`

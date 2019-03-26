@@ -1,4 +1,5 @@
 set   mbox_type = Maildir  # mailbox type
+set   sendmail = /usr/local/bin/msmtp
 set   timeout = 3          # idle time before scanning
 set   mail_check = 0       # minimum time between scans
 unset mark_old             # read/new is good enough
