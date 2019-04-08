@@ -4,7 +4,9 @@ alias ....='cd ../../..'
 alias ll='ls -Gl'
 alias la='ls -lAhG'
 alias l='ls -CFG'
+alias nvim='node --version && python --version && nvim' # ensure lazy loded nvm and python are present
 alias vi='nvim'
+alias vim='nvim'
 
 # tools
 alias free='top -l 1 | grep Phys'

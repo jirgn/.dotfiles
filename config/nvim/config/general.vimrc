@@ -21,7 +21,7 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " set python paths for plugins depending on python to work
-let g:python3_host_prog = '/Users/messner.j/.pyenv/shims/python'
+let g:python3_host_prog = "/Users/jirgn/.pyenv/shims/python"
 
 augroup configgroup
     autocmd!
@@ -34,7 +34,6 @@ augroup configgroup
 
     " markdown
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-    autocmd BufNewFile,BufReadPost *.hbs,*handlebars set filetype=mustache
     let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json=javascript', 'stylus', 'html']
     autocmd BufNewFile,BufRead,BufWrite *.md syntax match Comment /\%^---\_.\{-}---$/
 
