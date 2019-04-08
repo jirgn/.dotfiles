@@ -12,8 +12,8 @@ call plug#begin("~/.config/nvim/plugged")
 Plug 'morhetz/gruvbox'
 
 " utilities
-" Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
-Plug 'w0rp/ale' " replacement for neomake, that caused problems with eslint
+Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
+" Plug 'w0rp/ale' " replacement for neomake, that caused problems with eslint
 Plug 'honza/vim-snippets' " snippet library
 Plug 'SirVer/ultisnips' " snippet manager
 Plug 'vim-airline/vim-airline' " fancy statusline

@@ -4,7 +4,8 @@ alias ....='cd ../../..'
 alias ll='ls -Gl'
 alias la='ls -lAhG'
 alias l='ls -CFG'
-alias nvim='node --version && python --version && nvim' # ensure lazy loded nvm and python are present
+# ensure lazy loded nvm and python are present as well as the project specific binaries (eslint, phpunit ...)
+alias nvim='(node --version && python --version); (PATH=./node_modules/.bin:./vendor/bin:$PATH nvim)' 
 alias vi='nvim'
 alias vim='nvim'
 
