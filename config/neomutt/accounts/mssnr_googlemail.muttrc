@@ -3,7 +3,7 @@ set from                = jirgnmssnr@googlemail.com
 set use_from            = yes
 set ssl_force_tls       = yes
 set smtp_authenticators = login
-alternates jirgnmssnr@gmail.com
+alternates '^jirgnmssnr@gmail.com$' '^jirgn.mssnr@googlemail.com$' '^jirgn.mssnr@gmail.com$'
 
 set spoolfile = "=mssnr_googlemail/INBOX"
 set postponed = "=mssnr_googlemail/drafts"

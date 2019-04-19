@@ -1,11 +1,10 @@
 # user defined variables
 set my_config_dir    = ~/.config/neomutt
 
-source $my_config_dir/defaults.muttrc
-source $my_config_dir/navigation.muttrc
-source $my_config_dir/sidebar.muttrc
-source $my_config_dir/notmuch.muttrc
-source $my_config_dir/contacts.muttrc
+unalternative_order *
+alternative_order multipart/mixed multipart/related text/plain
+mime_lookup application/octet-stream # handle attached office documents correctly
+
 
 # Folder Setup
 set folder           = ~/Mail
@@ -15,6 +14,13 @@ set message_cachedir = $my_config_dir/cache/bodies
 set certificate_file = $my_config_dir/certificates
 set mailcap_path     = $my_config_dir/mailcap
 set tmpdir           = $my_config_dir/temp
+
+source $my_config_dir/defaults.muttrc
+source $my_config_dir/navigation.muttrc
+source $my_config_dir/sidebar.muttrc
+source $my_config_dir/notmuch.muttrc
+source $my_config_dir/contacts.muttrc
+source $my_config_dir/autoviews.muttrc
 
 # Theme 
 source $my_config_dir/themes/gruvbox-shuber.muttrc
