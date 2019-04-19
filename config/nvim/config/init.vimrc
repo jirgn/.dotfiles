@@ -13,12 +13,11 @@ Plug 'morhetz/gruvbox'
 
 " utilities
 Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
-" Plug 'w0rp/ale' " replacement for neomake, that caused problems with eslint
+Plug 'prettier/vim-prettier', { 'do': 'npm install' } " code formatting with prettier tool
 Plug 'honza/vim-snippets' " snippet library
 Plug 'SirVer/ultisnips' " snippet manager
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
-Plug 'joonty/vdebug', { 'for': [ 'php', 'javascript', 'javascript.jsx' ] } " dpkg debugger 
 Plug 'tpope/vim-eunuch' " syntactic sugar for Unix helpers
 Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ...
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
