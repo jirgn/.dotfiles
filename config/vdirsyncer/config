@@ -16,3 +16,19 @@ type = "carddav"
 url = "https://contacts.icloud.com/"
 username = "jirgn76@googlemail.com"
 password = "jevw-rguj-vzgk-mxvq"
+
+[pair jirgn_contacts_gmail]
+a = "jirgn_contacts_gmail_local"
+b = "jirgn_contacts_gmail_remote"
+collections = ["from a", "from b"]
+
+[storage jirgn_contacts_gmail_local]
+type = "filesystem"
+path = "~/Contacts/google/jirgn76"
+fileext = ".vcf"
+
+[storage jirgn_contacts_gmail_remote]
+type = "google_contacts"
+token_file = "~/.vdirsyncer/jirgn_contacts_gmail_token"
+client_id = <googleId>
+client_secret = <googleSecret>
