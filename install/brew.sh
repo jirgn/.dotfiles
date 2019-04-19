@@ -47,6 +47,7 @@ formulas=(
      tidy-html5
      pyenv
      icu4c
+     yamllint
 
 # php envirionment with sniffer and packagemanager
      php71
