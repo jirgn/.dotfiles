@@ -108,7 +108,7 @@ Plug 'phpactor/phpactor', { 'for': 'php', 'do': 'composer install'} " php refact
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' } " namespace completion
 
 " typo3 neos
-Plug 'elmar-hinz/vim.typoscript', { 'for': 'typoscript' }
+Plug 'jirgn/vim.typoscript', { 'for': 'typoscript' }
 
 " elixir
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
