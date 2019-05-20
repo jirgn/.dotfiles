@@ -10,6 +10,7 @@ packages=(
     'eslint-plugin-jasmine'
     'yarn'
     'javascript-typescript-langserver'
+    'local-ssl-proxy'
 )
 
 for package in "${packages[@]}"; do
