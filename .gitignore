@@ -6,3 +6,4 @@ config/nvim/plugged/
 config/nvim/autoload/
 config/neomutt/temp/
 config/neomutt/cache/
+environment/local_profile.sh
