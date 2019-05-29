@@ -1,0 +1,17 @@
+set nm_db_limit = 0
+set nm_default_uri = ""
+set nm_exclude_tags = ""
+set nm_open_timeout = 5
+set nm_query_type = messages
+set nm_record = no
+set nm_record_tags = ""
+set nm_unread_tag = unread
+set vfolder_format = "%6n(%6N) %f"
+set virtual_spoolfile = no
+set nm_query_window_duration=2
+set nm_query_window_timebase="week" # or "hour", "day", "week", "month", "year"
+bind index,pager X change-vfolder
+bind index,pager + entire-thread
+bind index,pager ,a vfolder-from-query
+bind index < vfolder-window-backward
+bind index > vfolder-window-forward

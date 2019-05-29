@@ -11,12 +11,11 @@ Icon
 
 # Files that might appear on external disk
 .Spotlight-V100
-.Trashes
+.Trashe
 
-# IDE
-atlassian-ide-plugin.xml
-.tags*
-.idea/
+# IDE Editor
+.tags
+.idea
 
-# other versioning systems
-.svn
+# others
+phpactor.log

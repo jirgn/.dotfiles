@@ -1,0 +1,53 @@
+set   mbox_type = Maildir  # mailbox type
+set   sendmail = /usr/local/bin/msmtp
+set   timeout = 3          # idle time before scanning
+set   mail_check = 0       # minimum time between scans
+unset mark_old             # read/new is good enough
+set   pipe_decode          # strip headers and eval
+set   thorough_search      # also when searching
+set   crypt_use_gpgme = no # Hide warning "GPGME: CMS protocol not available"
+set   text_flowed = yes    # Avoid weird line breaks
+set   record = yes         # ensure sent mails are stored locally
+
+set   editor = "nvim +/^$ -c 'set ft=markdown enc=utf-8 et nobk nosi nowb noswapfile spell spelllang=de,en'"
+
+# Headers
+ignore *
+unignore From: To: CC: Date: Subject:
+unhdr_order *
+hdr_order From: To: CC: Date: Subject:
+
+# Index view
+set date_format = "%d.%m.%y"
+set index_format = "[%Z]  %D  %-20.20F  %s"
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set sort = threads
+set sort_aux = reverse-last-date-received
+set sort_re = yes
+set uncollapse_jump = yes
+
+# Pager view
+set markers = no
+set menu_scroll = yes
+set pager_context = 3
+set pager_index_lines = 10
+set pager_stop = yes
+set tilde = yes
+
+# From header
+set use_from = yes
+set envelope_from = yes
+
+# Display version on startup
+push <show-version>
+
+# Faster, Mutt. Faster!
+set sleep_time = 0
+
+# Shut the fuck up, Mutt
+set   beep = no
+set   wait_key = no
+set   delete
+unset confirmappend
+set   quit
+set   beep_new

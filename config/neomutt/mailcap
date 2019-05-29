@@ -1,0 +1,11 @@
+text/html                ; open %s & sleep 5    ; nametemplate=%s.html
+text/html                ; w3m -dump %s         ; nametemplate=%s.html ; copiousoutput
+application/pdf          ; open %s & sleep 5    ; nametemplate=%s.pdf
+application/octet-stream ; mutt.octet.filter %s ; copiousoutput
+image/jpg                ; open %s & sleep 5    ; nametemplate=%s.jpg
+image/jpeg               ; open %s & sleep 5    ; nametemplate=%s.jpg
+image/pjpeg              ; open %s & sleep 5    ; nametemplate=%s.jpg
+image/png                ; open %s & sleep 5    ; nametemplate=%s.png
+image/gif                ; open %s & sleep 5    ; nametemplate=%s.gif
+text/*                   ; open %s & sleep 5
+application/*            ; open %s & sleep 5

@@ -1,5 +1,3 @@
-# ssh-add $HOME/.ssh/id_rsa
-
 #----------------------
 # system general
 # ---------------------
@@ -38,6 +36,10 @@ PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 PATH=$PATH:$PYENV_ROOT
 PATH=$PATH:$HOME/.rvm/bin                 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
+localprofile=$DOTFILES/environment/local_profile.sh
+if [[ -f $localprofile ]]; then
+    source $localprofile
+fi
 
 for config in $DOTFILES/environment/common_profile.d/*; do
     source $config
