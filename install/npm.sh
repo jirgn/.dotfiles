@@ -6,6 +6,7 @@ packages=(
     'tern'
     'eslint-cli'
     'yarn'
+    'local-ssl-proxy'
 )
 
 for package in "${packages[@]}"; do

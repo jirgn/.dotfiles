@@ -19,6 +19,7 @@ export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 export CPPFLAGS="-I${PHPROOT}/include"
 export VAGRANT_USE_VAGRANT_TRIGGERS=TRUE
 export BEACH_REMOTE_AUTHORIZED_KEYS=`ssh-add -L | base64`
+export HOMEBREW_GITHUB_API_TOKEN=befb326c9ca67736287c06c4608bb7838076d4f0
 
 # ------------------------------------------
 # path definition
