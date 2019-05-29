@@ -4,12 +4,8 @@ echo "\n\nInstalling javascript npm packages"
 
 packages=(
     'tern'
-    'eslint'
-    'babel-eslint'
-    'eslint-plugin-react'
-    'eslint-plugin-jasmine'
+    'eslint-cli'
     'yarn'
-    'javascript-typescript-langserver'
     'local-ssl-proxy'
 )
 

@@ -47,6 +47,7 @@ formulas=(
      tidy-html5
      pyenv
      icu4c
+     yamllint
 
 # php envirionment with sniffer and packagemanager
      php71
@@ -60,6 +61,16 @@ formulas=(
     
 # install neovim
      neovim
+
+# mutt - email
+    isync
+    khard
+    msmtp
+    notmuch
+    neomutt
+    ripmime
+    w3m
+    vdirsyncer
     
 # other
      go

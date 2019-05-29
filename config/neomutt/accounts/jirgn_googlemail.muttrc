@@ -1,0 +1,17 @@
+set realname            = "Jürgen Messner"
+set from                = jirgn76@googlemail.com
+set use_from            = yes
+set my_smtp_user        = jirgn76@googlemail.com
+# set smtp_pass           = password
+# set smtp_url            = smtps://$my_smtp_user:$smtp_pass@smtp.example.com
+set ssl_force_tls       = yes
+set smtp_authenticators = login
+alternates jirgn76@gmail.com
+
+set spoolfile = "=jirgn_googlemail/INBOX"
+# set record    = =example/sent  # sent folder
+
+mailboxes Jirgn76 \ # fake mailbox as divider
+        =jirgn_googlemail/inbox \
+        =jirgn_googlemail/sent \
+        =jirgn_googlemail/gmx \
