@@ -23,6 +23,7 @@ Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ..
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'junegunn/goyo.vim' " distraction free writing
+Plug 'jceb/vim-orgmode' | Plug 'tpope/vim-speeddating' " outline todo orga - clone of emacs org-mode
 
 
 " additional commands/textobjects
