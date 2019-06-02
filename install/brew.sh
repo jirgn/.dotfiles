@@ -58,7 +58,9 @@ formulas=(
      dfu-programmer
      gcc-arm-none-eabi
 
-    
+# emacs / spacemacs
+    emacs
+
 # install neovim
      neovim
 

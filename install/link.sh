@@ -14,6 +14,21 @@ for file in $linkables ; do
         ln -s $file $target
     fi
 done
+echo "\n\ninstalling to ~/.spacemacs.d/"
+echo "=============================="
+if [ ! -d $HOME/.spacemacs.d ]; then
+    echo "Creating ~/.spacemacs.d"
+    mkdir -p $HOME/.spacemacs.d
+fi
+for config in $DOTFILES/spacemacs/*; do
+    target=$HOME/.spacemacs.d/$( basename $config )
+    if [ -e $target ]; then
+        echo "~${target#$HOME} already exists... Skipping."
+    else
+        echo "Creating symlink for $config"
+        ln -s $config $target
+    fi
+done
 
 echo "\n\ninstalling to ~/.config"
 echo "=============================="
