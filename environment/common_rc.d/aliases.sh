@@ -8,6 +8,8 @@ alias l='ls -CFG'
 alias nvim='node --version && python --version && PATH=./node_modules/.bin:$PATH nvim'
 alias vi='nvim'
 # alias vim='nvim'
+alias gemacs='node --version && python --version && /Applications/Emacs.app/Contents/MacOS/Emacs >/dev/null &'
+alias emacs='node --version && python --version && emacs'
 
 # tools
 alias free='top -l 1 | grep Phys'
