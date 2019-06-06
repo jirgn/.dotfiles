@@ -15,6 +15,7 @@ taps=(
     'osx-cross/avr'
     'PX4/homebrew-px4'
     'getantibody/tap'
+    'railwaycat/emacsmacport'
 )
 
 # brew formulas to isntall
@@ -60,6 +61,7 @@ formulas=(
 
 # emacs / spacemacs
     emacs
+    emacs-mac
 
 # install neovim
      neovim
