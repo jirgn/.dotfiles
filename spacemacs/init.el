@@ -477,10 +477,10 @@ before packages are loaded."
   (setq org-default-notes-file (concat org-directory "/inbox.org"))
   (setq org-todo-keywords
         '((sequence "TODO(t)" "NEXT(n)" "PROGRESS(p)" "WAITING(w)" "PROJECT(P)" "|" "DONE(d)" "CANCELED(c)" "DELEGADED(d)")))
-  )
   (org-babel-do-load-languages
     'org-babel-load-languages
     '((ditaa . t)))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
