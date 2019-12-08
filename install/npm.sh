@@ -10,5 +10,5 @@ packages=(
 )
 
 for package in "${packages[@]}"; do
-    npm install -g $package
+    sudo npm install -g $package
 done

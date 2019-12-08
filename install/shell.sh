@@ -1,8 +1,5 @@
 #!/bin/sh
 
-echo "installing rvm ruby version manager"
-curl -sSL https://get.rvm.io | bash -s stable
-
 echo "installing tmux plugin manager"
 if [ ! -d $HOME/.tmux/plugins ]; then
     echo "creating plugins dir"
