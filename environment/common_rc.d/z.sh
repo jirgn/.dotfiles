@@ -1,1 +1,1 @@
-source "/usr/local/etc/profile.d/z.sh"
+source "/usr/share/z/z.sh"
