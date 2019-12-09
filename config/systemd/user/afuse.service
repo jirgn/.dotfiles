@@ -1,0 +1,19 @@
+[Unit]
+Description="SSHFS via Afuse automounter"
+AssertPathExists=%h/scp/
+AssertFileIsExecutable=/usr/bin/afuse
+AssertFileIsExecutable=/usr/bin/sshfs
+
+[Service]
+Type=forking
+WorkingDirectory=%h/scp
+ExecStart=/usr/bin/afuse \
+    -o mount_template="sshfs -o ServerAliveInterval=10 -o reconnect %%r:/ %%m" \
+    -o unmount_template="fusermount -u -z %%m" .
+Restart=always
+PrivateTmp=true
+#NoNewPrivileges=true
+#Environment=
+
+[Install]
+WantedBy=default.target

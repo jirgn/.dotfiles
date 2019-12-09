@@ -30,4 +30,18 @@ and run the install script
 >You can extend the install.sh with your system setup to make run. 
 >Good Luck
 
+## Automounting on Linux
+see [this
+article](https://unix.stackexchange.com/questions/294965/integration-of-afuse-user-level-automounter-with-sshfs-as-a-systemd-service-spaw/528699#528699)
+We installed a sshfs fuse filesystem as well as afuse for automounting possibility for specific user.
+The Automounting is startet with a user specific systemd unit, see ./config/systemd/user/afuse.service
 
+there is a user 
+
+    mkdir ~/scp  # Or Home Directories of all users, /etc/skel/ 
+    systemctl --user daemon-reload   # If root, then omit '--user'
+    # If enabling only for the current user:
+    systemctl --user enable afuse.service
+    # If enabling for all users, execute as root:
+    # systemctl --user --global enable service
+    systemctl --user start afuse.service

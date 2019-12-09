@@ -63,6 +63,7 @@ formulas_aur=(
     ripmime
     nvm
     rbenv
+    afuse
 )
 
 for formula in "${formulas[@]}"; do
