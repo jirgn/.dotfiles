@@ -1,0 +1,4 @@
+# directory shortcuts
+map gh cd ~
+map gc cd ~/Code
+map gD cd ~/Downloads

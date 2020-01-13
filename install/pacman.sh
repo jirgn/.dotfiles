@@ -68,8 +68,8 @@ formulas_aur=(
     arm-none-eabi-gcc
     ripmime
     nvm
-    rbenv
     afuse
+    lf
 )
 
 for formula in "${formulas[@]}"; do
