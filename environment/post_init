@@ -15,5 +15,5 @@ source /usr/share/nvm/init-nvm.sh
 # source "${DOTFILES}/environment/lazy-load.sh/loader"
 
 # PATH=./bin:$PATH                    # prefer bin dir of local project
-# PATH=./node_modules/.bin:$PATH      # prefer javascript npm binaries in local project
+PATH=./node_modules/.bin:$PATH      # prefer javascript npm binaries in local project
 # PATH=./vendor/bin:$PATH             # prefer php composer binaries in local project 
