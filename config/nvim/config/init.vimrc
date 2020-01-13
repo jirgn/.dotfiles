@@ -115,5 +115,8 @@ Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 Plug 'mhinz/vim-mix-format', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
+" graphql
+Plug 'jparise/vim-graphql'
+
 call plug#end()
 
