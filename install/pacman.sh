@@ -54,6 +54,12 @@ formulas=(
 
 # gui tools
     zeal
+
+# powersave
+    tlp
+    tlp-rdw
+    tp_smapi
+    acpi_call
 )
 
 formulas_aur=(
