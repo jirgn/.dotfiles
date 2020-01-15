@@ -28,6 +28,8 @@ formulas=(
      ripgrep
      tree
      wget
+     lf
+     fd
     
 # development tools
      cmake
