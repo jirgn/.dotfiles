@@ -3,7 +3,7 @@
 # ---------------------
 
 export DOTFILES="${HOME}/.dotfiles"
-export PHPROOT="${BREW_PREFIX}/opt/php@7.1"
+export PHPROOT="${BREW_PREFIX}/opt/php@7.3"
 export BREW_PREFIX=`brew --prefix`
 export EDITOR=nvim
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
@@ -13,16 +13,17 @@ export LC_ALL=en_US.UTF-8
 export GOPATH="${HOME}/.go"
 export GOROOT="${BREW_PREFIX}/opt/go/libexec"
 export PYENV_ROOT="`pyenv root`"
-export LDFLAGS="-L/usr/local/opt/icu4c/lib"
-export LDFLAGS="-L${PHPROOT}/lib"
-export CPPFLAGS="-I/usr/local/opt/icu4c/include"
-export CPPFLAGS="-I${PHPROOT}/include"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/icu4c/lib"
+export LDFLAGS="${LDFLAGS} -L${PHPROOT}/lib"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/icu4c/include"
+export CPPFLAGS="${CPPFLAGS} -I${PHPROOT}/include"
 export VAGRANT_USE_VAGRANT_TRIGGERS=TRUE
 export BEACH_REMOTE_AUTHORIZED_KEYS=`ssh-add -L | base64`
 export HOMEBREW_GITHUB_API_TOKEN=befb326c9ca67736287c06c4608bb7838076d4f0
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --no-ignore-vcs --exclude .git'
 export FZF_DEFAULT_OPTS="--ansi"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export COMPOSER_MEMORY_LIMIT=-1
 
 # ------------------------------------------
 # path definition
@@ -33,7 +34,9 @@ PATH=$PATH:$DOTFILES/bin                  # Personal binaries
 PATH=$PATH:$HOME/.local/bin               # pipsi libs
 PATH=$PATH:$HOME/.composer/vendor/bin     # Global Composer bin
 PATH=$PATH:/usr/X11/bin                   # X11 Stuff
-PATH=$PATH:$PHPROOT/bin:$PHPROOT/sbin
+# PATH=$PATH:$PHPROOT/bin:$PHPROOT/sbin
+PATH=$PATH:$BREW_PREFIX/opt/mariadb@10.3/bin
+PATH=$PATH:$BREW_PREFIX/opt/mysql-client/bin
 PATH=$PATH:$BREW_PREFIX/icu4c/bin:$BREW_PREFIX/icu4c/sbin
 PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 PATH=$PATH:$PYENV_ROOT

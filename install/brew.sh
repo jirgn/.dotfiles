@@ -30,6 +30,7 @@ formulas=(
      wget
      lf
      fd
+     htop
     
 # development tools
      cmake
@@ -53,7 +54,9 @@ formulas=(
      yamllint
 
 # php envirionment with sniffer and packagemanager
-     php71
+     php@7.2
+     php@7.3
+     brew-php-switcher
      composer
 
 # qmk keyboard firmware -- planck keyboard-
