@@ -1,4 +1,4 @@
 map gh cd ~
-map gv cd /Volumes/Development/environments/vagrant-environment
+map gv cd ~/Code/cornelsen/environment
 map gsd cd /Volumes/webkatalog/development
-map gd cd /Volumes/Development
+map gd cd ~/Code
