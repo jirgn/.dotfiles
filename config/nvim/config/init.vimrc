@@ -48,7 +48,7 @@ Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-ultisnips'
 Plug 'ncm2/ncm2-cssomni' , { 'for': [ 'css', 'scss', 'less' ] }
-Plug 'ncm2/ncm2-tern',  { 'do': 'npm install', 'for': [ 'javascript', 'javascript.jsx', 'typescript' ] }
+Plug 'ncm2/ncm2-tern',  { 'do': 'npm install', 'for': [ 'javascript', 'javascript.jsx' ] }
 Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'phpactor/ncm2-phpactor', { 'for': 'php' }
 Plug 'pbogut/ncm2-alchemist', { 'for': 'elixir' }
@@ -87,6 +87,10 @@ Plug 'pangloss/vim-javascript', { 'for': [ 'javascript.jsx', 'javascript'  ]} " 
 Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
 Plug 'heavenshell/vim-jsdoc', { 'for': [ 'javascript.jsx', 'javascript' ] }
 
+" Typescript
+Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'typescriptreact'] }
+Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'typescriptreact'], 'do': './install.sh' }
+
 " styles
 Plug 'groenewege/vim-less', { 'for': 'less' } " less support
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
@@ -94,9 +98,9 @@ Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } " sass scss syntax support
 Plug 'stephenway/postcss.vim', { 'for': [ 'css', 'scss', 'less', 'stylus' ] } " postcss syntax highlight
 
-" markdown
-Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' } " Open markdown files in Marked.app - mapped to <leader>m
-Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
+" text transform (markdown, tex, html, ...)
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
