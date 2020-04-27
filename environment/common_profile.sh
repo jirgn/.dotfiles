@@ -8,11 +8,10 @@ export MAKEOPTS="-j9"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PYENV_ROOT="`pyenv root`"
-export LDFLAGS="-L/usr/local/opt/icu4c/lib"
-export LDFLAGS="-L${PHPROOT}/lib"
-export CPPFLAGS="-I/usr/local/opt/icu4c/include"
-export CPPFLAGS="-I${PHPROOT}/include"
-
+export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --no-ignore-vcs --exclude .git'
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export COMPOSER_MEMORY_LIMIT=-1
 # ------------------------------------------
 # path definition
 # ------------------------------------------
