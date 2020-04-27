@@ -37,7 +37,10 @@ snippet rcomfn "react functional component" b
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ${1:ComponentName} = ({${2:propName} }) => { 
+const ${1:ComponentName} = ( props ) => { 
+	const {
+		${2:propName}
+	} = props;
 
 	return (
 		${0:<someJsx></someJsx>}

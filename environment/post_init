@@ -14,7 +14,7 @@ source /usr/share/nvm/init-nvm.sh
 # replaced standard initialization with lazy-loader for performance issues
 # source "${DOTFILES}/environment/lazy-load.sh/loader"
 
-# PATH=$HOME/bin:$PATH                    # prefer bin dir of local project
-# PATH=$HOME/node_modules/.bin:$PATH      # prefer javascript npm binaries in local project
-# PATH=$HOME/.composer/vendor/bin:$PATH     # Global Composer bin
-# PATH=$HOME/.rvm/bin:$PATH                 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# project specific binaries need to be loaded first so the lookup is correct
+PATH=./node_modules/.bin:$PATH      # prefer javascript npm binaries in local project
+# PATH=./.composer/vendor/bin:$PATH     # Global Composer bin
+# PATH=./.rvm/bin:$PATH                 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

@@ -18,7 +18,7 @@ Plug 'honza/vim-snippets' " snippet library
 Plug 'SirVer/ultisnips' " snippet manager
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
-Plug 'tpope/vim-eunuch' " syntactic sugar for Unix helpers
+" Plug 'tpope/vim-eunuch' " syntactic sugar for Unix helpers
 Plug 'cohama/lexima.vim' " autmatic closing of quotes, paranehesis, brackets, ...
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
@@ -52,21 +52,21 @@ Plug 'ncm2/ncm2-tern',  { 'do': 'npm install', 'for': [ 'javascript', 'javascrip
 Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'phpactor/ncm2-phpactor', { 'for': 'php' }
 Plug 'pbogut/ncm2-alchemist', { 'for': 'elixir' }
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+" Plug 'autozimu/LanguageClient-neovim', {
+    " \ 'branch': 'next',
+    " \ 'do': 'bash install.sh',
+    " \ }
 
 " search replace
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fuzzy file finder and so much more
-Plug 'wincent/ferret'
+" Plug 'wincent/ferret'
 
 " project 
 Plug 'mhinz/vim-startify' " fancy startscreen
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 Plug 'eshion/vim-sync' " filesync to remote or local directory
-Plug 'ludovicchabant/vim-gutentags' " ctag autogeneration
-Plug 'embear/vim-localvimrc' " enable .lvimrc support in projects
+" Plug 'ludovicchabant/vim-gutentags' " ctag autogeneration
+" Plug 'embear/vim-localvimrc' " enable .lvimrc support in projects
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
 
 " git support
@@ -105,7 +105,7 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }	 " Puppet Syntax
 Plug 'stanangeloff/php.vim', { 'for': 'php' } " PHP Syntax
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' } " PHP Coding Style Fixer
 Plug 'phpactor/phpactor', { 'for': 'php', 'do': 'composer install'} " php refactoring and completion
-Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' } " namespace completion
+" Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' } " namespace completion
 
 " typo3 neos
 Plug 'jirgn/vim.typoscript', { 'for': 'typoscript' }
