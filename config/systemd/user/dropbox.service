@@ -1,0 +1,14 @@
+[Unit]
+Description="Sync dropbox via rclone"
+AssertPathExists=%h/Cloud/dropbox
+AssertFileIsExecutable=/usr/bin/rclone
+
+[Service]
+WorkingDirectory=%h/Cloud/dropbox
+ExecStart=/usr/bin/rclone sync dropbox: ./ -v
+Restart=always
+RestartSec=15min
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target
