@@ -1,1 +1,67 @@
+" activate ideavim plugins
 set surround
+set commentary
+
+" idea specific settings
+set ideajoin
+set ideamarks
+
+" vim settings
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+set showmode
+set number
+
+" mappings
+let mapleader=","
+
+" fix
+nnoremap Y y$
+
+" convinience
+nnoremap <leader>, :w<CR>
+
+" show context menu
+nnoremap <leader>mm :action EditorPopupMenu<CR>
+nnoremap <leader>mr :action EditorPopupMenu1.FindRefactor<CR>
+nnoremap <leader>mg :action EditorPopupMenu.GoTo<CR>
+
+" navigation
+
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-b> <Left>
+
+inoremap <C-f> <Right>
+inoremap <C-d> <Del>
+nnoremap [<SPACE> I<CR><ESC>
+nnoremap ]<SPACE> o<ESC>k
+
+" git
+nnoremap <leader>gb :action Annotate<CR>
+nnoremap <leader>gd :action Compare.LastVersion<CR>
+nnoremap <leader>gf :action Git.Fetch<CR>
+nnoremap <leader>gm :action Git.Merge<CR>
+nnoremap <leader>gs :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>gv :action LocalHistory.ShowHistory<CR>
+
+" doc
+nnoremap ,K :action QuickJavaDoc<CR>
+vnoremap ,K :action QuickJavaDoc<CR>
+nnoremap ,k :action ExpressionTypeInfo<CR>
+vnoremap ,k :action ExpressionTypeInfo<CR>
+
+" search
+nnoremap <leader>/ :action Find<CR>
+vnoremap <leader>/ :action Find<CR>
+nnoremap <leader>e :action GotoFile<CR>
+vnoremap <leader>e :action GotoFile<CR>
+nnoremap <leader>gc :action GotoClass<CR>
+nnoremap <leader>ga :action GotoClass<CR>
+nnoremap <leader>a :action FindInPath<CR>
+vnoremap <leader>a :action FindInPath<CR>
+
+" view
+nnoremap <leader>z :action ToggleZenMode<CR>
