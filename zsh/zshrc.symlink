@@ -5,10 +5,8 @@
 # * prompt
 # * completion
 # * aliasses
-
 source $DOTFILES/environment/common_rc.sh
-source $DOTFILES/zsh/plugins.zsh
-
 for config ($DOTFILES/zsh/config/*.zsh) source $config
-
+source $DOTFILES/zsh/plugins.zsh
+for config ($DOTFILES/zsh/config-plugins/*.zsh) source $config
 source $DOTFILES/environment/post_init
