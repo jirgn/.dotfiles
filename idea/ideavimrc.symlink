@@ -22,6 +22,9 @@ nnoremap Y y$
 
 " convinience
 nnoremap <leader>, :w<CR>
+nnoremap <leader>y :action SelectInProjectView<CR>
+nnoremap <leader>Y :action SelectIn<CR>
+
 
 " show context menu
 nnoremap <leader>mm :action EditorPopupMenu<CR>
@@ -50,8 +53,6 @@ nnoremap <leader>gv :action LocalHistory.ShowHistory<CR>
 " doc
 nnoremap ,K :action QuickJavaDoc<CR>
 vnoremap ,K :action QuickJavaDoc<CR>
-nnoremap ,k :action ExpressionTypeInfo<CR>
-vnoremap ,k :action ExpressionTypeInfo<CR>
 
 " search
 nnoremap <leader>/ :action Find<CR>
@@ -59,7 +60,7 @@ vnoremap <leader>/ :action Find<CR>
 nnoremap <leader>e :action GotoFile<CR>
 vnoremap <leader>e :action GotoFile<CR>
 nnoremap <leader>gc :action GotoClass<CR>
-nnoremap <leader>ga :action GotoClass<CR>
+nnoremap <leader>ga :action GotoAction<CR>
 nnoremap <leader>a :action FindInPath<CR>
 vnoremap <leader>a :action FindInPath<CR>
 
