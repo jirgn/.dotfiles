@@ -8,6 +8,7 @@ autocmd FileType php nnoremap <leader>rmm :call phpactor#ContextMenu()<cr>
 
 " lookup definitions
 autocmd FileType php nnoremap <leader>rlr :call phpactor#FindReferences()<cr>
+autocmd FileType php nnoremap <leader>rli :call phpactor#Hover()<cr>
 
 " Fill
 " constructor
