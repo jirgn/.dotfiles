@@ -15,6 +15,7 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'folke/which-key.nvim', {'branch': 'main'}
+Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
 
 " ui
 Plug 'nvim-lua/popup.nvim'
@@ -24,6 +25,7 @@ Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
 Plug 'hrsh7th/nvim-compe'
+Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
 
 " additional commands/textobjects
