@@ -9,17 +9,22 @@ endif
 call plug#begin("~/.dotfiles/config/nvim_next/plugged")
 
 " colorschemas
-Plug 'shaunsingh/nord.nvim'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
+
+" util
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'folke/which-key.nvim', {'branch': 'main'}
 
 " ui
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
 Plug 'hrsh7th/nvim-compe'
+Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
@@ -31,6 +36,15 @@ Plug 'tpope/vim-unimpaired' " mappings for easier usage of common actions like n
 Plug 'tpope/vim-abolish' " magic substition
 Plug 'junegunn/vim-easy-align' " alignment 
 Plug 'vim-scripts/matchit.zip' " extended % matching
+
+" project
+Plug 'mhinz/vim-startify' " fancy startscreen
+Plug 'ahmedkhalf/lsp-rooter.nvim', { 'branch': 'main' } " project manager - startscreen
+" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
+" requires
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua', { 'on': ['NvimTreeToggle', 'NvimTreeFindFile'] }
+
 
 " language support
 Plug 'neovim/nvim-lspconfig'
