@@ -30,5 +30,5 @@ fileext = ".vcf"
 [storage jirgn_contacts_gmail_remote]
 type = "google_contacts"
 token_file = "~/.vdirsyncer/jirgn_contacts_gmail_token"
-client_id = <googleId>
-client_secret = <googleSecret>
+client_id = "<googleID>"
+client_secret = "<googleSecret>"
