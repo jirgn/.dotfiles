@@ -3,6 +3,8 @@
 # --------------------------
 
 # # Python pyenv
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 # # Ruby rvm
@@ -14,7 +16,11 @@ source /usr/share/nvm/init-nvm.sh
 # replaced standard initialization with lazy-loader for performance issues
 # source "${DOTFILES}/environment/lazy-load.sh/loader"
 
+# HACK: fix yarn2 neomake issue loading proxy file in local binaries
+PATH=$HOME/bin:$PATH                # Personal binaries
+#
+#
 # project specific binaries need to be loaded first so the lookup is correct
-PATH=./node_modules/.bin:$PATH      # prefer javascript npm binaries in local project
+# PATH=./node_modules/.bin:$PATH      # prefer javascript npm binaries in local project
 # PATH=./.composer/vendor/bin:$PATH     # Global Composer bin
 # PATH=./.rvm/bin:$PATH                 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
