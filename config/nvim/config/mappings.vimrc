@@ -28,6 +28,6 @@ nnoremap <silent> gj j
 nnoremap <silent> k gk
 nnoremap <silent> gk k
 nnoremap <silent> ^ g^
+nnoremap <silent> g^ ^
 nnoremap <silent> $ g$
-
-
+nnoremap <silent> g$ $
