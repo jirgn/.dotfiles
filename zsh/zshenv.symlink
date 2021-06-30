@@ -1,6 +1,8 @@
 # this file is always sourced
 # -> environement variables that need to be updated fequently
-# 
+#
 # WARNING:
 # this file is also sourced when running "zsh -c" for running single commands
 # Therefore NEVER BREAK DEFAULT BEHAVIOUR
+
+source $HOME/.dotfiles/environment/common_profile.sh 
