@@ -13,15 +13,15 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
-" Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets', {'branch': 'main'}
 Plug 'folke/which-key.nvim', {'branch': 'main'}
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " ui
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-" Plug 'camspiers/snap'
+" Plug 'camspiers/snap'  "alternative to telescope search
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
@@ -44,11 +44,8 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 " project
 Plug 'mhinz/vim-startify' " fancy startscreen
 Plug 'ahmedkhalf/lsp-rooter.nvim', { 'branch': 'main' } " project manager - startscreen
-" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
-" requires
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua', { 'on': ['NvimTreeToggle', 'NvimTreeFindFile'] }
-
 
 " language support
 Plug 'neovim/nvim-lspconfig'
