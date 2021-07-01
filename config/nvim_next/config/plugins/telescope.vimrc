@@ -19,4 +19,10 @@ require('telescope').setup{
     },
   }
 }
+
+-- better naming for which-key
+local wk = require("which-key")
+wk.register({
+    ["<leader>f"] = "+find"
+})
 EOF
