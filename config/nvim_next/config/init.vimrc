@@ -41,9 +41,6 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 
 " project
 Plug 'mhinz/vim-startify' " fancy startscreen
-Plug 'ahmedkhalf/lsp-rooter.nvim', { 'branch': 'main' } " project manager - startscreen
-" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
-" requires
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua', { 'on': ['NvimTreeToggle', 'NvimTreeFindFile'] }
 
@@ -51,6 +48,7 @@ Plug 'kyazdani42/nvim-tree.lua', { 'on': ['NvimTreeToggle', 'NvimTreeFindFile'] 
 " language support
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 " git
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
