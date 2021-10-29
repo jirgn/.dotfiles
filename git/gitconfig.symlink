@@ -1,6 +1,6 @@
 [user]
-    name = Jürgen Messner
-    email = juergen.messner@cornelsen.de
+    name = Jirgn
+    email = jirgn76@googlemail.com
 [http]
 #   proxy = http://192.168.160.252:3128
 [core]
@@ -16,3 +16,10 @@
 	default = current
 [credential]
     helper = osxkeychain
+[pull]
+	rebase = false
+; [filter "lfs"]
+; 	clean = git-lfs clean -- %f
+; 	smudge = git-lfs smudge -- %f
+; 	process = git-lfs filter-process
+; 	required = true
