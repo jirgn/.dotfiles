@@ -44,7 +44,7 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 " project
 Plug 'mhinz/vim-startify' " fancy startscreen
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua', { 'on': ['NvimTreeToggle', 'NvimTreeFindFile'] }
+Plug 'kyazdani42/nvim-tree.lua'
 
 " language support
 Plug 'neovim/nvim-lspconfig'

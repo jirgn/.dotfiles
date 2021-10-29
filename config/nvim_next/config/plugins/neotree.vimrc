@@ -3,6 +3,8 @@ nnoremap <leader>y :NvimTreeFindFile<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 
 lua << EOF
+require('nvim-tree').setup {}
+
 -- better naming for which-key
 local wk = require("which-key")
 wk.register({
