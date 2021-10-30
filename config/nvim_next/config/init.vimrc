@@ -23,6 +23,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 " Plug 'camspiers/snap'  "alternative to telescope search
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
