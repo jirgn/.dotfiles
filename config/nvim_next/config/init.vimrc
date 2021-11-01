@@ -27,9 +27,17 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
-Plug 'hrsh7th/nvim-compe'
+" Plug 'hrsh7th/nvim-compe'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
+
+" completion
+Plug 'onsails/lspkind-nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-vsnip'
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
