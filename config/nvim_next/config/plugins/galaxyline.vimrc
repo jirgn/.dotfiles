@@ -43,13 +43,22 @@ gls.left[2] = {
   },
 }
 gls.left[3] = {
+  BufferType = {
+    provider = 'FileTypeName',
+    condition = condition.hide_in_width,
+    separator = ' ',
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.green,colors.bg,'bold'}
+  }
+}
+gls.left[4] = {
   FileSize = {
     provider = 'FileSize',
     condition = condition.buffer_not_empty,
     highlight = {colors.fg,colors.bg}
   }
 }
-gls.left[4] ={
+gls.left[5] ={
   FileIcon = {
     provider = 'FileIcon',
     condition = condition.buffer_not_empty,
@@ -57,7 +66,7 @@ gls.left[4] ={
   },
 }
 
-gls.left[5] = {
+gls.left[6] = {
   FileName = {
     provider = 'FileName',
     condition = condition.buffer_not_empty,
@@ -65,7 +74,7 @@ gls.left[5] = {
   }
 }
 
-gls.left[6] = {
+gls.left[7] = {
   LineInfo = {
     provider = 'LineColumn',
     separator = ' ',
@@ -74,7 +83,7 @@ gls.left[6] = {
   },
 }
 
-gls.left[7] = {
+gls.left[8] = {
   PerCent = {
     provider = 'LinePercent',
     separator = ' ',
@@ -83,14 +92,14 @@ gls.left[7] = {
   }
 }
 
-gls.left[8] = {
+gls.left[9] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     icon = '  ',
     highlight = {colors.red,colors.bg}
   }
 }
-gls.left[9] = {
+gls.left[10] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = '  ',
@@ -98,7 +107,7 @@ gls.left[9] = {
   }
 }
 
-gls.left[10] = {
+gls.left[11] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     icon = '  ',
@@ -106,7 +115,7 @@ gls.left[10] = {
   }
 }
 
-gls.left[11] = {
+gls.left[12] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     icon = '  ',

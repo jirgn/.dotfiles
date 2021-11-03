@@ -13,20 +13,30 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'rafamadriz/friendly-snippets', {'branch': 'main'}
 Plug 'folke/which-key.nvim', {'branch': 'main'}
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " ui
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make', 'branch': 'main' }
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
-Plug 'hrsh7th/nvim-compe'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
+Plug 'Pocco81/TrueZen.nvim', {'branch': 'main'}
+
+" completion
+Plug 'onsails/lspkind-nvim'
+Plug 'hrsh7th/nvim-cmp', {'branch': 'main'}
+Plug 'hrsh7th/cmp-buffer', {'branch': 'main'}
+Plug 'hrsh7th/cmp-path', {'branch': 'main'}
+Plug 'hrsh7th/cmp-nvim-lsp', {'branch': 'main'}
+Plug 'hrsh7th/cmp-vsnip', {'branch': 'main'}
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
@@ -42,8 +52,7 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 " project
 Plug 'mhinz/vim-startify' " fancy startscreen
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua', { 'on': ['NvimTreeToggle', 'NvimTreeFindFile'] }
-
+Plug 'kyazdani42/nvim-tree.lua'
 
 " language support
 Plug 'neovim/nvim-lspconfig'

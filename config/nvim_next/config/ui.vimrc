@@ -1,6 +1,6 @@
 " configure nvcode-color-schemes
 let g:nvcode_termcolors=256
-colorscheme onedark " Or whatever colorscheme you make
+colorscheme aurora " Or whatever colorscheme you make
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))
@@ -45,7 +45,6 @@ set tabstop=4               " the visible width of tabs
 set softtabstop=4           " edit as if the tabs are 4 characters wide
 set shiftwidth=4            " number of spaces to use for indent and unindent
 set shiftround              " round indent to a multiple of 'shiftwidth'
-set completeopt+=longest
 
 " code folding settings
 set foldmethod=syntax       " fold based on indent
