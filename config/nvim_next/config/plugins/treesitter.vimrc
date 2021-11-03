@@ -1,4 +1,9 @@
 lua <<EOF
+local present, treesitter = pcall(require, "nvim-treesitter")
+if not present then
+	return
+end
+
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   ignore_install = {}, -- List of parsers to ignore installing

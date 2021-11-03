@@ -1,7 +1,11 @@
 set completeopt=menu,menuone,noselect
 
 lua <<EOF
-  local cmp = require('cmp')
+  local present, cmp = pcall(require, "cmp")
+  if not present then
+    return
+  end
+
   local lspkind = require('lspkind')
 
   lspkind.init()

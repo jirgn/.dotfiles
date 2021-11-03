@@ -7,8 +7,13 @@ nnoremap <leader>fk :lua require'telescope.builtin'.keymaps{}<cr>
 nnoremap <leader>f? :lua require'telescope.builtin'.builtin{}<cr>
 
 lua << EOF
+local present, telescope = pcall(require, "telescope")
+if not present then
+	return
+end
+
 local actions = require('telescope.actions')
-local telescope = require('telescope')
+
 telescope.setup{
   defaults = {
     mappings = {
