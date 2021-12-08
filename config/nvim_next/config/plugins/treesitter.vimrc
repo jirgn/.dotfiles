@@ -1,3 +1,6 @@
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 lua <<EOF
 local present, treesitter = pcall(require, "nvim-treesitter")
 if not present then
@@ -31,14 +34,31 @@ require'nvim-treesitter.configs'.setup {
       goto_node = '<cr>',
       show_help = '?',
     }
+  },
+  textobjects = {
+    select = {
+      enable = true,
+
+      -- Automatically jump forward to textobj, similar to targets.vim 
+      lookahead = true,
+
+      keymaps = {
+        -- You can use the capture groups defined in textobjects.scm
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner",
+      },
+    },
   }
 }
+
 
 -- add local fusion parser for dev purposes
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.fusion = {
   install_info = {
-    url = "~/Code/tree-sitter-fusion", -- local path to development
+    url = "~/Code/tree-sitter/tree-sitter-fusion", -- local path to development
     files = {"src/parser.c"}
   },
   filetype = "fusion", -- if filetype does not agrees with parser name
