@@ -1,7 +1,7 @@
 " vim:fdm=marker
 
 if empty(glob('~/.dotfiles/config/nvim_next/plugged'))
-  silent !curl -fLo ~/.dotfiles/config/nvim_next/autoload/plug.vim --create- 
+  silent !curl -fLo ~/.dotfiles/config/nvim_next/autoload/plug.vim --create-dirs
     \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
@@ -10,6 +10,8 @@ call plug#begin("~/.dotfiles/config/nvim_next/plugged")
 
 " colorschemas
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'folke/tokyonight.nvim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
@@ -56,7 +58,8 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 " language support
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/playground'
 
 " git
