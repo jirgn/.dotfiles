@@ -37,9 +37,68 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { "tsserver", "phpactor", "vimls", "yamlls", "bashls", "rust_analyzer", "clangd" }
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup { on_attach = on_attach }
+    nvim_lsp[lsp].setup { 
+        on_attach = on_attach,
+        capabilities = capabilities
+    }
 end
+
+local vs_code_extracted = {
+  html = "vscode-html-language-server",
+  cssls = "vscode-css-language-server"
+}
+
+for ls, cmd in pairs(vs_code_extracted) do
+  nvim_lsp[ls].setup {
+    cmd = {cmd, "--stdio"},
+    on_attach = on_attach,
+    capabilities = capabilities
+  }
+end
+
+nvim_lsp.jsonls.setup {
+  cmd = {"vscode-json-language-server", "--stdio"},
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"json", "jsonc"},
+  settings = {
+    json = {
+      -- Schemas https://www.schemastore.org
+      schemas = {
+        {
+          fileMatch = {"package.json"},
+          url = "https://json.schemastore.org/package.json"
+        },
+        {
+          fileMatch = {"tsconfig*.json"},
+          url = "https://json.schemastore.org/tsconfig.json"
+        },
+        {
+          fileMatch = {
+            ".prettierrc",
+            ".prettierrc.json",
+            "prettier.config.json"
+          },
+          url = "https://json.schemastore.org/prettierrc.json"
+        },
+        {
+          fileMatch = {".eslintrc", ".eslintrc.json"},
+          url = "https://json.schemastore.org/eslintrc.json"
+        },
+        {
+          fileMatch = {".babelrc", ".babelrc.json", "babel.config.json"},
+          url = "https://json.schemastore.org/babelrc.json"
+        },
+        {
+          fileMatch = {"lerna.json"},
+          url = "https://json.schemastore.org/lerna.json"
+        }
+      }
+    }
+  }
+}
 
 -- better naming for which-key
 local wk = require("which-key")

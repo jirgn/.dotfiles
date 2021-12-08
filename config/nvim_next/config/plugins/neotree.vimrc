@@ -3,7 +3,11 @@ nnoremap <leader>y :NvimTreeFindFile<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 
 lua << EOF
-require('nvim-tree').setup {}
+local present, nvim_tree = pcall(require, "nvim-tree")
+if not present then
+	return
+end
+nvim_tree.setup({})
 
 -- better naming for which-key
 local wk = require("which-key")

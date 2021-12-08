@@ -1,7 +1,7 @@
 " vim:fdm=marker
 
 if empty(glob('~/.dotfiles/config/nvim_next/plugged'))
-  silent !curl -fLo ~/.dotfiles/config/nvim_next/autoload/plug.vim --create- 
+  silent !curl -fLo ~/.dotfiles/config/nvim_next/autoload/plug.vim --create-dirs
     \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
@@ -10,6 +10,8 @@ call plug#begin("~/.dotfiles/config/nvim_next/plugged")
 
 " colorschemas
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'folke/tokyonight.nvim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
@@ -21,15 +23,22 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " ui
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-" Plug 'camspiers/snap'  "alternative to telescope search
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
-Plug 'hrsh7th/nvim-compe'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
+Plug 'Pocco81/TrueZen.nvim'
+
+" completion
+Plug 'onsails/lspkind-nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-vsnip'
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
@@ -49,7 +58,8 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 " language support
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/playground'
 
 " git
