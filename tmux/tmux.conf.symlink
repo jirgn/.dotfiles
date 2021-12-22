@@ -22,7 +22,8 @@ set-option -g mouse on
 ##############################
 ### Color & Style Settings ###
 ##############################
-# solrarized loaded as plugin see plugin section
+set -ga terminal-overrides ',screen-256color:Tc'
+source-file ${DOTFILES}/tmux/theme.zenbones.tmux
 tm_icon="🙊"
 tm_battery="#(~/.dotfiles/scripts/battery_indicator.sh)"
 tm_date="#[fg=$tm_color_inactive] %R %d %b"
@@ -40,7 +41,6 @@ set-option -sa terminal-overrides ',alacritty:RGB'
 ###  List of plugins ###
 ########################
 set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'seebi/tmux-colors-solarized'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-copycat'
@@ -53,7 +53,6 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 
 # Plugin Features
 # ################
-set -g @colors-solarized 'dark'
 
 # activate optionals feature for tmux-resurrect plugin
 # for vim

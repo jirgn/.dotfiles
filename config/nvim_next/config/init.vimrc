@@ -12,6 +12,7 @@ call plug#begin("~/.dotfiles/config/nvim_next/plugged")
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'folke/tokyonight.nvim'
+Plug 'mcchrish/zenbones.nvim' | Plug 'rktjmp/lush.nvim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
@@ -29,7 +30,8 @@ Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
-Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
+Plug 'nvim-lualine/lualine.nvim'
+" Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
 Plug 'Pocco81/TrueZen.nvim'
 
 " completion
@@ -55,9 +57,12 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'mhinz/vim-startify' " fancy startscreen
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-neorg/neorg' " documentation / note taking
+Plug 'nvim-neorg/neorg-telescope'
 
 " language support
 Plug 'neovim/nvim-lspconfig'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/playground'

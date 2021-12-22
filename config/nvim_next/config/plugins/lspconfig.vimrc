@@ -45,6 +45,12 @@ for _, lsp in ipairs(servers) do
     }
 end
 
+-- null-ls 
+nvim_lsp["null-ls"].setup({
+ 
+})
+
+
 local vs_code_extracted = {
   html = "vscode-html-language-server",
   cssls = "vscode-css-language-server"

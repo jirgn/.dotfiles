@@ -13,5 +13,6 @@ alias emacs='node --version && python --version && emacs'
 # tools
 alias free='top -l 1 | grep Phys'
 alias top='top -o cpu'
-alias grep="grep --color=auto"
-alias tmux="TERM=screen-256color-bce tmux"
+alias grep='grep --color=auto'
+alias tmux='TERM=screen-256color tmux'
+

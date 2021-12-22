@@ -33,6 +33,7 @@ lua <<EOF
       { name = 'buffer' }, 
       { name = 'nvim_lsp' },
       { name = 'path' }, 
+      { name = 'neorg' }, 
     })
   })
 

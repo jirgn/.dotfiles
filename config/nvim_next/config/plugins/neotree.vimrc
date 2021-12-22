@@ -8,6 +8,10 @@ if not present then
 	return
 end
 nvim_tree.setup({})
+--    git = {
+--        ignore = false
+    --}
+--})
 
 -- better naming for which-key
 local wk = require("which-key")

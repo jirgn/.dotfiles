@@ -1,12 +1,15 @@
-" configure nvcode-color-schemes
-let g:nvcode_termcolors=256
-colorscheme aurora " Or whatever colorscheme you make
+colorscheme zenbones " Or whatever colorscheme you make
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))
     set termguicolors
     hi LineNr ctermbg=NONE guibg=NONE
 endif
+
+" fix tmux/screen italics issue
+" see https://gist.github.com/gutoyr/4192af1aced7a1b555df06bd3781a722
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
 
 
 " make the highlighting of tabs and other non-text less annoying

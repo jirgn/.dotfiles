@@ -7,6 +7,7 @@ if not present then
 	return
 end
 
+
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   ignore_install = {}, -- List of parsers to ignore installing
@@ -53,14 +54,22 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
-
 -- add local fusion parser for dev purposes
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+
 parser_config.fusion = {
   install_info = {
     url = "~/Code/tree-sitter/tree-sitter-fusion", -- local path to development
-    files = {"src/parser.c"}
+    files = {"src/parser.c", "src/scanner.c"}
   },
-  filetype = "fusion", -- if filetype does not agrees with parser name
 }
+
+parser_config.norg = {
+    install_info = {
+        url = "https://github.com/nvim-neorg/tree-sitter-norg",
+        files = { "src/parser.c", "src/scanner.cc" },
+        branch = "main"
+    },
+}
+
 EOF
