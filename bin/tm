@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# ensure italics support
+alias tmux='TERM=screen-256color tmux'
+
 # abort if we're already inside a TMUX session
 [ "$TMUX" == "" ] || exit 0
 # startup a "default" session if non currently exists
