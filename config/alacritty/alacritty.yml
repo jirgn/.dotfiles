@@ -154,8 +154,8 @@ colors:
     foreground: '#B4BDC3'
     background: '#1C1917'
   cursor:
-    cursor: '#1C1917'
-    text: '#C4CACF'
+    cursor: '#B4BDC3'
+    text: '#1C1917'
   normal:
     black:   '#1C1917'
     red:     '#DE6E7C'
