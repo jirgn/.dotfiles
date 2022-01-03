@@ -27,84 +27,104 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>cn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   buf_set_keymap("n", "<leader>cf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-  buf_set_keymap('n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+  buf_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-
 end
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { "tsserver", "phpactor", "vimls", "yamlls", "bashls", "rust_analyzer", "clangd" }
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup { 
-        on_attach = on_attach,
-        capabilities = capabilities
-    }
-end
+local server_configs = { 
+    tsserver = {}, 
+    phpactor = {}, 
+    vimls = {}, 
+    bashls = {},
+    rust_analyzer = {}, 
+    clangd = {},
+    yamlls = {
+        settings = {
+            yaml = {
+                schemas = {
+                    ["https://raw.githubusercontent.com/Sebobo/Shel.Neos.Schema/main/NodeTypes.Schema.json"] = {
+                        "DistributionPackages/*/Configuration/NodeTypes*.yaml",
+                        "NodeTypes/**/*.yaml"
+                    },
+                    ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml"
 
--- null-ls 
-nvim_lsp["null-ls"].setup({
- 
-})
-
-
-local vs_code_extracted = {
-  html = "vscode-html-language-server",
-  cssls = "vscode-css-language-server"
-}
-
-for ls, cmd in pairs(vs_code_extracted) do
-  nvim_lsp[ls].setup {
-    cmd = {cmd, "--stdio"},
-    on_attach = on_attach,
-    capabilities = capabilities
-  }
-end
-
-nvim_lsp.jsonls.setup {
-  cmd = {"vscode-json-language-server", "--stdio"},
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = {"json", "jsonc"},
-  settings = {
-    json = {
-      -- Schemas https://www.schemastore.org
-      schemas = {
-        {
-          fileMatch = {"package.json"},
-          url = "https://json.schemastore.org/package.json"
+                },
+                trace = {
+                    server = "verbose"
+                }
+            }
         },
-        {
-          fileMatch = {"tsconfig*.json"},
-          url = "https://json.schemastore.org/tsconfig.json"
-        },
-        {
-          fileMatch = {
-            ".prettierrc",
-            ".prettierrc.json",
-            "prettier.config.json"
-          },
-          url = "https://json.schemastore.org/prettierrc.json"
-        },
-        {
-          fileMatch = {".eslintrc", ".eslintrc.json"},
-          url = "https://json.schemastore.org/eslintrc.json"
-        },
-        {
-          fileMatch = {".babelrc", ".babelrc.json", "babel.config.json"},
-          url = "https://json.schemastore.org/babelrc.json"
-        },
-        {
-          fileMatch = {"lerna.json"},
-          url = "https://json.schemastore.org/lerna.json"
+    },
+    elixirls = {
+        cmd = { "/usr/bin/elixir-ls" },
+        settings = {
+            elixirLS = {
+                dialyzerEnabled = false,
+                fetchDeps = false,
+            }
         }
-      }
+    },
+    html = {
+        cmd = { "vscode-html-language-server", "--stdio" },
+        filetypes = { "html", "xhtml" }
+    },
+    cssls = {
+        cmd = { "vscode-css-language-server", "--stdio" },
+    },
+    jsonls = {
+        cmd = {"vscode-json-language-server", "--stdio"},
+        filetypes = {"json", "jsonc"},
+        settings = {
+            json = {
+            -- Schemas https://www.schemastore.org,
+                schemas = {
+                    {
+                        fileMatch = {"package.json"},
+                        url = "https://json.schemastore.org/package.json"
+                    },
+                    {
+                        fileMatch = {"tsconfig*.json"},
+                        url = "https://json.schemastore.org/tsconfig.json"
+                    },
+                    {
+                        fileMatch = {
+                            ".prettierrc",
+                            ".prettierrc.json",
+                            "prettier.config.json"
+                        },
+                        url = "https://json.schemastore.org/prettierrc.json"
+                    },
+                    {
+                        fileMatch = {".eslintrc", ".eslintrc.json"},
+                        url = "https://json.schemastore.org/eslintrc.json"
+                    },
+                    {
+                        fileMatch = {".babelrc", ".babelrc.json", "babel.config.json"},
+                        url = "https://json.schemastore.org/babelrc.json"
+                    },
+                    {
+                        fileMatch = {"lerna.json"},
+                        url = "https://json.schemastore.org/lerna.json"
+                    }
+                }
+            }
+        }
     }
-  }
 }
+
+for name, config  in pairs(server_configs) do
+    -- add global configs
+    config.on_attach = on_attach
+    config.capabilities = capabilities
+    nvim_lsp[name].setup(config)
+end
+
 
 -- better naming for which-key
 local wk = require("which-key")
