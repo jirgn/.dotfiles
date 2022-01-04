@@ -8,6 +8,7 @@ packages=(
  "psutil"
  "setproctitle"
  "urlscan"
+ "aws-mfa"
 )
 
 for package in "${packages[@]}"; do

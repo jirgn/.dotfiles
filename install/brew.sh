@@ -12,7 +12,6 @@ echo "=============================="
 taps=(
     'universal-ctags/universal-ctags'
     'neovim/neovim'
-    'osx-cross/avr'
     'PX4/homebrew-px4'
     'getantibody/tap'
     'railwaycat/emacsmacport'
@@ -52,17 +51,13 @@ formulas=(
      pyenv
      icu4c
      yamllint
+     awscli
 
 # php envirionment with sniffer and packagemanager
      php@7.2
      php@7.3
      brew-php-switcher
      composer
-
-# qmk keyboard firmware -- planck keyboard-
-     avr-gcc
-     dfu-programmer
-     gcc-arm-none-eabi
 
 # emacs / spacemacs
     emacs

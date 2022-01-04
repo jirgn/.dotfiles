@@ -14,6 +14,7 @@ for file in $linkables ; do
         ln -s $file $target
     fi
 done
+
 echo "\n\ninstalling to ~/.spacemacs.d/"
 echo "=============================="
 if [ ! -d $HOME/.spacemacs.d ]; then
