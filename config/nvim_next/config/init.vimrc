@@ -10,6 +10,9 @@ call plug#begin("~/.dotfiles/config/nvim_next/plugged")
 
 " colorschemas
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'folke/tokyonight.nvim'
+Plug 'mcchrish/zenbones.nvim' | Plug 'rktjmp/lush.nvim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
@@ -41,7 +44,8 @@ Plug 'hrsh7th/cmp-vsnip', {'branch': 'main'}
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
 Plug 'nelstrom/vim-visual-star-search' " enables * search on visual selection
-Plug 'tpope/vim-commentary' " comment stuff out
+Plug 'numToStr/Comment.nvim' " comment stuff
+" Plug 'tpope/vim-commentary' " comment stuff out
 Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
 Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
 Plug 'tpope/vim-unimpaired' " mappings for easier usage of common actions like next, previous or line switching

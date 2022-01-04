@@ -33,6 +33,9 @@ tm_prefix_highlight="#[fg=$tm_color_active]#{prefix_highlight}"
 set -g status-left $tm_session_name' '
 set -g status-right $tm_prefix_highlight' '$tm_battery' '$tm_tunes' '$tm_date' '$tm_host
 
+# fix term colors for alacritty
+set-option -sa terminal-overrides ',screen-256color:RGB'
+
 ########################
 ###  List of plugins ###
 ########################

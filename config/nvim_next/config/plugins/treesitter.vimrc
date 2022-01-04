@@ -34,13 +34,4 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
--- add local fusion parser for dev purposes
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.fusion = {
-  install_info = {
-    url = "~/Code/tree-sitter-fusion", -- local path to development
-    files = {"src/parser.c"}
-  },
-  filetype = "fusion", -- if filetype does not agrees with parser name
-}
 EOF
