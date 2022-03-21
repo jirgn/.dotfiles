@@ -57,8 +57,10 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'mhinz/vim-startify' " fancy startscreen
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'nvim-neorg/neorg' " documentation / note taking
-Plug 'nvim-neorg/neorg-telescope'
+Plug 'nvim-orgmode/orgmode'
+Plug 'akinsho/org-bullets.nvim'
+" Plug 'nvim-neorg/neorg' " documentation / note taking
+" Plug 'nvim-neorg/neorg-telescope'
 
 " language support
 Plug 'neovim/nvim-lspconfig'
