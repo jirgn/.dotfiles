@@ -16,13 +16,10 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require('orgmode').setup({
-  org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
-  org_default_notes_file = '~/Dropbox/org/refile.org',
+  org_agenda_files = {'~/Cloud/dropbox/org/**/*'},
+  org_default_notes_file = '~/Cloud/dropbox/org/inbox.org',
+  org_todo_keywords = { 'NEXT(n)', 'TODO(t)', 'PROGRESS(p)', 'WAITING(w)', 'SOMETIME(s)', '|', 'DONE(d)', 'CANCELLED(c)'},
 })
-
-require("org-bullets").setup {
-    symbols = { "◉", "○", "✸", "✿" }
-}
 
 -- better naming for which-key
 local wk = require("which-key")

@@ -1,13 +1,16 @@
-" vim:fdm=marker
-let g:gruvbox_contrast_dark = 'soft'
-let g:gruvbox_contrast_light = 'hard'
+colorscheme zenbones " Or whatever colorscheme you make
 
-colorscheme gruvbox " Set the colorscheme
-set background=dark
-
-if has('gui_running')
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ Mono:h13
+" checks if your terminal has 24-bit color support
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
 endif
+
+" fix tmux/screen italics issue
+" see https://gist.github.com/gutoyr/4192af1aced7a1b555df06bd3781a722
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
 
 " make the highlighting of tabs and other non-text less annoying
 highlight SpecialKey ctermbg=none ctermfg=8
@@ -18,6 +21,7 @@ highlight Comment cterm=italic
 highlight htmlArg cterm=italic
 
 set number                  " show line numbers
+set cursorline
 
 set wrap                    " turn on line wrapping
 set wrapmargin=8            " wrap lines when coming within n characters from side
@@ -30,7 +34,6 @@ set smartindent
 " toggle invisible characters
 set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
-set showbreak=↪
 
 " highlight conflicts
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
@@ -45,7 +48,6 @@ set tabstop=4               " the visible width of tabs
 set softtabstop=4           " edit as if the tabs are 4 characters wide
 set shiftwidth=4            " number of spaces to use for indent and unindent
 set shiftround              " round indent to a multiple of 'shiftwidth'
-set completeopt+=longest
 
 " code folding settings
 set foldmethod=syntax       " fold based on indent

@@ -51,18 +51,18 @@ nnoremap <leader>gs :action ActivateVersionControlToolWindow<CR>
 nnoremap <leader>gv :action LocalHistory.ShowHistory<CR>
 
 " doc
-nnoremap ,K :action QuickJavaDoc<CR>
-vnoremap ,K :action QuickJavaDoc<CR>
+nnoremap <S-K> :action QuickJavaDoc<CR>
+vnoremap <S-K> :action QuickJavaDoc<CR>
 
 " search
 nnoremap <leader>/ :action Find<CR>
 vnoremap <leader>/ :action Find<CR>
-nnoremap <leader>e :action GotoFile<CR>
-vnoremap <leader>e :action GotoFile<CR>
-nnoremap <leader>gc :action GotoClass<CR>
-nnoremap <leader>ga :action GotoAction<CR>
-nnoremap <leader>a :action FindInPath<CR>
-vnoremap <leader>a :action FindInPath<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+vnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fc :action GotoClass<CR>
+nnoremap <leader>fa :action GotoAction<CR>
+nnoremap <leader>fg :action FindInPath<CR>
+vnoremap <leader>fg :action FindInPath<CR>
 
 " view
 nnoremap <leader>z :action ToggleZenMode<CR>

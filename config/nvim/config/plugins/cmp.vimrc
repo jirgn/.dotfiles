@@ -23,6 +23,7 @@ lua <<EOF
             }
         }),
     },
+    mapping = cmp.mapping.preset.insert(),
     snippet = {
       expand = function(args)
         vim.fn["vsnip#anonymous"](args.body)
@@ -33,9 +34,13 @@ lua <<EOF
       { name = 'buffer' }, 
       { name = 'nvim_lsp' },
       { name = 'path' }, 
-      { name = 'neorg' }, 
+      -- { name = 'neorg' }, 
+      { name = 'orgmode' }
     })
   })
+
+  local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+  cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
 
   -- Use buffer source for `/`.
 --  cmp.setup.cmdline('/', {

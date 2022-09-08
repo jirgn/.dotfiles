@@ -21,6 +21,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 PATH=$PATH:/usr/local/bin:/usr/local/sbin # User binaries
 PATH=$PATH:$DOTFILES/bin                  # Personal binaries
 PATH=$PATH:$HOME/.local/bin               # pipsi libs
+PATH=$PATH:$HOME/.cargo/bin               # cargo libs
 PATH=$PATH:$PYENV_ROOT
 PATH=$PATH:$GEM_HOME/ruby/2.7.0/bin
 

@@ -21,35 +21,40 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " set python paths for plugins depending on python to work
-let g:python3_host_prog = "/home/jirgn/.pyenv/shims/python3"
-
-augroup configgroup
-    autocmd!
-
-    " automatically resize panes on resize
-    autocmd VimResized * exe 'normal! \<c-w>='
-
-    " save all files on focus lost, ignoring warnings about untitled buffers
-    autocmd FocusLost * silent! wa
-
-    " markdown
-    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-    let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json=javascript', 'stylus', 'html']
-    autocmd BufNewFile,BufRead,BufWrite *.md syntax match Comment /\%^---\_.\{-}---$/
-
-    " mutt
-    autocmd BufNewFile,BufReadPost *.muttrc set filetype=muttrc
-    autocmd BufNewFile,BufReadPost *.neomuttrc set filetype=neomuttrc
+let g:python3_host_prog = "/home/jirgn/.pyenv/shims/python"
+let g:vimsyn_embed = "l"
 
 
-    " fix some issues with puppet and ruby
-    if v:version >= 703
-        " Note: Relative number is quite slow with Ruby, so is cursorline
-        autocmd FileType ruby setlocal norelativenumber nocursorline regexpengine=1 foldmethod=manual lazyredraw
-    endif
+"{{{ Mappings }}}
+"""""""""""""""""""""""""""""""""""
 
-    " puppet-commentary
-    autocmd FileType puppet setlocal commentstring=#\ %s
-augroup END
+" set a map leader for more key combos
+let mapleader = ','
 
-com! FormatJSON %!python -m json.tool
+" shortcut to save
+nmap <leader>, :w<cr>
+
+" switch between current and last buffer
+nmap <leader>. <c-^>
+
+" enable . command in visual mode
+vnoremap . :normal .<cr>
+
+" toggle cursor line
+nnoremap <leader>i :set cursorline!<cr>
+
+" shortcut to redraw current window
+nnoremap <leader>rd :redraw!<cr>
+
+" scroll the viewport faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+" moving up and down work as you would expect
+nnoremap <silent> j gj
+nnoremap <silent> gj j
+nnoremap <silent> k gk
+nnoremap <silent> gk k
+nnoremap <silent> ^ g^
+nnoremap <silent> $ g$
+
