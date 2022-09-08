@@ -22,7 +22,8 @@ set-option -g mouse on
 ##############################
 ### Color & Style Settings ###
 ##############################
-set -ga terminal-overrides ',screen-256color:Tc'
+set -ga terminal-overrides ',screen-256color:Tc,*:Ss=\E[%p1%d q:Se=\E[ q'
+
 source-file ${DOTFILES}/tmux/theme.zenbones.tmux
 tm_icon="🙊"
 tm_battery="#(~/.dotfiles/scripts/battery_indicator.sh)"
