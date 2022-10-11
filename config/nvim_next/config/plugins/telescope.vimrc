@@ -7,6 +7,10 @@ nnoremap <leader>fk :lua require'telescope.builtin'.keymaps{}<cr>
 nnoremap <leader>f? :lua require'telescope.builtin'.builtin{}<cr>
 
 lua << EOF
+
+-- register fusion for highlighting
+require('plenary.filetype').add_file('fusion')
+
 local present, telescope = pcall(require, "telescope")
 if not present then
 	return

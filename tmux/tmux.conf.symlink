@@ -22,7 +22,8 @@ set-option -g mouse on
 ##############################
 ### Color & Style Settings ###
 ##############################
-# solrarized loaded as plugin see plugin section
+set -g default-terminal "screen-256color"
+source-file ${DOTFILES}/tmux/theme_zenbones.tmux
 tm_icon="🙊"
 tm_battery="#(~/.dotfiles/scripts/battery_indicator.sh)"
 tm_date="#[fg=$tm_color_inactive] %R %d %b"
@@ -33,14 +34,10 @@ tm_prefix_highlight="#[fg=$tm_color_active]#{prefix_highlight}"
 set -g status-left $tm_session_name' '
 set -g status-right $tm_prefix_highlight' '$tm_battery' '$tm_tunes' '$tm_date' '$tm_host
 
-# fix term colors for alacritty
-set-option -sa terminal-overrides ',screen-256color:RGB'
-
 ########################
 ###  List of plugins ###
 ########################
 set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'seebi/tmux-colors-solarized'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-copycat'

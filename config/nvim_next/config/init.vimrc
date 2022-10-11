@@ -1,12 +1,6 @@
 " vim:fdm=marker
 
-if empty(glob('~/.dotfiles/config/nvim_next/plugged'))
-  silent !curl -fLo ~/.dotfiles/config/nvim_next/autoload/plug.vim --create- 
-    \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall
-endif
-
-call plug#begin("~/.dotfiles/config/nvim_next/plugged")
+call plug#begin()
 
 " colorschemas
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
@@ -30,7 +24,7 @@ Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'javascript', 'javascript.jsx', 'typoscript' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
-Plug 'glepnir/galaxyline.nvim', {'branch': 'main'}
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'Pocco81/TrueZen.nvim', {'branch': 'main'}
 
 " completion
@@ -57,6 +51,7 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'mhinz/vim-startify' " fancy startscreen
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-orgmode/orgmode' " orgmode for neovim
 
 " language support
 Plug 'neovim/nvim-lspconfig'

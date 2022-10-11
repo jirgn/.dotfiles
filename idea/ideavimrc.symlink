@@ -24,6 +24,7 @@ nnoremap Y y$
 nnoremap <leader>, :w<CR>
 nnoremap <leader>y :action SelectInProjectView<CR>
 nnoremap <leader>Y :action SelectIn<CR>
+nnoremap <leader>gg :action Generate<CR>
 
 
 " show context menu

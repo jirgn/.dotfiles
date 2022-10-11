@@ -1,3 +1,6 @@
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 lua <<EOF
 local present, treesitter = pcall(require, "nvim-treesitter")
 if not present then
@@ -5,8 +8,8 @@ if not present then
 end
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ignore_install = {}, -- List of parsers to ignore installing
+  ensure_installed = "all",
+  ignore_install = {neorg, lua}, -- List of parsers to ignore installing
   highlight = {
     enable = true,              -- false will disable the whole extension
     disable = {}, -- list of language that will be disabled
@@ -33,5 +36,23 @@ require'nvim-treesitter.configs'.setup {
     }
   }
 }
+
+-- local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+--
+-- parser_configs.norg_meta = {
+--     install_info = {
+--         url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
+--         files = { "src/parser.c" },
+--         branch = "main"
+--     },
+-- }
+--
+-- parser_configs.norg_table = {
+--     install_info = {
+--         url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
+--         files = { "src/parser.c" },
+--         branch = "main"
+--     },
+-- }
 
 EOF

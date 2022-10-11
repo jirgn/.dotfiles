@@ -7,7 +7,7 @@ end
 true_zen.setup({
 	integrations = {
 		vim_gitgutter = false,
-		galaxyline = true,
+		galaxyline = false,
 		tmux = true,
 		gitsigns = false,
 		nvim_bufferline = false,
@@ -17,7 +17,7 @@ true_zen.setup({
 		vim_powerline = false,
 		vim_signify = false,
 		express_line = false,
-		lualine = false,
+		lualine = true,
 		lightline = false,
 		feline = false
 	}

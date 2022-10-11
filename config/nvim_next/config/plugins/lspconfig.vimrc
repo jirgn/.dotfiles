@@ -59,10 +59,20 @@ local server_configs = {
             }
         },
     },
+    elixirls = {
+        cmd = { "/usr/local/bin/elixir-ls"},
+        settings = {
+            elixirLS = {
+                dialyzerEnabled = false,
+                fetchDeps = false,
+            }
+        }
+    },
     html = {
         cmd = { "vscode-html-language-server", "--stdio" },
         filetypes = { "html", "xhtml" }
     },
+    lemminx = {},
     cssls = {
         cmd = { "vscode-css-language-server", "--stdio" },
     },

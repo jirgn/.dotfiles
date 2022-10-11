@@ -16,32 +16,93 @@ window:
 
 live_config_reload: true
 
-# Colors (Gruvbox dark)
+# Colors (One Dark)
 colors:
+  # Default colors
   primary:
-    # hard contrast: background = '#1d2021'
-    background: '#282828'
-    # soft contrast: background = '#32302f'
-    foreground: '#ebdbb2'
+    foreground: '0xabb2bf'
+    background: '0x282c34'
+
+  # Cursor colors
+  cursor:
+    text: '0x5c6370'
+    cursor: '0xabb2bf'
 
   # Normal colors
   normal:
-    black: '#282828'
-    red: '#cc241d'
-    green: '#98971a'
-    yellow: '#d79921'
-    blue: '#458588'
-    magenta: '#b16286'
-    cyan: '#689d6a'
-    white: '#a89984'
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xe5c07b'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xabb2bf'
 
   # Bright colors
   bright:
-    black: '#928374'
-    red: '#fb4934'
-    green: '#b8bb26'
-    yellow: '#fabd2f'
-    blue: '#83a598'
-    magenta: '#d3869b'
-    cyan: '#8ec07c'
-    white: '#ebdbb2'
+    black:   '0x4b5263'
+    red:     '0xbe5046'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x3e4452'
+
+# Colors zenbones
+# colors:
+#   primary:
+#     foreground: '#C6D5CF'
+#     background: '#0F191F'
+#   cursor:
+#     cursor: '#CEDDD7'
+#     text: '#0F191F'
+#   normal:
+#     black:   '#0F191F'
+#     red:     '#DE6E7C'
+#     green:   '#90FF6B'
+#     yellow:  '#B77E64'
+#     blue:    '#8190D4'
+#     magenta: '#B279A7'
+#     cyan:    '#66A5AD'
+#     white:   '#C6D5CF'
+#   bright:
+#     black:   '#263945'
+#     red:     '#E8838F'
+#     green:   '#A0FF85'
+#     yellow:  '#D68C67'
+#     blue:    '#92A0E2'
+#     magenta: '#CF86C1'
+#     cyan:    '#65B8C1'
+#     white:   '#98A39E'
+#
+# Colors (Gruvbox dark)
+# colors:
+#   primary:
+#     # hard contrast: background = '#1d2021'
+#     background: '#282828'
+#     # soft contrast: background = '#32302f'
+#     foreground: '#ebdbb2'
+#
+#   # Normal colors
+#   normal:
+#     black: '#282828'
+#     red: '#cc241d'
+#     green: '#98971a'
+#     yellow: '#d79921'
+#     blue: '#458588'
+#     magenta: '#b16286'
+#     cyan: '#689d6a'
+#     white: '#a89984'
+#
+#   # Bright colors
+#   bright:
+#     black: '#928374'
+#     red: '#fb4934'
+#     green: '#b8bb26'
+#     yellow: '#fabd2f'
+#     blue: '#83a598'
+#     magenta: '#d3869b'
+#     cyan: '#8ec07c'
+#     white: '#ebdbb2'
