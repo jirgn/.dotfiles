@@ -16,4 +16,5 @@ alias top='top -o cpu'
 alias grep='grep --color=auto'
 alias tmux='TERM=screen-256color tmux'
 alias umirror='sudo reflector --country Germany --sort score -f 10 -l 100 --save /etc/pacman.d/mirrorlist'
+alias doom='~/.emacs.d/bin/doom'
 
