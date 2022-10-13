@@ -33,6 +33,7 @@
               #'org-roam-reflinks-insert-section
               #'org-roam-unlinked-references-insert-section)))
 
+
 (use-package! org-roam-ui
   :after org-roam
   :config
@@ -94,6 +95,22 @@
 #+title: ${slug} ")
          :unnarrowed t))))
 
+(use-package deft
+  :after org-roam
+  :custom
+  (deft-recursive t)
+  (deft-use-filter-string-for-filename t)
+  (deft-use-filename-as-title 't)
+  (deft-default-extension "org")
+  (deft-strip-summary-regexp
+    (concat "\\("
+        "[\n\t]" ;; blank
+        "\\|^#\\+[[:alpha:]_]+:.*$" ;; org-mode metadata
+        "\\|^:PROPERTIES:\n\\(.+\n\\)+:END:\n"
+        "\\)"))
+  (deft-directory "~/org/slipbox/pages"))
+  ;; (deft-directory org-roam-directory))
+
 (use-package! org-ref
   :config
   (setq
@@ -118,7 +135,7 @@
 
 (after! org-ref
   (setq
-   bibtex-completion-bibliography '("~/org/slipbox/references/zotero_mylibrary/zotero_mylibrary.bib")
+   bibtex-completion-bibliography '("~/org/slipbox/references/zotero_mylibrary.bib")
    bibtex-completion-notes "~/org/slipbox/references/notes/bibnotes.org"
    bibtex-completion-notes-path "~/org/references"
    bibtex-completion-pdf-field "file"
