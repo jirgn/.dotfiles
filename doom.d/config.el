@@ -33,6 +33,7 @@
               #'org-roam-reflinks-insert-section
               #'org-roam-unlinked-references-insert-section)))
 
+
 (use-package! org-roam-ui
   :after org-roam
   :config
@@ -91,12 +92,25 @@
     :FORNAME: ${forname}
     :LASTNAME: ${lastname}
     :BIRTHDAY: %^t
-    :RELATION: %^{relation|family|work}
+    :RELATION: %^{relation|family|friend|work}
 :END:
-#+title: ${slug}
-#+filetags: :person: \n\n
-")
+#+title: ${slug} ")
          :unnarrowed t))))
+
+(use-package deft
+  :after org-roam
+  :custom
+  (deft-recursive t)
+  (deft-use-filter-string-for-filename t)
+  (deft-use-filename-as-title 't)
+  (deft-default-extension "org")
+  (deft-strip-summary-regexp
+    (concat "\\("
+        "[\n\t]" ;; blank
+        "\\|^#\\+[[:alpha:]_]+:.*$" ;; org-mode metadata
+        "\\|^:PROPERTIES:\n\\(.+\n\\)+:END:\n"
+        "\\)"))
+  (deft-directory "~/org/slipbox/pages"))
 
 (use-package! org-ref
   :config
