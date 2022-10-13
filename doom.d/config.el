@@ -109,7 +109,6 @@
         "\\|^:PROPERTIES:\n\\(.+\n\\)+:END:\n"
         "\\)"))
   (deft-directory "~/org/slipbox/pages"))
-  ;; (deft-directory org-roam-directory))
 
 (use-package! org-ref
   :config
