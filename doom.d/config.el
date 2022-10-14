@@ -51,8 +51,9 @@
       org-roam-directory slipbox-root-directory
       org-roam-dailies-directory "journals/"
       org-roam-dailies-capture-templates
-      '(("d" "default" entry
-         "* %?"
+      '(("d" "default" entry "* %?" 
+         :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d>\n"))
+        ("b" "board" entry "* Jira [[CVSHOP-%?]]" 
          :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d>\n")))
 
       org-roam-capture-templates
@@ -344,15 +345,15 @@
 (with-eval-after-load 'org
   (plist-put org-format-latex-options :background 'default))
 
-(setq org-agenda-files '("~/org/slipbox/notes" "~/org/slipbox/journals"))
+(setq org-agenda-files '("~/org/notes" "~/org/slipbox/journals"))
 
 (after! org
   (setq org-capture-templates `(("i" "Inbox"
-                                 entry (file "~/org/slipbox/notes/inbox.org")
+                                 entry (file "~/org/notes/inbox.org")
                                  "* %?\n%U\n\n  %i"
                                  :kill-buffer t)
-                                ("m" "Meeting"
-                                 entry (file+headline "~/org/slipbox/notes/agenda.org" "Future")
+                                ("m" "Meeting Todo"
+                                 entry (file+headline "~/org/notes/meetings_agenda.org" "Future")
                                  ,(concat 
                                     "* TODO %? :meeting:\n"
                                     "<%<%Y-%m-%d %a %H:00>>"))
