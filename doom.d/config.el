@@ -2,10 +2,16 @@
       user-mail-address "jirgn76@googlemail.com")
 
 (setq doom-theme 'doom-nord)
-
 (setq display-line-numbers-type t)
 
-(setq org-directory "~/org/")
+;; some common used vars
+(setq 
+  slipbox-root-directory (concat (getenv "HOME") "/org/slipbox")
+  slipbox-references-directory (concat slipbox-root-directory "/references")
+  zot_bib (concat slipbox-references-directory "/zotero_mylibrary.bib"))
+
+(setq
+   org-directory slipbox-root-directory)
 
 (use-package! org-fragtog
   :after org
@@ -42,27 +48,26 @@
 
 (after! org-roam
     (setq
-      org-roam-directory "~/org/slipbox"
+      org-roam-directory slipbox-root-directory
       org-roam-dailies-directory "journals/"
       org-roam-dailies-capture-templates
       '(("d" "default" entry
          "* %?"
-         :target (file+head "%<%Y-%m-%d>.org"
-                            "#+title: %<%Y-%m-%d>\n")))
+         :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d>\n")))
+
       org-roam-capture-templates
           `(("s" "standard" plain "%?"
      :if-new
-     (file+head "pages/%<%Y%m%d%H%M%S>-${slug}.org"
-                "#+title: ${title}\n
+     (file+head "pages/%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n
 #+filetags: \n\n ")
      :unnarrowed t)
 
         ("d" "definition" plain "%?"
          :if-new
          (file+head "pages/${slug}.org"
-                    "#+title: ${title}\n
-#+filetags: :definition: \n\n
-* Definition\n\n\n
+                    "#+title: ${title}
+#+filetags: :definition: \n
+* Definition\n%?\n
 * Examples\n")
          :unnarrowed t)
 
@@ -70,8 +75,8 @@
          :if-new
          (file+head "pages/${slug}.org"
                     "#+title: ${title}\n
-#+filetags: :howto:\n\n
-* Howto\n\n\n
+#+filetags: :howto:\n
+* Howto\n%?\n
 * Examples\n")
          :unnarrowed t)
 
@@ -110,35 +115,34 @@
         "\\|^#\\+[[:alpha:]_]+:.*$" ;; org-mode metadata
         "\\|^:PROPERTIES:\n\\(.+\n\\)+:END:\n"
         "\\)"))
-  (deft-directory "~/org/slipbox/pages"))
+  (deft-directory slipbox-root-directory))
 
 (use-package! org-ref
   :config
   (setq
-   ;; org-ref-completion-library 'org-ref-ivy-cite
-   org-ref-get-pdf-filename-function 'org-ref-get-pdf-filename-helm-bibtex
+   org-ref-completion-library 'org-ref-ivy-cite
    org-ref-note-title-format "* %y - %t\n
-:PROPERTIES:\n  
-   :Custom_ID: %k\n  
-   :NOTER_DOCUMENT: %F\n 
-   :ROAM_KEY: cite:%k\n  
-   :AUTHOR: %9a\n  
-   :JOURNAL: %j\n  
-   :YEAR: %y\n  
-   :VOLUME: %v\n  
-   :PAGES: %p\n  
-   :DOI: %D\n  
-   :URL: %U\n 
+:PROPERTIES:\n
+   :CUSTOM_ID: %k\n
+   :NOTER_DOCUMENT: %F\n
+   :ROAM_KEY: cite:%k\n
+   :AUTHOR: %9a\n
+   :JOURNAL: %j\n
+   :YEAR: %y\n
+   :VOLUME: %v\n
+   :PAGES: %p\n
+   :DOI: %D\n
+   :URL: %U\n
 :END:\n\n"
-   org-ref-notes-directory "~/org/slipbox/references"
+   org-ref-notes-directory slipbox-references-directory
    org-ref-notes-function 'orb-edit-notes
    ))
 
 (after! org-ref
   (setq
-   bibtex-completion-bibliography '("~/org/slipbox/references/zotero_mylibrary.bib")
-   bibtex-completion-notes "~/org/slipbox/references/notes/bibnotes.org"
-   bibtex-completion-notes-path "~/org/references"
+   bibtex-completion-bibliography zot_bib
+   bibtex-completion-notes (concat slipbox-references-directory "/bibnotes.org")
+   bibtex-completion-notes-path slipbox-references-directory
    bibtex-completion-pdf-field "file"
    bibtex-completion-notes-template-multiple-files
    (concat
@@ -172,17 +176,10 @@
   :after (:any org pdf-view)
   :config
   (setq
-   ;; The WM can handle splits
-   ;;org-noter-notes-window-location 'other-frame
-   ;; Please stop opening frames
-   ;;org-noter-always-create-frame nil
-   ;; I want to see the whole file
    org-noter-hide-other nil
-   ;; Everything is relative to the rclone mega
-   org-noter-notes-search-path "~/org/slipbox/references/"
+   org-noter-notes-search-path `(slipbox-references-directory)
    )
   )
-
 
 (use-package! org-pdftools
   :hook (org-load . org-pdftools-setup-link))
@@ -234,11 +231,11 @@
     "Red."
     :group 'basic-faces)
   (custom-set-faces!
-    ;'(org-document-title :height 1.6 :weight bold)
+    '(org-document-title :height 1.6 :weight bold)
     '(org-level-1 :height 1.3 :weight extrabold :slant normal)
     '(org-level-2 :height 1.2 :weight bold :slant normal)
     '(org-level-3 :height 1.1 :weight regular :slant normal)
-    ;'(org-document-info  :inherit 'nano-face-faded)
+    '(org-document-info  :inherit 'nano-face-faded)
     '(org-document-title   ;:foreground ,(doom-color 'black)
       :family "Roboto"
       :height 250
@@ -468,4 +465,3 @@
         :desc "start live edit"      "s"   #'org-transclusion-live-sync-start-at-point
         :desc "stop live edit"       "S"   #'org-transclusion-live-sync-exit-at-point)
        ))
-

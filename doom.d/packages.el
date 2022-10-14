@@ -61,3 +61,5 @@
 (package! org-transclusion :recipe (:host github :repo "/nobiot/org-transclusion"))
 (package! tree-sitter)
 (package! tree-sitter-langs)
+(package! ivy-bibtex)
+(package! nov)
