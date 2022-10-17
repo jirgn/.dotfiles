@@ -6,12 +6,14 @@
 
 ;; some common used vars
 (setq 
-  slipbox-root-directory (concat (getenv "HOME") "/org/slipbox")
+  org-root-directory (concat (getenv "HOME") "/org")
+  org-notes-directory (concat org-root-directory "/notes")
+  slipbox-root-directory (concat org-root-directory "/slipbox")
   slipbox-references-directory (concat slipbox-root-directory "/references")
   zot_bib (concat slipbox-references-directory "/zotero_mylibrary.bib"))
 
 (setq
-   org-directory slipbox-root-directory)
+   org-directory org-root-directory)
 
 (use-package! org-fragtog
   :after org
@@ -345,15 +347,17 @@
 (with-eval-after-load 'org
   (plist-put org-format-latex-options :background 'default))
 
-(setq org-agenda-files '("~/org/notes" "~/org/slipbox/journals"))
+(setq org-agenda-files (append 
+   '("~/org/slipbox/journals")
+   (directory-files-recursively "~/org/notes" "\.org$" )))
 
 (after! org
   (setq org-capture-templates `(("i" "Inbox"
-                                 entry (file "~/org/notes/inbox.org")
+                                 entry (file (concat org-notes-directory "/inbox.org"))
                                  "* %?\n%U\n\n  %i"
                                  :kill-buffer t)
                                 ("m" "Meeting Todo"
-                                 entry (file+headline "~/org/notes/meetings_agenda.org" "Future")
+                                 entry (file+headline (concat org-notes-directory "/meetings_agenda.org") "Future")
                                  ,(concat 
                                     "* TODO %? :meeting:\n"
                                     "<%<%Y-%m-%d %a %H:00>>"))
@@ -368,7 +372,7 @@
 (setq org-agenda-skip-scheduled-if-done t
       org-agenda-skip-deadline-if-done t
       org-agenda-include-deadlines t
-      org-agenda-include-diary t
+      org-agenda-include-diary nil
       org-agenda-block-separator nil
       org-agenda-compact-blocks t
       org-agenda-start-with-log-mode t
