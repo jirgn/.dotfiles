@@ -30,23 +30,11 @@
 (use-package! org-transclusion
   :after org-roam)
 
-(setq org-roam-v2-ack t)
-
 (use-package! org-roam
   :after org
+  :hook (after-init . org-roam-mode)
   :config
-  (setq org-roam-v2-ack t)
-  (setq org-roam-mode-sections
-        (list #'org-roam-backlinks-insert-section
-              #'org-roam-reflinks-insert-section
-              #'org-roam-unlinked-references-insert-section)))
-
-
-(use-package! org-roam-ui
-  :after org-roam
-  :config
-  (setq org-roam-ui-open-on-start nil)
-  (setq org-roam-ui-browser-function #'xwidget-webkit-browse-url))
+  (setq org-roam-v2-ack t))
 
 (after! org-roam
     (setq
