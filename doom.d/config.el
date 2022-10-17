@@ -353,11 +353,11 @@
 
 (after! org
   (setq org-capture-templates `(("i" "Inbox"
-                                 entry (file "~/org/slipbox/notes/inbox.org")
+                                 entry (file "~/org/notes/inbox.org")
                                  "* %?\n%U\n\n  %i"
                                  :kill-buffer t)
-                                ("m" "Meeting"
-                                 entry (file+headline "~/org/slipbox/notes/agenda.org" "Future")
+                                ("m" "Meeting Todo"
+                                 entry (file+headline "~/org/notes/meetings_agenda.org" "Future")
                                  ,(concat 
                                     "* TODO %? :meeting:\n"
                                     "<%<%Y-%m-%d %a %H:00>>"))
