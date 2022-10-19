@@ -30,23 +30,11 @@
 (use-package! org-transclusion
   :after org-roam)
 
-(setq org-roam-v2-ack t)
-
 (use-package! org-roam
   :after org
+  :hook (after-init . org-roam-mode)
   :config
-  (setq org-roam-v2-ack t)
-  (setq org-roam-mode-sections
-        (list #'org-roam-backlinks-insert-section
-              #'org-roam-reflinks-insert-section
-              #'org-roam-unlinked-references-insert-section)))
-
-
-(use-package! org-roam-ui
-  :after org-roam
-  :config
-  (setq org-roam-ui-open-on-start nil)
-  (setq org-roam-ui-browser-function #'xwidget-webkit-browse-url))
+  (setq org-roam-v2-ack t))
 
 (after! org-roam
     (setq
@@ -353,15 +341,15 @@
 
 (after! org
   (setq org-capture-templates `(("i" "Inbox"
-                                 entry (file "~/org/notes/inbox.org")
-                                 "* %?\n%U\n\n  %i"
-                                 :kill-buffer t)
-                                ("m" "Meeting Todo"
-                                 entry (file+headline "~/org/notes/meetings_agenda.org" "Future")
-                                 ,(concat 
-                                    "* TODO %? :meeting:\n"
-                                    "<%<%Y-%m-%d %a %H:00>>"))
-                                ))
+        entry (file "~/org/notes/inbox.org")
+        "* %?\n%U\n\n  %i"
+        :kill-buffer t)
+    ("m" "Meeting Todo"
+        entry (file+headline "~/org/notes/meetings_agenda.org" "Future")
+        ,(concat 
+        "* TODO %? :meeting:\n"
+        "<%<%Y-%m-%d %a %H:00>>"))
+    ))
   (set-face-attribute 'org-headline-done nil :strike-through t))
 
 (use-package! org-super-agenda
@@ -470,3 +458,36 @@
         :desc "start live edit"      "s"   #'org-transclusion-live-sync-start-at-point
         :desc "stop live edit"       "S"   #'org-transclusion-live-sync-exit-at-point)
        ))
+
+;; capture setup
+;; use `emacsclient -c -F '(quote (name . "capture"))' -e '(activate-capture-frame)` in the terminal
+;; see https://www.reddit.com/r/emacs/comments/74gkeq/system_wide_org_capture/
+(defadvice org-switch-to-buffer-other-window
+    (after supress-window-splitting activate)
+  "Delete the extra window if we're in a capture frame"
+  (if (equal "capture" (frame-parameter nil 'name))
+      (delete-other-windows)))
+
+(defadvice org-capture-finalize
+(after delete-capture-frame activate)
+  "Advise capture-finalize to close the frame"
+  (when (and (equal "capture" (frame-parameter nil 'name))
+	 (not (eq this-command 'org-capture-refile)))
+(delete-frame)))
+
+(defadvice org-capture-refile
+(after delete-capture-frame activate)
+  "Advise org-refile to close the frame"
+  (delete-frame))
+
+(defun activate-capture-frame ()
+  "run org-capture in capture frame"
+  (make-frame '((name . "capture")
+    (top . 300)
+    (left . 300)
+    (width . 120)
+    (height . 25)))
+  (select-frame-by-name "capture")
+  (switch-to-buffer (get-buffer-create "*scratch*"))
+  (org-capture))
+
