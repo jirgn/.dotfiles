@@ -491,3 +491,13 @@
   (switch-to-buffer (get-buffer-create "*scratch*"))
   (org-capture))
 
+(defun activate-roam-capture-frame ()
+  "run org-capture in capture frame"
+  (make-frame '((name . "capture")
+    (top . 300)
+    (left . 300)
+    (width . 120)
+    (height . 25)))
+  (select-frame-by-name "capture")
+  (switch-to-buffer (get-buffer-create "*scratch*"))
+  (org-roam-capture))
