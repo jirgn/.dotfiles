@@ -14,6 +14,10 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export COMPOSER_MEMORY_LIMIT=-1
 export GEM_HOME="${HOME}/.gem"
 export PYENV_ROOT="$HOME/.pyenv"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_STATE_HOME="${HOME}/.local/state"
 
 # ------------------------------------------
 # path definition
