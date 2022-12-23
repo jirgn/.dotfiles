@@ -15,7 +15,7 @@
 [push]
 	default = current
 [credential]
-    helper = osxkeychain
+    helper = store
 [pull]
 	rebase = false
 ; [filter "lfs"]
