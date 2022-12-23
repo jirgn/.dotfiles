@@ -4,6 +4,12 @@
 (setq doom-theme 'doom-nord)
 (setq display-line-numbers-type t)
 
+;; hide window handles
+(setq default-frame-alist '((undecorated . t)))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
 ;; some common used vars
 (setq 
   org-root-directory (concat (getenv "HOME") "/org")
@@ -42,9 +48,7 @@
       org-roam-dailies-directory "journals/"
       org-roam-dailies-capture-templates
       '(("d" "default" entry "* %?" 
-         :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d>\n"))
-        ("b" "board" entry "* Jira [[CVSHOP-%?]]" 
-         :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d>\n")))
+         :target (file+head "%<%Y_%m_%d>.org" "#+title: %<%Y-%m-%d>\n")))
 
       org-roam-capture-templates
           `(("s" "standard" plain "%?"
@@ -501,3 +505,10 @@
   (select-frame-by-name "capture")
   (switch-to-buffer (get-buffer-create "*scratch*"))
   (org-roam-capture))
+
+(org-link-set-parameters
+    "calibre"
+    :follow 'my/calibre-follow)
+
+(defun my/calibre-follow (path)
+    (call-process "xdg-open" nil 0 nil (concat "calibre:" path)))
