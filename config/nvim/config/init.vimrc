@@ -66,6 +66,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/playground'
+Plug 'nvim-neotest/neotest'
+    \ | Plug 'antoinemadec/FixCursorHold.nvim' 
+    \ | Plug 'jfpedroza/neotest-elixir'
+    \ | Plug 'nvim-neotest/neotest-vim-test' | Plug 'vim-test/vim-test'
 
 " git
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim

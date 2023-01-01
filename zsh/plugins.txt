@@ -1,0 +1,11 @@
+ohmyzsh/ohmyzsh path:plugins/vi-mode
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/docker-compose
+zdharma/fast-syntax-highlighting
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+sandstorm/oh-my-zsh-flow-plugin
+spaceship-prompt/spaceship-prompt
+spaceship-prompt/spaceship-vi-mode
+# spaceship-prompt/spaceship-section
