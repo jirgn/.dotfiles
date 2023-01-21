@@ -12,6 +12,8 @@ smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab
 imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
+let g:vsnip_snippet_dirs = ["~/.dotfiles/config/nvim/config/snippets"]
+
 " " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
 " " See https://github.com/hrsh7th/vim-vsnip/pull/50
 " nmap        s   <Plug>(vsnip-select-text)
