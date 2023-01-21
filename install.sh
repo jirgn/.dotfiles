@@ -1,4 +1,4 @@
-!/usr/bin/env sh
+#!/usr/bin/env sh
 
  echo "Installing dotfiles"
 
@@ -25,7 +25,12 @@
      cd -
  fi
 
- # source install/composer.sh
+ if uname -a |grep -E "(arch|manjaro)" > /dev/null; then
+     echo "\n\nRunning on Arch Linux"
+     source install/pacman.sh
+ fi 
+
+ source install/composer.sh
  source install/pecl.sh
  source install/npm.sh
  source install/pip.sh

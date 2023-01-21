@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 echo "\n\nInstalling pacman packages..."
 echo "=============================="
@@ -23,7 +23,6 @@ formulas=(
     markdown
     diff-so-fancy
     tidy
-    pyenv
     yamllint
 
 # qmk keyboard firmware -- planck keyboard-
@@ -67,9 +66,9 @@ formulas_aur=(
     antibody
     arm-none-eabi-gcc
     ripmime
-    nvm
     afuse
     lf
+    asdf-vm
 )
 
 for formula in "${formulas[@]}"; do
