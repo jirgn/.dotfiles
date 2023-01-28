@@ -1,0 +1,23 @@
+{
+  "Form": {
+    "prefix": "form",
+    "description": "form definition",
+    "body": [
+      "<%= form_for(${1:@conn}, ${2:path}, [ as: ${3:param_name}, method: ${4::http_method}], fn form ->  %>",
+      "\t$0",
+      "<% end ) %>"
+    ]
+  },
+  "Text Input": {
+    "prefix": ["text_input"],
+    "body": [
+      "<%= text_input(${1:form}, ${2:field}) %>"
+    ]
+  },
+  "Submit": {
+    "prefix": ["submit"],
+    "body": [
+      "<%= submit(${1:label}) %>"
+    ]
+  }
+}
