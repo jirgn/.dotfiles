@@ -5,6 +5,7 @@ alias ls='ls --color=auto'
 alias ll='ls -Gl'
 alias la='ls -lAhG'
 alias l='ls -CFG'
+alias gg='lazygit'
 # ensure project specific binaries (eslint, phpunit ...)
 alias nvim='PATH=./node_modules/.bin:$PATH nvim'
 alias nv=nvim

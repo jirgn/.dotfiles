@@ -10,6 +10,8 @@ formulas=(
     ripgrep
     fd
     tree
+    bat
+    lazygit
 
 # development tools
     base-devel
