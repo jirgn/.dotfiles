@@ -65,7 +65,7 @@ local server_configs = {
         cmd = { "/usr/bin/elixir-ls" },
         settings = {
             elixirLS = {
-                dialyzerEnabled = true,
+                dialyzerEnabled = false,
                 fetchDeps = false,
             }
         }
