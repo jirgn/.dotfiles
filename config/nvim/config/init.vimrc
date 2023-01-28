@@ -27,7 +27,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
-Plug 'mattn/emmet-vim', { 'for': [ 'html', 'heex', 'javascript', 'javascript.jsx', 'fusion' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
+Plug 'mattn/emmet-vim', { 'for': [ 'html', 'heex', 'elixir', 'javascript', 'javascript.jsx', 'fusion' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'Pocco81/TrueZen.nvim'
 
