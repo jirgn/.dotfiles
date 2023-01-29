@@ -26,6 +26,7 @@ formulas=(
     diff-so-fancy
     tidy
     yamllint
+    git-delta
 
 # qmk keyboard firmware -- planck keyboard-
     avr-gcc
