@@ -21,12 +21,15 @@ formulas=(
     tmux
     zsh
     highlight
-    z
     markdown
-    diff-so-fancy
     tidy
     yamllint
     git-delta
+
+# virtual machines / containers
+    docker
+    minikube
+    kubectl
 
 # qmk keyboard firmware -- planck keyboard-
     avr-gcc
