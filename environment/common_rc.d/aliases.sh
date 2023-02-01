@@ -6,6 +6,7 @@ alias ll='ls -Gl'
 alias la='ls -lAhG'
 alias l='ls -CFG'
 alias gg='lazygit'
+
 # ensure project specific binaries (eslint, phpunit ...)
 alias nvim='PATH=./node_modules/.bin:$PATH nvim'
 alias nv=nvim
@@ -19,4 +20,4 @@ alias grep='grep --color=auto'
 alias tmux='TERM=screen-256color tmux'
 alias umirror='sudo reflector --country Germany --sort score -f 10 -l 100 --save /etc/pacman.d/mirrorlist'
 alias doom='~/.emacs.d/bin/doom'
-
+alias portainer="docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest"
