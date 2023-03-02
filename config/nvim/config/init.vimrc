@@ -69,6 +69,7 @@ Plug 'nvim-treesitter/playground'
 Plug 'nvim-neotest/neotest'
     \ | Plug 'jfpedroza/neotest-elixir'
     \ | Plug 'nvim-neotest/neotest-vim-test' | Plug 'vim-test/vim-test'
+Plug 'folke/trouble.nvim'
 
 " git
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
