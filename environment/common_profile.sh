@@ -17,6 +17,8 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_STATE_HOME="${HOME}/.local/state"
 export KERL_BUILD_DOCS=yes
+export KREW_ROOT="${HOME}/.krew"
+
 
 # ------------------------------------------
 # path definition
@@ -26,6 +28,8 @@ PATH=$PATH:$DOTFILES/bin                  # Personal binaries
 PATH=$PATH:$HOME/.local/bin               # pipsi libs
 PATH=$PATH:$HOME/.cargo/bin               # cargo libs
 PATH=$PATH:$HOME/.yarn/bin               # cargo libs
+PATH=$PATH:$KREW_ROOT/bin
+
 
 localprofile=$DOTFILES/environment/local_profile.sh
 if [[ -f $localprofile ]]; then

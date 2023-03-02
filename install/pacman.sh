@@ -30,6 +30,7 @@ formulas=(
     docker
     minikube
     kubectl
+    k9s
 
 # qmk keyboard firmware -- planck keyboard-
     avr-gcc
@@ -75,6 +76,7 @@ formulas_aur=(
     afuse
     lf
     asdf-vm
+    lazydocker-bin
 )
 
 for formula in "${formulas[@]}"; do
