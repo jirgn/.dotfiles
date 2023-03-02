@@ -17,6 +17,8 @@ let g:vsnip_snippet_dir = "~/.dotfiles/config/nvim/config/snippets"
 let g:vsnip_snippet_dirs = []
 let g:vsnip_filetypes = {}
 let g:vsnip_filetypes.heex = ['eelixir']
+let g:vsnip_filetypes.elixir = ['heex']
+
 
 " " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
 " " See https://github.com/hrsh7th/vim-vsnip/pull/50

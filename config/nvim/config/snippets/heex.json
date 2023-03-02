@@ -1,5 +1,13 @@
 {
-  "Form": {
+  "comprehension directive": {
+    "prefix": ["<for"],
+    "body": [
+      "<%= for ${1} <- ${2} do %>",
+      "  ${0}",
+      "<% end %>"
+    ]
+  },
+  "form": {
     "prefix": "form",
     "description": "form definition",
     "body": [
@@ -8,13 +16,13 @@
       "<% end ) %>"
     ]
   },
-  "Text Input": {
+  "text input": {
     "prefix": ["text_input"],
     "body": [
       "<%= text_input(${1:form}, ${2:field}) %>"
     ]
   },
-  "Submit": {
+  "submit": {
     "prefix": ["submit"],
     "body": [
       "<%= submit(${1:label}) %>"

@@ -53,7 +53,7 @@ local server_configs = {
                         "NodeTypes/**/*.yaml"
                     },
                     ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
-                    ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master-standalone-strict/all.json"] = "/*.k8s.yaml",
+                    ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.4-standalone-strict/all.json"] = "/*.k8s.yaml",
                 },
                 trace = {
                     server = "verbose"
@@ -87,7 +87,7 @@ local server_configs = {
     },
     html = {
         cmd = { "vscode-html-language-server", "--stdio" },
-        filetypes = { "html", "xhtml" }
+        filetypes = { "html", "xhtml", "heex" }
     },
     cssls = {
         cmd = { "vscode-css-language-server", "--stdio" },
