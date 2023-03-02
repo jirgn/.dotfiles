@@ -53,8 +53,8 @@ Plug 'windwp/nvim-autopairs' " add closing parens and other matching pair chars
 
 " project
 Plug 'mhinz/vim-startify' " fancy startscreen
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons' " for file icons
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-orgmode/orgmode'
 " Plug 'nvim-neorg/neorg' " documentation / note taking
 " Plug 'nvim-neorg/neorg-telescope'
