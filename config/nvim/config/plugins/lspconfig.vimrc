@@ -26,6 +26,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   buf_set_keymap('n', '<leader>cn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', '<leader>cl', '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
   buf_set_keymap("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format {async=true}<CR>", opts)
   buf_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
@@ -38,6 +39,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local server_configs = { 
+    fusionls = {}, 
     tsserver = {}, 
     phpactor = {}, 
     vimls = {}, 
@@ -65,12 +67,12 @@ local server_configs = {
         cmd = { "/usr/bin/elixir-ls" },
         settings = {
             elixirLS = {
-                dialyzerEnabled = false,
-                fetchDeps = false,
+                dialyzerEnabled = true,
+                fetchDeps = true,
             }
         }
     },
-    sumneko_lua = {
+    lua_ls = {
         settings = {
             Lua = {
                 runtime = {
@@ -81,6 +83,9 @@ local server_configs = {
                 },
                 workspace = {
                     library = vim.api.nvim_get_runtime_file("", true),
+                },
+                telemetry = {
+                    enable = false,
                 },
             },
         },
@@ -134,9 +139,12 @@ local server_configs = {
 }
 
 for name, config  in pairs(server_configs) do
-    -- add global configs
-    config.on_attach = on_attach
-    config.capabilities = capabilities
+    -- add fallback if not explicitly defined
+    config.on_attach = ((config and config.on_attach) and {config.on_attach} or {on_attach})[1]
+    config.capabilities = ((config and config.capabilities) and {config.capabilities} or {capabilities})[1]
+
+    -- config.on_attach = on_attach
+    -- config.capabilities = capabilities
     nvim_lsp[name].setup(config)
 end
 
@@ -160,6 +168,7 @@ wk.register({
        name = "+code refactor (LSP)",
        n = "rename",
        a = "code-action",
+       l = "code-lens",
        f = "format"
     },
     ["<leader>e"] = "show line error diagnostic(LSP)",
