@@ -6,8 +6,6 @@ endif
 call plug#begin("~/.dotfiles/config/nvim/plugged")
 
 " colorschemas
-" Plug 'christianchiarulli/nvcode-color-schemes.vim'
-" Plug 'sainnhe/gruvbox-material'
 Plug 'folke/tokyonight.nvim'
 Plug 'mcchrish/zenbones.nvim' | Plug 'rktjmp/lush.nvim'
 
@@ -60,7 +58,8 @@ Plug 'nvim-orgmode/orgmode'
 " Plug 'nvim-neorg/neorg-telescope'
 
 " language support
-Plug 'neovim/nvim-lspconfig'
+" Plug 'neovim/nvim-lspconfig'
+Plug '~/Code/tools/nvim-lspconfig'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}

@@ -1,6 +1,9 @@
 # automatically renumber tmux windows
 set -g renumber-windows on
 
+set-option -g focus-events on
+set-option -sg escape-time 100
+
 # unbind default prefix and set it to Ctrl+a
 unbind C-b
 set -g prefix C-a

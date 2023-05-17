@@ -20,8 +20,12 @@ set history=1000            " change history to 1000
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-" set python paths for plugins depending on python to work
-let g:python3_host_prog = "/home/jirgn/.pyenv/shims/python"
+" providers
+let g:loaded_perl_provider = 0
+let g:loaded_node_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_python3_provider = 0
+
 let g:vimsyn_embed = "l"
 
 
