@@ -3,5 +3,5 @@
 # --------------------------
 
 # tools especially language version switcher need do be on top of the path to be present the relevant bin
-source /opt/asdf-vm/asdf.sh
+source /opt/homebrew/opt/asdf/libexec/asdf.sh
 

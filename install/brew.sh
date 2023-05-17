@@ -25,30 +25,53 @@ casks=(
 
 # brew formulas to isntall
 formulas=(
-# better terminal
-     'Caskroom/cask/iterm2'
-    
-# cli tools
      ack
      ripgrep
      tree
      wget
      lf
      fd
+     bat
      htop
-    
-# development tools
-     cmake
-     '--HEAD universal-ctags'
-     git
-     # git-flow
-     # hub
      fzf
      tmux
      zsh
      antidote
+     fontforge
+
+     cmake
+     git
      lazygit
+     tldr
      'emacs-plus --with-native-comp --with-modern-doom3-icon --HEAD'
+
+     asdf
+        # build asdf php
+        iautoconf 
+        automake 
+        bison 
+        freetype 
+        gd 
+        gettext 
+        icu4c 
+        krb5 
+        libedit 
+        libiconv 
+        libjpeg 
+        libpng 
+        libxml2 
+        libzip 
+        pkg-config 
+        re2c 
+        zlib
+        oniguruma
+        gmp 
+        libsodium 
+        imagemagick
+
+     # git-flow
+     # hub
+     # '--HEAD universal-ctags'
      # antibody
      # highlight
      # nvm
