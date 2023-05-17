@@ -23,6 +23,7 @@ export KREW_ROOT="${HOME}/.krew"
 # ------------------------------------------
 # path definition
 # ------------------------------------------
+PATH=$PATH:/opt/homebrew/bin            # only MacOS
 PATH=$PATH:/usr/local/bin:/usr/local/sbin # User binaries
 PATH=$PATH:$DOTFILES/bin                  # Personal binaries
 PATH=$PATH:$HOME/.local/bin               # pipsi libs

@@ -3,13 +3,13 @@
 echo "\n\nInstalling javascript yarn packages"
 
 packages=(
-    'eslint-cli'
-    'bash-language-server'
-    'typescript'
-    'typescript-language-server'
-    'vim-language-server'
-    'vscode-langservers-extracted'
-    'yaml-language-server'
+    # 'eslint-cli'
+    # 'bash-language-server'
+    # 'typescript'
+    # 'typescript-language-server'
+    # 'vim-language-server'
+    # 'vscode-langservers-extracted'
+    # 'yaml-language-server'
 )
 
 for package in "${packages[@]}"; do

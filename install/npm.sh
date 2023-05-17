@@ -3,7 +3,7 @@
 echo "\n\nInstalling javascript npm packages"
 
 packages=(
-    'yarn'
+    # 'yarn'
 )
 
 for package in "${packages[@]}"; do

@@ -10,12 +10,17 @@ echo "=============================="
 
 # brew taps to execute
 taps=(
-    'universal-ctags/universal-ctags'
-    'neovim/neovim'
-    'osx-cross/avr'
-    'PX4/homebrew-px4'
-    'getantibody/tap'
-    'railwaycat/emacsmacport'
+     d12frosted/emacs-plus
+#     'universal-ctags/universal-ctags'
+#     'neovim/neovim'
+#     'osx-cross/avr'
+#     'PX4/homebrew-px4'
+#     'getantibody/tap'
+#     'railwaycat/emacsmacport'
+)
+
+casks=(
+     'caskroom/cask/alacritty'
 )
 
 # brew formulas to isntall
@@ -36,57 +41,60 @@ formulas=(
      cmake
      '--HEAD universal-ctags'
      git
-     git-flow
-     hub
+     # git-flow
+     # hub
      fzf
      tmux
      zsh
-     antibody
-     highlight
-     nvm
-     z
-     markdown
-     diff-so-fancy
-     editorconfig
-     tidy-html5
-     pyenv
-     icu4c
-     yamllint
+     antidote
+     lazygit
+     'emacs-plus --with-native-comp --with-modern-doom3-icon --HEAD'
+     # antibody
+     # highlight
+     # nvm
+     # z
+     # markdown
+     # diff-so-fancy
+     # editorconfig
+     # tidy-html5
+     # pyenv
+     # icu4c
+     # yamllint
 
 # php envirionment with sniffer and packagemanager
-     php@7.2
-     php@7.3
-     brew-php-switcher
-     composer
 
 # qmk keyboard firmware -- planck keyboard-
-     avr-gcc
-     dfu-programmer
-     gcc-arm-none-eabi
+     # avr-gcc
+     # dfu-programmer
+     # gcc-arm-none-eabi
 
 # emacs / spacemacs
-    emacs
-    emacs-mac
+#     emacs
+#     emacs-mac
 
 # install neovim
      neovim
 
 # mutt - email
-    isync
-    khard
-    msmtp
-    notmuch
-    neomutt
-    ripmime
-    w3m
-    vdirsyncer
+#     isync
+#     khard
+#     msmtp
+#     notmuch
+#     neomutt
+#     ripmime
+#     w3m
+#     vdirsyncer
     
 # other
-     go
+     # go
 )
 
 for tap in "${taps[@]}"; do
     brew tap $tap
+done
+
+for cask in "${casks[@]}"; do
+    brew install --cask $cask
 done
 
 for formula in "${formulas[@]}"; do
