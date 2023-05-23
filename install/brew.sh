@@ -15,20 +15,22 @@ taps=(
 #     'neovim/neovim'
 #     'osx-cross/avr'
 #     'PX4/homebrew-px4'
-#     'getantibody/tap'
 #     'railwaycat/emacsmacport'
 )
 
 casks=(
-     'caskroom/cask/alacritty'
+     'alacritty'
 )
 
 # brew formulas to isntall
 formulas=(
      ack
      ripgrep
+     exa
      tree
      wget
+     curlie
+     jq
      lf
      fd
      bat
@@ -39,16 +41,19 @@ formulas=(
      gpatch
      antidote
      fontforge
+     git-delta
 
      cmake
      git
      lazygit
+     lazydocker
      tldr
      'emacs-plus --with-native-comp --with-modern-doom3-icon --HEAD'
+     mycli
 
      asdf
         # build asdf php
-        iautoconf 
+        autoconf 
         automake 
         bison 
         freetype 
