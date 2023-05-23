@@ -36,6 +36,7 @@ formulas=(
      fzf
      tmux
      zsh
+     gpatch
      antidote
      fontforge
 
