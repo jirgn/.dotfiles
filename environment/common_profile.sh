@@ -25,13 +25,13 @@ export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 # ------------------------------------------
 # path definition
 # ------------------------------------------
-PATH=$PATH:/opt/homebrew/bin            # only MacOS
 PATH=$PATH:/usr/local/bin:/usr/local/sbin # User binaries
 PATH=$PATH:$DOTFILES/bin                  # Personal binaries
+PATH=$PATH:$HOME/bin                      # manual personal binaries
 PATH=$PATH:$HOME/.local/bin               # pipsi libs
 PATH=$PATH:$HOME/.cargo/bin               # cargo libs
-PATH=$PATH:$HOME/.yarn/bin               # cargo libs
-PATH=$PATH:$KREW_ROOT/bin
+PATH=$PATH:$HOME/.yarn/bin                # cargo libs
+PATH=$PATH:$KREW_ROOT/bin                 # krew plugins (kubernetes)
 
 
 localprofile=$DOTFILES/environment/local_profile.sh
