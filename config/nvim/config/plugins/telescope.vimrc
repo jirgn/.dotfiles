@@ -18,6 +18,20 @@ local trouble_provider = require('trouble.providers.telescope')
 
 telescope.setup{
   defaults = {
+    sorting_strategy = "ascending",
+
+    layout_strategy = "bottom_pane",
+    layout_config = {
+      prompt_position = "bottom",
+      height = 25,
+    },
+
+    border = true,
+    borderchars = {
+      prompt = { " ", " ", "─", " ", " ", " ", "─", "─" },
+      results = { "─", " ", " ", " ", "─", "─", " ", " " },
+      preview = { "─", " ", "─", "│", "┬", "─", "─", "╰" },
+    },
     mappings = {
       i = {
         ["<C-w>"] = actions.send_selected_to_qflist,
