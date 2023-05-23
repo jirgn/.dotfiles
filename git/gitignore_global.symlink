@@ -18,4 +18,5 @@ Icon
 .idea
 
 # others
+.tool-versions
 phpactor.log
