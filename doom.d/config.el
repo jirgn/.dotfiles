@@ -1,3 +1,7 @@
+(setq
+  mac-option-modifier nil
+  magit-git-executable "/usr/bin/git")
+
 (setq user-full-name "Jürgen Messner"
       user-mail-address "jirgn76@googlemail.com")
 
@@ -5,10 +9,10 @@
 (setq display-line-numbers-type t)
 
 ;; hide window handles
-(setq default-frame-alist '((undecorated . t)))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+;; (setq default-frame-alist '((undecorated . t)))
+;; (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+;; (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+;; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 ;; some common used vars
 (setq 
