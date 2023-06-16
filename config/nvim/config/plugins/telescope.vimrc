@@ -15,9 +15,23 @@ end
 
 local actions = require('telescope.actions')
 local trouble_provider = require('trouble.providers.telescope')
+local themes = require('telescope.themes')
 
 telescope.setup{
   defaults = {
+    sorting_strategy = "ascending",
+
+    layout_strategy = "bottom_pane",
+    layout_config = {
+      height = 25,
+    },
+
+    border = true,
+    borderchars = {
+      prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
+      results = { " " },
+      preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+    },
     mappings = {
       i = {
         ["<C-w>"] = actions.send_selected_to_qflist,
@@ -30,7 +44,12 @@ telescope.setup{
         ["<C-t>"] = trouble_provider.open_with_trouble,
       },
     },
-  }
+  },
+  -- pickers = {
+  --   find_files = {
+  --     theme = 'ivy'
+  --   }
+  -- }
 }
 telescope.load_extension('fzf')
 
