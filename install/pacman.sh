@@ -58,6 +58,10 @@ formulas=(
     composer
     go
 
+# asdf php 
+    re2c
+    postgresql-libs
+
 # gui tools
     zeal
 
