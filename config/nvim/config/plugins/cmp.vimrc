@@ -43,20 +43,20 @@ lua <<EOF
   cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
 
   -- Use buffer source for `/`.
---  cmp.setup.cmdline('/', {
---    sources = {
---      { name = 'buffer' }
---    }
---  })
+ -- cmp.setup.cmdline('/', {
+ --   sources = {
+ --     { name = 'buffer' }
+ --   }
+ -- })
 
   -- Use cmdline & path source for ':'.
---  cmp.setup.cmdline(':', {
---    sources = cmp.config.sources({
---      { name = 'path' }
---    }, {
---      { name = 'cmdline' }
---    })
---  })
+ -- cmp.setup.cmdline(':', {
+ --   sources = cmp.config.sources({
+ --     { name = 'path' }
+ --   }, {
+ --     { name = 'cmdline' }
+ --   })
+ -- })
 
 EOF
 
