@@ -23,7 +23,8 @@ export KREW_ROOT="${HOME}/.krew"
 # ------------------------------------------
 # path definition
 # ------------------------------------------
-PATH=$PATH:/usr/local/bin:/usr/local/sbin # User binaries
+PATH=$PATH:/usr/local/bin:/usr/local/sbin # local system binaries
+PATH=$PATH:$HOME/bin # my personal binaries
 PATH=$PATH:$DOTFILES/bin                  # Personal binaries
 PATH=$PATH:$HOME/.local/bin               # pipsi libs
 PATH=$PATH:$HOME/.cargo/bin               # cargo libs
