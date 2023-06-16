@@ -13,17 +13,16 @@ Plug 'mcchrish/zenbones.nvim' | Plug 'rktjmp/lush.nvim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
-Plug 'rafamadriz/friendly-snippets', {'branch': 'main'}
+    Plug 'rafamadriz/friendly-snippets', {'branch': 'main'}
 Plug 'folke/which-key.nvim', {'branch': 'main'}
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " ui
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
@@ -56,19 +55,19 @@ Plug 'mhinz/vim-startify' " fancy startscreen
 Plug 'nvim-tree/nvim-web-devicons' " for file icons
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-orgmode/orgmode'
-" Plug 'nvim-neorg/neorg' " documentation / note taking
-" Plug 'nvim-neorg/neorg-telescope'
 
 " language support
-Plug 'neovim/nvim-lspconfig'
+" Plug 'neovim/nvim-lspconfig'
+Plug '~/Code/nvim-lspconfig'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-neotest/neotest'
-    \ | Plug 'jfpedroza/neotest-elixir'
-    \ | Plug 'nvim-neotest/neotest-vim-test' | Plug 'vim-test/vim-test'
+    Plug 'jfpedroza/neotest-elixir'
+    Plug 'nvim-neotest/neotest-vim-test' 
+    Plug 'vim-test/vim-test'
 Plug 'folke/trouble.nvim'
 
 " git
