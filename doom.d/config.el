@@ -18,6 +18,12 @@
   slipbox-references-directory (concat slipbox-root-directory "/references")
   zot_bib (concat slipbox-references-directory "/zotero_mylibrary.bib"))
 
+ ;; Make evil-mode up/down operate in screen lines instead of logical lines
+(define-key evil-motion-state-map "j" 'evil-next-visual-line)
+(define-key evil-motion-state-map "k" 'evil-previous-visual-line)
+;; Also in visual mode
+(define-key evil-visual-state-map "j" 'evil-next-visual-line)
+(define-key evil-visual-state-map "k" 'evil-previous-visual-line)
 (setq
    org-directory org-root-directory)
 
