@@ -144,8 +144,6 @@ for name, config  in pairs(server_configs) do
     config.on_attach = ((config and config.on_attach) and {config.on_attach} or {on_attach})[1]
     config.capabilities = ((config and config.capabilities) and {config.capabilities} or {capabilities})[1]
 
-    -- config.on_attach = on_attach
-    -- config.capabilities = capabilities
     nvim_lsp[name].setup(config)
 end
 

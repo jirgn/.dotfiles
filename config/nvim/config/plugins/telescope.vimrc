@@ -52,6 +52,8 @@ telescope.setup{
   -- }
 }
 telescope.load_extension('fzf')
+telescope.load_extension('dap')
+-- require('telescope').load_extension('dap')
 
 -- better naming for which-key
 local wk = require("which-key")
