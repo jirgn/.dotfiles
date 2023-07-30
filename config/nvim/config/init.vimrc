@@ -6,10 +6,9 @@ endif
 call plug#begin("~/.dotfiles/config/nvim/plugged")
 
 " colorschemas
-" Plug 'christianchiarulli/nvcode-color-schemes.vim'
-" Plug 'sainnhe/gruvbox-material'
 Plug 'folke/tokyonight.nvim'
-Plug 'mcchrish/zenbones.nvim' | Plug 'rktjmp/lush.nvim'
+Plug 'mcchrish/zenbones.nvim' 
+    Plug 'rktjmp/lush.nvim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
@@ -32,12 +31,11 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'Pocco81/TrueZen.nvim'
 
 " completion
-Plug 'onsails/lspkind-nvim'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-vsnip'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-vsnip'
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
@@ -60,6 +58,7 @@ Plug 'nvim-orgmode/orgmode'
 " language support
 " Plug 'neovim/nvim-lspconfig'
 Plug '~/Code/nvim-lspconfig'
+Plug 'onsails/lspkind-nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
@@ -75,6 +74,7 @@ Plug 'folke/trouble.nvim'
 Plug 'mfussenegger/nvim-dap'
     Plug 'rcarriga/nvim-dap-ui'
     Plug 'theHamsta/nvim-dap-virtual-text'
+
 " git
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'airblade/vim-gitgutter' " gitstatus in the gutter column
