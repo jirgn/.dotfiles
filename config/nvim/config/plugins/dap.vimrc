@@ -29,7 +29,6 @@ wk.register({
             f = {"<cmd>lua local widgets = require('dap.ui.widgets'); widgets.centered_float(widgets.frames)<CR>", "frames"},
             s = {"<cmd>lua local widgets = require('dap.ui.widgets'); widgets.centered_float(widgets.scopes)<CR>", "scopes"},
         },
-        r = {"<cmd>lua require('dap').repl.open()<CR>", "open REPL"},
         u = {"<cmd>lua require('dapui').toggle()<CR>", "toggle UI"},
         x = {"<cmd>lua require('dap').terminate()<CR>", "Exit"},
     }
@@ -63,8 +62,38 @@ local languages = {
                     "test/**/*_test.exs"
                 }
             },
+            {
+                type = "mix_task",
+                name = "phx.server",
+                request = "launch",
+                task = "phx.server",
+                projectDir = "${workspaceFolder}"
+            }
         }
-    }
+    },
+    -- javascript = {
+    --     additional_langs = {"typescript"},
+    --     adapters = {
+    --         pwa_node = {
+    --             type = "server",
+    --             host = "localhost",
+    --             port = "${port}",
+    --             executable = {
+    --                 command = "node",
+    --                 args = {"/home/jirgn/.local/share/yarn/global/node_modules/js-debug/dist/src/vsDebugServer.js" , "${port}"},
+    --             }
+    --         }
+    --     },
+    --     configs = {
+    --         {
+    --             type = "pwa_node",
+    --             request = "launch",
+    --             name = "Launch file",
+    --             program = "${file}",
+    --             cwd = "${workspaceFolder}",
+    --         },
+    --     }
+    -- }
 }
 
 for name, config  in pairs(languages) do
@@ -76,6 +105,10 @@ for name, config  in pairs(languages) do
 
     if config.configs then
         dap.configurations[name] = config.configs
+        langs = config.additional_langs or {}
+        for _, l in ipairs(langs) do
+            dap.configurations[l] = config.configs
+        end
     end
 end
 
