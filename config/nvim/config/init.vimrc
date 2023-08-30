@@ -8,6 +8,7 @@ call plug#begin("~/.dotfiles/config/nvim/plugged")
 " colorschemas
 Plug 'folke/tokyonight.nvim'
 Plug 'mcchrish/zenbones.nvim' | Plug 'rktjmp/lush.nvim'
+Plug 'rebelot/kanagawa.nvim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
@@ -16,10 +17,11 @@ Plug 'folke/which-key.nvim', {'branch': 'main'}
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'nvim-lua/plenary.nvim'
+    \ | Plug 'rest-nvim/rest.nvim'
 
 " ui
 Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
