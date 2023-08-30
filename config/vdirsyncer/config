@@ -15,7 +15,7 @@ fileext = ".vcf"
 type = "carddav"
 url = "https://contacts.icloud.com/"
 username = "jirgn76@googlemail.com"
-password = "jevw-rguj-vzgk-mxvq"
+# password = "xxxxxxxxxxxxxxxxxxx"
 
 [pair jirgn_contacts_gmail]
 a = "jirgn_contacts_gmail_local"
