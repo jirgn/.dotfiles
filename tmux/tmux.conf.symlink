@@ -10,6 +10,9 @@ set -g prefix C-a
 bind C-a send-prefix
 bind-key a send-prefix # for nested tmux sessions
 
+# set terminal for correct color and font support
+set-option default-terminal "tmux-256color"
+
 ######################
 #### Key Bindings ####
 
@@ -25,7 +28,7 @@ set-option -g mouse on
 ##############################
 ### Color & Style Settings ###
 ##############################
-set -ga terminal-overrides ',screen-256color:Tc,*:Ss=\E[%p1%d q:Se=\E[ q'
+set -a terminal-overrides ',*256col*:Tc,*:Ss=\E[%p1%d q:Se=\E[ q'
 
 source-file ${DOTFILES}/tmux/theme.zenbones.tmux
 tm_icon="🙊"
@@ -37,9 +40,6 @@ tm_prefix_highlight="#[fg=$tm_color_active]#{prefix_highlight}"
 
 set -g status-left $tm_session_name' '
 set -g status-right $tm_prefix_highlight' '$tm_battery' '$tm_tunes' '$tm_date' '$tm_host
-
-# fix term colors for alacritty
-# set-option -sa terminal-overrides ',alacritty:RGB'
 
 ########################
 ###  List of plugins ###
