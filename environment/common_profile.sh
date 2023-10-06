@@ -19,6 +19,7 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 export KERL_BUILD_DOCS=yes
 export KREW_ROOT="${HOME}/.krew"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
 
 
 
