@@ -11,9 +11,9 @@
 [mergetool "nvim"]
   cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 [push]
-	default = current
-[credential]
-    helper = store
+  default = current
+# [credential]
+#   helper = manager
 [pull]
 	rebase = false
 ; [filter "lfs"]
