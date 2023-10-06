@@ -20,13 +20,14 @@ taps=(
 
 casks=(
      'alacritty'
+     'openlens'
 )
 
 # brew formulas to isntall
 formulas=(
      ack
      ripgrep
-     exa
+     eza
      tree
      wget
      curlie
