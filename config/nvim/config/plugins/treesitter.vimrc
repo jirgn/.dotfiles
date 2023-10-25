@@ -53,8 +53,35 @@ require'nvim-treesitter.configs'.setup {
         ["i}"] = "@block.inner",
       },
     },
+    move = {
+      enable = true,
+      set_jumps = true,
+      goto_next_start = {
+        ["]m"] = { query = "@function.outer", desc = "Next function start"},
+        ["]]"] = { query = "@class.outer", desc = "Next class start" },
+      },
+      goto_next_end = {
+        ["]M"] = { query = "@function.outer", desc = "Next function start"},
+        ["]["] = { query = "@class.outer", desc = "Next class start" },
+      },
+      goto_previous_start = {
+        ["[m"] = { query = "@function.outer", desc = "Previous function start" },
+        ["[["] = { query = "@class.outer"   , desc = "Previous class start" },
+      },
+      goto_previous_end = {
+        ["[M"] = { query = "@function.outer", desc = "Previous function start"},
+        ["[]"] = { query = "@class.outer",    desc = "Previous function start"},
+      },
+    }
   }
 }
+
+local ts_repeat_move = require "nvim-treesitter.textobjects.repeatable_move"
+
+-- Repeat movement with ; and ,
+-- ensure ; goes forward and , goes backward regardless of the last direction
+vim.keymap.set({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move_next)
+vim.keymap.set({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_previous)
 
 -- add local fusion parser for dev purposes
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
