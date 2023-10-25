@@ -10,6 +10,7 @@ wk.register({
         b = {
             name = "+breakpoint",
             b = {"<cmd>lua require('dap').toggle_breakpoint()<CR>", "Toggle Breakpoint"},
+            c = {"<cmd>lua require('dap').clear_breakpoints()<CR>", "Clear all Breakpoints"},
             s = {"<cmd>lua require('dap').set_breakpoint()<CR>", "Set Breakpoint"},
             l = {"<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", "Log point message"},
         },
