@@ -10,6 +10,24 @@
   "typespec": {
     "prefix": "type",
     "body": "@type ${1:t} :: $0"
+  },
+  "doc template": {
+    "prefix": ["doc"],
+    "body": [
+      "@doc \"\"\"",
+      "${1:short summery of function behaviour}",
+      "",
+      "${2:optional long description with specifics (e.g. on attributes or behaviour)}",
+      "",
+      "${3:Describe specific case of folloing doctest",
+      "",
+      "## Examples",
+      "",
+      "  iex> Some.doctest(code)",
+      "  [response]",
+      "}",
+      "\"\"\""
+    ]
   }
 }
 
