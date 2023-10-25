@@ -1,12 +1,3 @@
-nnoremap <leader>ff  <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg  <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fga <cmd>lua require('telescope.builtin').grep_string()<cr>
-nnoremap <leader>fo  <cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>
-nnoremap <leader>fb  <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh  <cmd>lua require('telescope.builtin').help_tags()<cr>
-nnoremap <leader>fk  <cmd>lua require('telescope.builtin').keymaps()<cr>
-nnoremap <leader>f?  <cmd>lua require('telescope.builtin').builtin()<cr>
-
 lua << EOF
 local present, telescope = pcall(require, "telescope")
 if not present then
@@ -53,11 +44,23 @@ telescope.setup{
 }
 telescope.load_extension('fzf')
 telescope.load_extension('dap')
--- require('telescope').load_extension('dap')
 
 -- better naming for which-key
 local wk = require("which-key")
 wk.register({
-    ["<leader>f"] = "+find"
+    ["<leader>f"] = {
+        name = "+find",
+        f = {"<cmd>lua require('telescope.builtin').find_files()<cr>", "find files via fd"},
+        g = {
+            name = "grep",
+            g = {"<cmd>lua require('telescope.builtin').live_grep()<cr>", "project files"},
+            a = {"<cmd>lua require('telescope.builtin').grep_string()<cr>", "all files -- also ignored"}
+        },
+        o = {"<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>", "outline - document symbols"},
+        b = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "buffers"},
+        h = {"<cmd>lua require('telescope.builtin').help_tags()<cr>", "help"},
+        k = {"<cmd>lua require('telescope.builtin').keymaps()<cr>", "keymaps"},
+        ["?"] = {"<cmd>lua require('telescope.builtin').builtin()<cr>", "all telescope buildins"},
+    }
 })
 EOF

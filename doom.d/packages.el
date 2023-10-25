@@ -63,3 +63,4 @@
 (package! tree-sitter-langs)
 (package! ivy-bibtex)
 (package! nov)
+(package! ob-mermaid)

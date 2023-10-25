@@ -24,8 +24,14 @@
 ;; Also in visual mode
 (define-key evil-visual-state-map "j" 'evil-next-visual-line)
 (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
+
 (setq
    org-directory org-root-directory)
+
+(use-package! ob-mermaid
+  :config
+  (setq ob-mermaid-cli-path "~/.yarn/bin/mmdc")
+  )
 
 (use-package! org-fragtog
   :after org
@@ -44,7 +50,7 @@
 
 (use-package! org-roam
   :after org
-  :hook (after-init . org-roam-mode)
+  :hook (after-init . org-roam-setup)
   :config
   (setq org-roam-v2-ack t))
 
