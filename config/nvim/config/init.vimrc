@@ -70,6 +70,7 @@ Plug 'nvim-neotest/neotest'
     Plug 'nvim-neotest/neotest-vim-test' 
     Plug 'vim-test/vim-test'
 Plug 'folke/trouble.nvim'
+Plug 'emmanueltouzery/elixir-extras.nvim'
 
 " debugging
 Plug 'mfussenegger/nvim-dap'
