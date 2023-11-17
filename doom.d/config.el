@@ -12,13 +12,13 @@
 
 ;; some common used vars
 (setq 
-  org-root-directory (concat (getenv "HOME") "/org")
-  org-notes-directory (concat org-root-directory "/notes")
-  slipbox-root-directory (concat org-root-directory "/slipbox")
-  slipbox-references-directory (concat slipbox-root-directory "/references")
-  zot_bib (concat slipbox-references-directory "/zotero_mylibrary.bib"))
+ org-root-directory (concat (getenv "HOME") "/org")
+ org-notes-directory (concat org-root-directory "/notes")
+ slipbox-root-directory (concat org-root-directory "/slipbox")
+ slipbox-references-directory (concat slipbox-root-directory "/references")
+ zot_bib (concat slipbox-references-directory "/zotero_mylibrary.bib"))
 
- ;; Make evil-mode up/down operate in screen lines instead of logical lines
+;; Make evil-mode up/down operate in screen lines instead of logical lines
 (define-key evil-motion-state-map "j" 'evil-next-visual-line)
 (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
 ;; Also in visual mode
@@ -26,7 +26,7 @@
 (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
 
 (setq
-   org-directory org-root-directory)
+ org-directory org-root-directory)
 
 (use-package! ob-mermaid
   :config
@@ -50,64 +50,65 @@
 
 (use-package! org-roam
   :after org
-  :hook (after-init . org-roam-setup)
   :config
   (setq org-roam-v2-ack t))
 
 (after! org-roam
-    (setq
-      org-roam-directory slipbox-root-directory
-      org-roam-dailies-directory "journals/"
-      org-roam-dailies-capture-templates
-      '(("d" "default" entry "* %?" 
-         :target (file+head "%<%Y_%m_%d>.org" "#+title: %<%Y-%m-%d>\n")))
-
-      org-roam-capture-templates
-          `(("s" "standard" plain "%?"
-     :if-new
-     (file+head "pages/%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n
-#+filetags: \n\n ")
-     :unnarrowed t)
-
-        ("d" "definition" plain "%?"
-         :if-new
-         (file+head "pages/${slug}.org"
-                    "#+title: ${title}
+  (setq
+   org-roam-directory slipbox-root-directory
+   org-roam-dailies-directory "journals/"
+   org-roam-dailies-capture-templates
+   '(("d" "default" entry "* %?"
+      :target (file+head "%<%Y_%m_%d>.org" "#+title: %<%Y-%m-%d>\n")))
+   org-roam-capture-templates
+   `(("s" "standard" plain "%?"
+      :if-new
+      (file+head "pages/%<%Y%m%d%H%M%S>-${slug}.org"
+                 "#+title: ${title}
 #+filetags: :definition: \n
-* Definition\n%?\n
+* Definition\n
 * Examples\n")
-         :unnarrowed t)
+      :unnarrowed t)
 
-        ("h" "howto" plain "%?"
-         :if-new
-         (file+head "pages/${slug}.org"
-                    "#+title: ${title}\n
+     ("d" "definition" plain "%?"
+      :if-new
+      (file+head "pages/${slug}.org"
+                 "#+title: #${title}
+#+filetags: :definition: \n
+* Definition\n
+* Examples\n")
+      :unnarrowed t)
+
+     ("h" "howto" plain "%?"
+      :if-new
+      (file+head "pages/${slug}.org"
+                 "#+title: ${title}\n
 #+filetags: :howto:\n
-* Howto\n%?\n
+* Howto\n
 * Examples\n")
-         :unnarrowed t)
+      :unnarrowed t)
 
-        ("r" "ref" plain "%?"
-           :if-new
-           (file+head "references/${citekey}.org"
-                      "#+title: ${slug}: ${title}\n\n
+     ("r" "ref" plain "%?"
+      :if-new
+      (file+head "references/${citekey}.org"
+                 "#+title: ${slug}: ${title}\n\n
 #+filetags: :reference: ${keywords} \n\n
 * ${title}\n\n\n
 * Summary\n\n\n
 * Rough note space\n")
-           :unnarrowed t)
+      :unnarrowed t)
 
-        ("p" "person" plain "%?"
-         :if-new
-         (file+head "pages/${slug}.org"
-                    ":PROPERTIES:
+     ("p" "person" plain "%?"
+      :if-new
+      (file+head "pages/${slug}.org"
+                 ":PROPERTIES:
     :FORNAME: ${forname}
     :LASTNAME: ${lastname}
     :BIRTHDAY: %^t
     :RELATION: %^{relation|family|friend|work}
 :END:
 #+title: ${slug} ")
-         :unnarrowed t))))
+      :unnarrowed t))))
 
 (use-package deft
   :after org-roam
@@ -117,11 +118,11 @@
   (deft-use-filename-as-title 't)
   (deft-default-extension "org")
   (deft-strip-summary-regexp
-    (concat "\\("
-        "[\n\t]" ;; blank
-        "\\|^#\\+[[:alpha:]_]+:.*$" ;; org-mode metadata
-        "\\|^:PROPERTIES:\n\\(.+\n\\)+:END:\n"
-        "\\)"))
+   (concat "\\("
+           "[\n\t]" ;; blank
+           "\\|^#\\+[[:alpha:]_]+:.*$" ;; org-mode metadata
+           "\\|^:PROPERTIES:\n\\(.+\n\\)+:END:\n"
+           "\\)"))
   (deft-directory slipbox-root-directory))
 
 (use-package! org-ref
@@ -176,8 +177,8 @@
   :config
   (require 'org-ref)
   (setq orb-preformat-keywords
-   '("citekey" "title" "url" "file" "author-or-editor" "keywords" "pdf" "doi" "author" "tags" "year" "author-bbrev")))
-;)
+        '("citekey" "title" "url" "file" "author-or-editor" "keywords" "pdf" "doi" "author" "tags" "year" "author-bbrev")))
+                                        ;)
 
 (use-package! org-noter
   :after (:any org pdf-view)
@@ -352,25 +353,25 @@
   (plist-put org-format-latex-options :background 'default))
 
 (setq org-agenda-files (append 
-   '("~/org/slipbox/journals")
-   (directory-files-recursively "~/org/notes" "\.org$" )))
+                        '("~/org/slipbox/journals")
+                        (directory-files-recursively "~/org/notes" "\.org$" )))
 
 (after! org
   (setq org-capture-templates `(("i" "Inbox"
-        entry (file "~/org/notes/inbox.org")
-        "* %?\n%U\n\n  %i"
-        :kill-buffer t)
-    ("m" "Meeting Todo"
-        entry (file+headline "~/org/notes/meetings_agenda.org" "Future")
-        ,(concat 
-        "* TODO %? :meeting:\n"
-        "<%<%Y-%m-%d %a %H:00>>"))
-    ))
+                                 entry (file "~/org/notes/inbox.org")
+                                 "* %?\n%U\n\n  %i"
+                                 :kill-buffer t)
+                                ("m" "Meeting Todo"
+                                 entry (file+headline "~/org/notes/meetings_agenda.org" "Future")
+                                 ,(concat
+                                   "* TODO %? :meeting:\n"
+                                   "<%<%Y-%m-%d %a %H:00>>"))
+                                ))
   (set-face-attribute 'org-headline-done nil :strike-through t))
 
 (use-package! org-super-agenda
   :hook (org-agenda-mode . org-super-agenda-mode)
-)
+  )
 
 
 (setq org-agenda-skip-scheduled-if-done t
@@ -429,9 +430,9 @@
                           (:name "Notes"
                            :tag "notes"
                            :order 20)
-                           ;(:name "Open Questions"
-                           ;       :todo "OPEN"
-                           ;       :order 3)
+                                        ;(:name "Open Questions"
+                                        ;       :todo "OPEN"
+                                        ;       :order 3)
                           (:name "trivial"
                            :priority<= "C"
                            :tag ("Trivial" "Unimportant")
@@ -485,24 +486,24 @@
       (delete-other-windows)))
 
 (defadvice org-capture-finalize
-(after delete-capture-frame activate)
+    (after delete-capture-frame activate)
   "Advise capture-finalize to close the frame"
   (when (and (equal "capture" (frame-parameter nil 'name))
-	 (not (eq this-command 'org-capture-refile)))
-(delete-frame)))
+             (not (eq this-command 'org-capture-refile)))
+    (delete-frame)))
 
 (defadvice org-capture-refile
-(after delete-capture-frame activate)
+    (after delete-capture-frame activate)
   "Advise org-refile to close the frame"
   (delete-frame))
 
 (defun activate-capture-frame ()
   "run org-capture in capture frame"
   (make-frame '((name . "capture")
-    (top . 300)
-    (left . 300)
-    (width . 120)
-    (height . 25)))
+                (top . 300)
+                (left . 300)
+                (width . 120)
+                (height . 25)))
   (select-frame-by-name "capture")
   (switch-to-buffer (get-buffer-create "*scratch*"))
   (org-capture))
@@ -510,17 +511,17 @@
 (defun activate-roam-capture-frame ()
   "run org-capture in capture frame"
   (make-frame '((name . "capture")
-    (top . 300)
-    (left . 300)
-    (width . 120)
-    (height . 25)))
+                (top . 300)
+                (left . 300)
+                (width . 120)
+                (height . 25)))
   (select-frame-by-name "capture")
   (switch-to-buffer (get-buffer-create "*scratch*"))
   (org-roam-capture))
 
 (org-link-set-parameters
-    "calibre"
-    :follow 'my/calibre-follow)
+ "calibre"
+ :follow 'my/calibre-follow)
 
 (defun my/calibre-follow (path)
-    (call-process "xdg-open" nil 0 nil (concat "calibre:" path)))
+  (call-process "xdg-open" nil 0 nil (concat "calibre:" path)))
