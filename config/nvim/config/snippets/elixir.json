@@ -28,6 +28,20 @@
       "}",
       "\"\"\""
     ]
+  },
+  "config": {
+    "prefix": ["config"],
+    "body": [
+      "import Config",
+      "",
+      "config ${1:name_atom_of_the_application}",
+      "  ${2:some_key}: ${2: :some_value}",
+      "",
+      "config :logger,",
+      "  level: :info",
+      "",
+      "import_config \"#{config_env()}.exs\""
+    ]
   }
 }
 
