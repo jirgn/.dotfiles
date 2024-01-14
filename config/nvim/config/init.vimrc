@@ -62,6 +62,7 @@ Plug 'nvim-orgmode/orgmode'
 Plug '~/Code/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
 Plug 'nvimtools/none-ls.nvim', { 'branch': 'main' }
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -72,6 +73,7 @@ Plug 'nvim-neotest/neotest'
     Plug 'vim-test/vim-test'
 Plug 'folke/trouble.nvim'
 Plug 'emmanueltouzery/elixir-extras.nvim'
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 " debugging
 Plug 'mfussenegger/nvim-dap'
