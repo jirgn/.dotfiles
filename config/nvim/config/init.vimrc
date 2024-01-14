@@ -30,6 +30,7 @@ Plug 'mattn/emmet-vim', { 'for': [ 'html', 'heex', 'elixir', 'javascript', 'java
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'Pocco81/TrueZen.nvim'
 Plug 'anuvyklack/pretty-fold.nvim'
+Plug 'ggandor/leap.nvim'
 
 " completion
 Plug 'hrsh7th/nvim-cmp'
