@@ -61,7 +61,7 @@ Plug 'nvim-orgmode/orgmode'
 " Plug 'neovim/nvim-lspconfig'
 Plug '~/Code/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
-Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvimtools/none-ls.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
