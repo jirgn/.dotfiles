@@ -62,7 +62,7 @@ Plug 'nvim-orgmode/orgmode'
 " language support
 " Plug 'neovim/nvim-lspconfig'
 Plug '~/Code/tools/nvim-lspconfig'
-Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvimtools/none-ls.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
