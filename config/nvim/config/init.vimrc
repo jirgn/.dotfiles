@@ -30,6 +30,7 @@ Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'heex', 'elixir', 'javascript', 'javascript.jsx', 'fusion' ] } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'Pocco81/TrueZen.nvim'
+Plug 'ggandor/leap.nvim'
 
 " completion
 Plug 'onsails/lspkind-nvim'
