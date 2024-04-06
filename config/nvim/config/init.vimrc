@@ -77,6 +77,7 @@ Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 " debugging
 Plug 'mfussenegger/nvim-dap'
+    Plug 'nvim-neotest/nvim-nio'
     Plug 'rcarriga/nvim-dap-ui'
     Plug 'theHamsta/nvim-dap-virtual-text'
 
