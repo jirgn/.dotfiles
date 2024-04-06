@@ -58,3 +58,5 @@ nnoremap <silent> gk k
 nnoremap <silent> ^ g^
 nnoremap <silent> $ g$
 
+nnoremap <leader>xk <cmd>lua vim.diagnostic.open_float()<CR>
+
