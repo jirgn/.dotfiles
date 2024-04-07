@@ -22,8 +22,9 @@ wk.register({
         s = {
             name = "+step",
             s = {"<cmd>lua require('dap').step_over()<CR>", "step over"},
-            i = {"<cmd>lua require('dap').step_in()<CR>", "step in"},
+            i = {"<cmd>lua require('dap').step_into()<CR>", "step into"},
             o = {"<cmd>lua require('dap').step_out()<CR>", "step out"},
+            b = {"<cmd>lua require('dap').step_back()<CR>", "step back"},
         },
         f = {
             name = "+frames (layout)",
@@ -32,6 +33,7 @@ wk.register({
         },
         u = {"<cmd>lua require('dapui').toggle()<CR>", "toggle UI"},
         x = {"<cmd>lua require('dap').terminate()<CR>", "Exit"},
+        v = {"<cmd>lua require('dap.ext.vscode').load_launchjs()<CR>", "Load launch.json from .vscode folder"},
     }
 })
 
@@ -72,6 +74,7 @@ local languages = {
             }
         }
     },
+
     -- javascript = {
     --     additional_langs = {"typescript"},
     --     adapters = {
