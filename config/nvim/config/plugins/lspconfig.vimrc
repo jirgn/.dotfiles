@@ -40,6 +40,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- map buffer local keybindings when the language server attaches
 local server_configs = { 
     ruff_lsp = {},
+    dockerls = {},
     pyright = {},
     neosfusionls = {}, 
     tsserver = {}, 
@@ -58,6 +59,12 @@ local server_configs = {
                     },
                     ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
                     ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.4-standalone-strict/all.json"] = "/*.k8s.yaml",
+                    ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = { 
+                        "compose.yaml", 
+                        "compoose.yml", 
+                        "docker-compose.yaml", 
+                        "docker-compose.yml" 
+                    },
                 },
                 trace = {
                     server = "verbose"
