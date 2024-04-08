@@ -11,3 +11,4 @@ source $DOTFILES/zsh/plugins.zsh
 for config ($DOTFILES/zsh/config/*.zsh) source $config
 for config ($DOTFILES/zsh/config-plugins/*.zsh) source $config
 source $DOTFILES/environment/post_init.sh
+for config ($DOTFILES/zsh/post_init/*.zsh) source $config
