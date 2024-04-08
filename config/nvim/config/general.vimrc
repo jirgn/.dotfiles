@@ -62,3 +62,5 @@ nnoremap <silent> gk k
 nnoremap <silent> ^ g^
 nnoremap <silent> $ g$
 
+" show full info for virtual text -> shortcut aligned with trouble prefix
+nnoremap <leader>xk <cmd>lua vim.diagnostic.open_float()<CR>
