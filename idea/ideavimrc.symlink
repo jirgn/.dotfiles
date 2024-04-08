@@ -32,7 +32,6 @@ nnoremap <leader>mr :action EditorPopupMenu1.FindRefactor<CR>
 nnoremap <leader>mg :action EditorPopupMenu.GoTo<CR>
 
 " navigation
-
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-b> <Left>
@@ -63,6 +62,10 @@ nnoremap <leader>fc :action GotoClass<CR>
 nnoremap <leader>fa :action GotoAction<CR>
 nnoremap <leader>fg :action FindInPath<CR>
 vnoremap <leader>fg :action FindInPath<CR>
+
+# format
+nnoremap <leader>cf :action ReformatCode<CR>
+vnoremap <leader>/ :action ReformatCode<CR>
 
 " view
 nnoremap <leader>z :action ToggleZenMode<CR>
