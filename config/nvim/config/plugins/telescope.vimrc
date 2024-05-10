@@ -5,6 +5,7 @@ nnoremap <leader>fo  <cmd>lua require('telescope.builtin').lsp_document_symbols(
 nnoremap <leader>fb  <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh  <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>fk  <cmd>lua require('telescope.builtin').keymaps()<cr>
+nnoremap <leader>fr  <cmd>lua require('telescope.builtin').registers()<cr>
 nnoremap <leader>f?  <cmd>lua require('telescope.builtin').builtin()<cr>
 
 lua << EOF

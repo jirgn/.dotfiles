@@ -7,23 +7,25 @@ call plug#begin("~/.dotfiles/config/nvim/plugged")
 
 " colorschemas
 Plug 'folke/tokyonight.nvim'
-Plug 'mcchrish/zenbones.nvim' | Plug 'rktjmp/lush.nvim'
+Plug 'mcchrish/zenbones.nvim' 
+    Plug 'rktjmp/lush.nvim'
 Plug 'rebelot/kanagawa.nvim'
 
 " util
 Plug 'hrsh7th/vim-vsnip'
-Plug 'rafamadriz/friendly-snippets', {'branch': 'main'}
+    Plug 'rafamadriz/friendly-snippets', {'branch': 'main'}
 Plug 'folke/which-key.nvim', {'branch': 'main'}
 Plug 'editorconfig/editorconfig-vim' " activates recognition of .editorconfig in projects
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'nvim-lua/plenary.nvim'
-    \ | Plug 'rest-nvim/rest.nvim'
+Plug 'nvim-neotest/nvim-nio'
+" Plug 'vhyrro/luarocks.nvim', { 'do': 'nvim -l build.lua' }
 
 " ui
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'romainl/vim-cool' " autmatically turn of hlsearch when searching is done
 Plug 'machakann/vim-highlightedyank' " visual feedback on yank command
 Plug 'christoomey/vim-tmux-navigator' " integrate vim with tmux navigation
@@ -35,10 +37,10 @@ Plug 'ggandor/leap.nvim'
 " completion
 Plug 'onsails/lspkind-nvim'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-vsnip'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-vsnip'
 
 " additional commands/textobjects
 Plug 'mbbill/undotree' " visualize undo branches
@@ -64,15 +66,25 @@ Plug 'nvim-orgmode/orgmode'
 " Plug 'neovim/nvim-lspconfig'
 Plug '~/Code/tools/nvim-lspconfig'
 Plug 'nvimtools/none-ls.nvim', { 'branch': 'main' }
+    Plug 'nvimtools/none-ls-extras.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-neotest/neotest'
-    \ | Plug 'jfpedroza/neotest-elixir'
-    \ | Plug 'nvim-neotest/neotest-vim-test' | Plug 'vim-test/vim-test'
+    Plug 'jfpedroza/neotest-elixir'
+    Plug 'nvim-neotest/neotest-vim-test' 
+    Plug 'vim-test/vim-test'
 Plug 'folke/trouble.nvim'
 Plug 'zbirenbaum/copilot.lua'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+" Plug 'rest-nvim/rest.nvim'
+
+" debugging
+Plug 'mfussenegger/nvim-dap'
+    Plug 'rcarriga/nvim-dap-ui'
+    Plug 'theHamsta/nvim-dap-virtual-text'
+    Plug 'mfussenegger/nvim-dap-python'
 
 " git
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim

@@ -23,7 +23,7 @@ lua <<EOF
             }
         }),
     },
-    mapping = cmp.mapping.preset.insert(),
+    mapping = cmp.config.mapping.preset.insert(),
     snippet = {
       expand = function(args)
         vim.fn["vsnip#anonymous"](args.body)
