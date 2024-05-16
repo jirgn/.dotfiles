@@ -5,6 +5,8 @@ set commentary
 " idea specific settings
 set ideajoin
 set ideamarks
+set which-key
+set notimeout
 
 " vim settings
 set hlsearch
@@ -14,17 +16,54 @@ set smartcase
 set showmode
 set number
 
+" ----------- mappings for actions ------------
+" to list actions that can be used for mappings use `:actionlist` within intellij
+
 " mappings
 let mapleader=","
+
+" whichkey setup
+let g:WhichKey_DefaultDelay = 600
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKeyDesc_ideavim = "<leader>v  (Idea)Vim"
+let g:WhichKeyDesc_windows = "<leader>w  (Tool)Windows"
+let g:WhichKeyDesc_menue = "<leader>m  (Menu)Context"
+let g:WhichKeyDesc_git = "<leader>g  Git"
+let g:WhichKeyDesc_run = "<leader>r  Run"
+let g:WhichKeyDesc_find = "<leader>f  Find"
+let g:WhichKeyDesc_codeformat = "<leader>c  (Code)Format"
+let g:WhichKeyDesc_zen = "<leader>z  ZenMode"
+let g:WhichKeyDesc_zen_only = "<leader>zz  Hide all tool windows"
+let g:WhichKeyDesc_zen_true = "<leader>zt  TrueZen Mode - Fullscreen"
+let g:WhichKeyDesc_code = "<leader>c  Code Actions"
+
 
 " fix
 nnoremap Y y$
 
-" convinience
-nnoremap <leader>, :w<CR>
+" ideavim
+nnoremap <leader>ve :e ~/.ideavimrc<CR>
+nnoremap <leader>vr :action IdeaVim.ReloadVimRc.reload<CR>
+
+" convenience mappings
+nnoremap <leader>. <C-^>
+nnoremap <LEADER>, :w<CR>
 nnoremap <leader>y :action SelectInProjectView<CR>
 nnoremap <leader>Y :action SelectIn<CR>
+nnoremap gr :action FindUsages<CR>
 
+nnoremap <leader>rc :action RunConfiguration<CR>
+nnoremap <leader>rr :action Run<CR>
+nnoremap <leader>re :action Rerun<CR>
+
+" tool windows
+nnoremap <leader>wp :action ActivateProjectToolWindow<CR>
+nnoremap <leader>wr :action ActivateRunToolWindow<CR>
+nnoremap <leader>wd :action ActivateDebugToolWindow<CR>
+nnoremap <leader>wt :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>ws :action ActivateStructureToolWindow<CR>
+nnoremap <leader>wv :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>wac :action ActivateGitHubCopilotChatToolWindow<CR>
 
 " show context menu
 nnoremap <leader>mm :action EditorPopupMenu<CR>
@@ -63,9 +102,14 @@ nnoremap <leader>fa :action GotoAction<CR>
 nnoremap <leader>fg :action FindInPath<CR>
 vnoremap <leader>fg :action FindInPath<CR>
 
-# format
+# code actions
 nnoremap <leader>cf :action ReformatCode<CR>
-vnoremap <leader>/ :action ReformatCode<CR>
+vnoremap <leader>cf :action ReformatCode<CR>
+nnoremap <leader>cn :action RenameElement<CR>
+nnoremap <leader>cr :action RefactoringMenu<CR>
+nnoremap <leader>cg :action Generate<CR>
+
 
 " view
-nnoremap <leader>z :action ToggleZenMode<CR>
+nnoremap <leader>zt :action ToggleZenMode<CR>
+nnoremap <leader>zz :action HideAllWindows<CR>
