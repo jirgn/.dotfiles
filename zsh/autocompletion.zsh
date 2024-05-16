@@ -1,23 +1,23 @@
-# intitialize complition 
+# Initialize completion
 autoload -Uz compinit
 
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+if type brew &>/dev/null; then
+  FPATH="${(P)$(brew --prefix)/share/zsh/site-functions}:${FPATH}"
+fi
 
-  autoload -Uz compinit
+# Daily cache invalidation for.zcompdump
+for dump in ~/.zcompdump(N.mh+24); do
   compinit
-fi
+done
 
-# cache it in file .zcompdump to prevent slow startup times
-typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
-if [ $(date +'%j') != $updated_at ]; then
-  compinit -i
+# Load completions from.zcompdump if available, otherwise generate them
+if [[ -e ~/.zcompdump ]]; then
+    compinit -C
 else
-  compinit -C -i
+    compinit
 fi
 
-# activate completion list
+# Activate completion list
 zmodload -i zsh/complist
 
 setopt auto_cd # cd by typing directory name if it's not a command
@@ -29,3 +29,4 @@ setopt always_to_end # move cursor to end if word had one match
 zstyle ':completion:*' menu select # select completions with arrow keys
 zstyle ':completion:*' group-name '' # group results by category
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
+
