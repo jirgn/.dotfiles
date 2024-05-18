@@ -63,6 +63,7 @@ Plug '~/Code/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
 Plug 'nvimtools/none-ls.nvim', { 'branch': 'main' }
 Plug 'mfussenegger/nvim-dap-python'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug '~/Code/nvim-treesitter', {'do': ':TSUpdate'}
