@@ -62,6 +62,7 @@ Plug 'nvim-orgmode/orgmode'
 Plug '~/Code/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
 Plug 'nvimtools/none-ls.nvim', { 'branch': 'main' }
+Plug 'nvimtools/none-ls-extras.nvim', { 'branch': 'main' }
 Plug 'mfussenegger/nvim-dap-python'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 

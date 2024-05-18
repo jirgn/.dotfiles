@@ -4,7 +4,7 @@ local null_ls = require("null-ls")
 null_ls.setup({
     sources = {
         -- javascript
-        null_ls.builtins.diagnostics.eslint,
+        require("none-ls.diagnostics.eslint"),
         null_ls.builtins.formatting.prettier,
 
         -- elixir
