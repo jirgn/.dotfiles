@@ -4,7 +4,7 @@
 [http]
 #   proxy = http://192.168.160.252:3128
 [core]
-	excludesfile = /Users/messner.j/.gitignore_global
+	excludesfile = /home/jirgn/.gitignore_global
 	autocrlf = input
 [merge]
   tool = nvim
