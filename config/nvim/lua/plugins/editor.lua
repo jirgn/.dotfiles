@@ -7,12 +7,21 @@ return {
       { "<leader>e", false },
       { "<leader>E", false },
     },
+    opts = {
+      window = {
+        mappings = {
+          ["P"] = function(state)
+            local node = state.tree:get_node()
+            require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+          end,
+          desc = "Navigate to Parent",
+        },
+      },
+    },
   },
   {
     "tummetott/unimpaired.nvim",
     event = "VeryLazy",
-    opts = {
-      -- add options here if you wish to override the default settings
-    },
   },
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 }

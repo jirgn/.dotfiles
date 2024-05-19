@@ -1,0 +1,31 @@
+{
+  "comprehension directive": {
+    "prefix": ["<for"],
+    "body": [
+      "<%= for ${1} <- ${2} do %>",
+      "  ${0}",
+      "<% end %>"
+    ]
+  },
+  "form": {
+    "prefix": "form",
+    "description": "form definition",
+    "body": [
+      "<%= form_for(${1:@conn}, ${2:path}, [ as: ${3:param_name}, method: ${4::http_method}], fn form ->  %>",
+      "\t$0",
+      "<% end ) %>"
+    ]
+  },
+  "text input": {
+    "prefix": ["text_input"],
+    "body": [
+      "<%= text_input(${1:form}, ${2:field}) %>"
+    ]
+  },
+  "submit": {
+    "prefix": ["submit"],
+    "body": [
+      "<%= submit(${1:label}) %>"
+    ]
+  }
+}
