@@ -22,8 +22,37 @@ return {
   {
     "tummetott/unimpaired.nvim",
     event = "VeryLazy",
+    config = function()
+      require("unimpaired").setup({
+        keymaps = {
+          exchange_above = {
+            mapping = "[s",
+            description = "swap line with [count] lines above",
+            dot_repeat = true,
+          },
+          exchange_below = {
+            mapping = "]s",
+            description = "swap line with [count] lines below",
+            dot_repeat = true,
+          },
+          exchange_section_above = {
+            mapping = "[s",
+            description = "Move section [count] lines up",
+            dot_repeat = true,
+          },
+          exchange_section_below = {
+            mapping = "]s",
+            description = "Move section [count] lines down",
+            dot_repeat = true,
+          },
+        },
+      })
+    end,
   },
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make",
+  },
   {
     "jiaoshijie/undotree",
     dependencies = "nvim-lua/plenary.nvim",
@@ -36,12 +65,5 @@ return {
         noremap = true,
       },
     },
-  },
-  {
-    "echasnovski/mini.nvim",
-    version = false,
-    config = function()
-      require("mini.align").setup()
-    end,
   },
 }
