@@ -24,4 +24,24 @@ return {
     event = "VeryLazy",
   },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  {
+    "jiaoshijie/undotree",
+    dependencies = "nvim-lua/plenary.nvim",
+    keys = { -- load the plugin only when using it's keybinding:
+      {
+        "<leader>uu",
+        "<cmd>lua require('undotree').toggle()<cr>",
+        desc = "Toggle Undotree",
+        mode = "n",
+        noremap = true,
+      },
+    },
+  },
+  {
+    "echasnovski/mini.nvim",
+    version = false,
+    config = function()
+      require("mini.align").setup()
+    end,
+  },
 }
