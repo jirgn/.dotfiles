@@ -10,11 +10,14 @@ return {
     opts = {
       window = {
         mappings = {
-          ["P"] = function(state)
-            local node = state.tree:get_node()
-            require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
-          end,
-          desc = "Navigate to Parent",
+          ["P"] = {
+            command = function(state)
+              local node = state.tree:get_node()
+              require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+            end,
+            desc = "focus parent",
+            nowait = true,
+          },
         },
       },
     },
