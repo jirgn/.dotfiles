@@ -10,6 +10,9 @@ return {
     end,
   },
   {
+    "emmanueltouzery/elixir-extras.nvim",
+  },
+  {
     "Exafunction/codeium.vim",
     event = "BufEnter",
     config = function()
