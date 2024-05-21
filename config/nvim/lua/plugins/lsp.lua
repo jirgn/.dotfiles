@@ -25,12 +25,12 @@ return {
                   "DistributionPackages/*/Configuration/NodeTypes*.yaml",
                   "NodeTypes/**/*.yaml",
                 },
-                ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
+                -- ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
                 ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.4-standalone-strict/all.json"] = "/*.k8s.yaml",
               },
-              trace = {
-                server = "verbose",
-              },
+              -- trace = {
+              --   server = "verbose",
+              -- },
             },
           },
         },
