@@ -8,7 +8,29 @@ return {
         html = {
           filetypes = { "html", "xhtml", "heex" },
         },
+        emmet_language_server = {
+          filetypes = {
+            "css",
+            "eruby",
+            "heex",
+            "elixir",
+            "html",
+            "javascript",
+            "javascriptreact",
+            "javascript.jsx",
+            "less",
+            "sass",
+            "scss",
+            "pug",
+            "typescriptreact",
+          },
+        },
         cssls = {},
+        vimls = {},
+        bashls = {},
+        tsserver = {},
+
+        -- override extras
         elixirls = {
           settings = {
             elixirLS = {
@@ -32,26 +54,6 @@ return {
               --   server = "verbose",
               -- },
             },
-          },
-        },
-        vimls = {},
-        bashls = {},
-        tsserver = {},
-        emmet_language_server = {
-          filetypes = {
-            "css",
-            "eruby",
-            "heex",
-            "elixir",
-            "html",
-            "javascript",
-            "javascriptreact",
-            "javascript.jsx",
-            "less",
-            "sass",
-            "scss",
-            "pug",
-            "typescriptreact",
           },
         },
       },
