@@ -13,6 +13,31 @@ return {
     "emmanueltouzery/elixir-extras.nvim",
   },
   {
+    "nvim-orgmode/orgmode",
+    dependencies = { "nvim-orgmode/org-bullets.nvim" },
+    event = "VeryLazy",
+    ft = { "org" },
+    config = function()
+      -- Setup org-bullets
+      require("org-bullets").setup()
+      -- Setup orgmode
+      require("orgmode").setup({
+        org_agenda_files = { "~/org/slipbox/**/*", "~/org/notes/**/*" },
+        org_default_notes_file = "~/org/notes/inbox.org",
+        org_todo_keywords = {
+          "NEXT(n)",
+          "TODO(t)",
+          "PROGRESS(p)",
+          "WAITING(w)",
+          "SOMETIME(s)",
+          "|",
+          "DONE(d)",
+          "CANCELLED(c)",
+        },
+      })
+    end,
+  },
+  {
     "Exafunction/codeium.vim",
     event = "BufEnter",
     config = function()
