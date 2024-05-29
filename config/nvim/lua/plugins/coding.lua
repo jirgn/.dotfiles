@@ -42,6 +42,8 @@ return {
     event = "BufEnter",
     config = function()
       vim.g.codeium_disable_bindings = 1
+      vim.g.codeium_manual = 1
+
       -- vim.g.codeium_filetypes_disabled_by_default = true
       -- vim.g.codeium_filetypes = {
       --   rust = true,
@@ -51,15 +53,28 @@ return {
     keys = {
       {
         "<c-g><cr>",
-        "codeium#Accept()",
+        function()
+          return vim.fn["codeium#Accept"]()
+        end,
         mode = "i",
         noremap = true,
         expr = true,
         desc = "Accept suggestion",
       },
       {
+        "<c-g>;",
+        function()
+          return vim.fn["codeium#CycleOrComplete"]()
+        end,
+        mode = "i",
+        expr = true,
+        desc = "cycle or complete suggestion",
+      },
+      {
         "<c-g><c-n>",
-        "codeium#CycleCompletions(1)",
+        function()
+          return vim.fn["codeium#CycleCompletions"](1)
+        end,
         mode = "i",
         noremap = true,
         expr = true,
@@ -67,7 +82,9 @@ return {
       },
       {
         "<c-g><c-p>",
-        "codeium#CycleCompletions(-1)",
+        function()
+          return vim.fn["codeium#CycleCompletions"](-1)
+        end,
         mode = "i",
         noremap = true,
         expr = true,
@@ -75,7 +92,9 @@ return {
       },
       {
         "<c-g><c-x>",
-        "codeium#Clear()",
+        function()
+          return vim.fn["codeium#Clear"]()
+        end,
         mode = "i",
         noremap = true,
         expr = true,
@@ -83,7 +102,9 @@ return {
       },
       {
         "<c-g><c-o>",
-        "codeium#Complete()",
+        function()
+          return vim.fn["codeium#Complete"]()
+        end,
         mode = "i",
         noremap = true,
         expr = true,
