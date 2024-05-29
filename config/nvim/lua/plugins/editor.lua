@@ -18,6 +18,7 @@ return {
             desc = "focus parent",
             nowait = true,
           },
+          ["/"] = "noop",
         },
       },
     },
