@@ -29,5 +29,11 @@ return {
       },
     },
   },
-  opts = {},
+  opts = {
+    handlers = {
+      ["jdtls"] = function()
+        require("lspconfig").jdtls.setup({})
+      end,
+    },
+  },
 }
