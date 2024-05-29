@@ -1,6 +1,6 @@
 return {
   {
-    "/nvim-neo-tree/neo-tree.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
     keys = {
       { "<leader>k", "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer (Neotree)" },
       { "<leader>y", "<cmd>Neotree reveal<cr>", desc = "Show current file in Explorer (Neotree)" },
