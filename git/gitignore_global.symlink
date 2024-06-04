@@ -19,4 +19,6 @@ Icon
 
 # others
 .tool-versions
+.envrc
+.env
 phpactor.log
