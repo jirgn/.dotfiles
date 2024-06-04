@@ -7,6 +7,7 @@ set ideajoin
 set ideamarks
 set which-key
 set notimeout
+set visualbell
 
 " vim settings
 set hlsearch
@@ -27,6 +28,7 @@ let g:WhichKey_DefaultDelay = 600
 let g:WhichKey_ShowVimActions = "true"
 let g:WhichKeyDesc_ideavim = "<leader>v  (Idea)Vim"
 let g:WhichKeyDesc_windows = "<leader>w  (Tool)Windows"
+let g:WhichKeyDesc_windows_gitlab = "<leader>wg  Gitlab"
 let g:WhichKeyDesc_menue = "<leader>m  (Menu)Context"
 let g:WhichKeyDesc_git = "<leader>g  Git"
 let g:WhichKeyDesc_run = "<leader>r  Run"
@@ -52,6 +54,12 @@ nnoremap <leader>y :action SelectInProjectView<CR>
 nnoremap <leader>Y :action SelectIn<CR>
 nnoremap gr :action FindUsages<CR>
 
+" some unimpaired mappings
+nnoremap ]c :action Diff.NextChang<CR>
+nnoremap [c :action Diff.PrevChange<CR>
+nnoremap ]n :action Diff.NextConflict<CR>
+nnoremap [n :action Diff.PreviousConflict<CR>
+
 nnoremap <leader>rc :action RunConfiguration<CR>
 nnoremap <leader>rr :action Run<CR>
 nnoremap <leader>re :action Rerun<CR>
@@ -64,6 +72,7 @@ nnoremap <leader>wt :action ActivateTerminalToolWindow<CR>
 nnoremap <leader>ws :action ActivateStructureToolWindow<CR>
 nnoremap <leader>wv :action ActivateVersionControlToolWindow<CR>
 nnoremap <leader>wac :action ActivateGitHubCopilotChatToolWindow<CR>
+nnoremap <leader>wgm :action GitLab.Merge.Request.Show.In.Toolwindow<CR>
 
 " show context menu
 nnoremap <leader>mm :action EditorPopupMenu<CR>
