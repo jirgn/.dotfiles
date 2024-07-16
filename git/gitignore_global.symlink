@@ -22,3 +22,8 @@ phpactor.log
 
 # asdf
 .tool-versions
+
+# clojure tools
+.clj-kondo/
+.cpcache/
+.lsp/
