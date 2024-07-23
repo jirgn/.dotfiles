@@ -1,12 +1,13 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ll='eza --long --git --time-style long-iso --time=modified --group-directories-first'
-alias la='eza --long --git --time-style long-iso --time=modified --group-directories-first -a'
+alias ll='eza --long --git --git-repos-no-status --time-style long-iso --time=modified --group-directories-first'
+alias la='eza --long --git --git-repos-no-status --time-style long-iso --time=modified --group-directories-first -a'
 alias ls='eza -G'
 alias gg='lazygit'
 alias k='kubectl'
 alias kk='k9s'
+alias kx='kubectx'
 
 # ensure project specific binaries (eslint, phpunit ...)
 alias nvim='PATH=./node_modules/.bin:$PATH nvim'
