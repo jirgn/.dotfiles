@@ -21,6 +21,7 @@ export KREW_ROOT="${HOME}/.krew"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
 export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/ohmyzsh"
+export KUBECONFIG="${HOME}/.kube/config/kubeconfig.json"
 
 # ------------------------------------------
 # path definition
@@ -33,12 +34,11 @@ PATH=$PATH:$HOME/.cargo/bin               # cargo libs
 PATH=$PATH:$HOME/.yarn/bin                # cargo libs
 PATH=$PATH:$KREW_ROOT/bin                 # krew plugins (kubernetes)
 
-
 localprofile=$DOTFILES/environment/local_profile.sh
 if [[ -f $localprofile ]]; then
-    source $localprofile
+	source $localprofile
 fi
 
 for config in $DOTFILES/environment/common_profile.d/*; do
-    source $config
+	source $config
 done
