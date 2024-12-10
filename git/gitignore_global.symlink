@@ -13,12 +13,27 @@ Icon
 .Spotlight-V100
 .Trashe
 
+# exploratoin within projects
+_scratch/
+
 # IDE Editor
 .tags
 .idea
 
-# others
+## java
+.classpath
+.factorypath
+.project
+.settings/
+
+## kotlin editor config
+kls_database.db
+
+## php
+phpactor.log
+
+# common language tools
 .tool-versions
 .envrc
 .env
-phpactor.log
+.markdownlint.jsonc
