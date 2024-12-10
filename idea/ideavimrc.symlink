@@ -55,7 +55,7 @@ nnoremap <leader>Y :action SelectIn<CR>
 nnoremap gr :action FindUsages<CR>
 
 " some unimpaired mappings
-nnoremap ]c :action Diff.NextChang<CR>
+nnoremap ]c :action Diff.NextChange<CR>
 nnoremap [c :action Diff.PrevChange<CR>
 nnoremap ]n :action Diff.NextConflict<CR>
 nnoremap [n :action Diff.PreviousConflict<CR>
@@ -63,6 +63,7 @@ nnoremap [n :action Diff.PreviousConflict<CR>
 nnoremap <leader>rc :action RunConfiguration<CR>
 nnoremap <leader>rr :action Run<CR>
 nnoremap <leader>re :action Rerun<CR>
+nnoremap <leader>rb :action BuildMenu<CR>
 
 " tool windows
 nnoremap <leader>wp :action ActivateProjectToolWindow<CR>
@@ -112,6 +113,8 @@ nnoremap <leader>fa :action GotoAction<CR>
 nnoremap <leader>ft :action GotoTest<CR>
 nnoremap <leader>fg :action FindInPath<CR>
 vnoremap <leader>fg :action FindInPath<CR>
+nnoremap <leader>fs :action GotoSymbol<CR>
+vnoremap <leader>fs :action GotoSymbol<CR>
 
 # code actions
 nnoremap <leader>cf :action ReformatCode<CR>
@@ -120,6 +123,7 @@ nnoremap <leader>cn :action RenameElement<CR>
 nnoremap <leader>cr :action RefactoringMenu<CR>
 nnoremap <leader>cg :action Generate<CR>
 nnoremap <leader>ci :action OptimizeImports<CR>
+nnoremap <leader>cc :action NewClass<CR>
 
 
 " view
