@@ -13,6 +13,10 @@ bind-key a send-prefix # for nested tmux sessions
 # set terminal for correct color and font support
 set-option default-terminal "tmux-256color"
 
+# settings for image.nvim 
+set -gq allow-passthrough on
+set -g visual-activity off
+
 ######################
 #### Key Bindings ####
 
@@ -24,6 +28,9 @@ bind = setw synchronize-panes
 
 # enable mouse support for switching panes/windows
 set-option -g mouse on
+
+# increase scrollback buffer
+set-option -g history-limit 50000
 
 ##############################
 ### Color & Style Settings ###
