@@ -1,11 +1,12 @@
 [user]
-    name = Jirgn
-    email = jirgn76@googlemail.com
+  name = Jirgn
+  email = jirgn76@googlemail.com
 [http]
 #   proxy = http://192.168.160.252:3128
 [core]
-	excludesfile = /Users/messner.j/.gitignore_global
-	autocrlf = input
+  excludesfile = /Users/juergen.messner/.gitignore_global
+  autocrlf = input
+  ignorecase = false
 [merge]
   tool = nvim
 [mergetool "nvim"]
@@ -16,29 +17,28 @@
 #   helper = manager
 [pull]
 	rebase = false
-; [filter "lfs"]
-; 	clean = git-lfs clean -- %f
-; 	smudge = git-lfs smudge -- %f
-; 	process = git-lfs filter-process
-; 	required = true
+# [filter "lfs"]
+# 	clean = git-lfs clean -- %f
+# 	smudge = git-lfs smudge -- %f
+# 	process = git-lfs filter-process
+# 	required = true
 [init]
-	defaultBranch = main
-
-; delta as diff an pager
+  defaultBranch = main
+# delta as diff an pager
 [pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
-    features = line-numbers decorations
-    whitespace-error-style = 22 reverse
+  features = line-numbers decorations
+  whitespace-error-style = 22 reverse
 
 [delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
